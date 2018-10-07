@@ -10,8 +10,19 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 2%;
 }
 
+p {
+    margin: 1em;
+}
+
 ul {
     list-style-type: circle;
+}
+
+table {
+    padding: 1em;
+}
+td {
+    padding-right: 1em;
 }
 
 div#header {
