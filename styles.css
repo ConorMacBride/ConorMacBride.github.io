@@ -151,7 +151,7 @@ div.entry {
 }
 
 .entry div.description {
-    float: left;
+    position: relative;
     width: 100%;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
@@ -169,6 +169,99 @@ div#footer {
     font-size: 3rem;
     color: #333;
 }
+
+/* BEGIN Expanding Mechanism */
+
+.expand-state {
+  display:none;  
+}
+
+.expand-state + .description {
+  max-height: 10rem;
+  overflow: hidden;
+  transition: all .3s ease;
+  margin-bottom: 2%;
+}
+
+.toggle-expand {
+  display: block;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle-expand:before {
+  content: "Read More";
+}
+
+@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+
+div.fade-out {
+  display: block;
+  position: absolute;
+  top: 4rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  animation: fadein ease-in 1;
+  animation-duration: .3s;
+  background: -webkit-linear-gradient(
+    rgba(238, 238, 238, 0) 0%,
+    rgba(238, 238, 238, 1) 100%
+  );
+}
+
+#expand1:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand1:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand1:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+#expand2:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand2:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand2:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+#expand3:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand3:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand3:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+#expand4:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand4:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand4:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+/* END Expanding Mechanism */
 
 @media only screen and (min-width: 641px) {
     .profile div.name {
