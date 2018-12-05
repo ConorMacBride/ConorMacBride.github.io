@@ -17,7 +17,7 @@
       </div>
       <div class="headline"><div class="txt">Mathematics and Theoretical Physics Student at the University of St Andrews | Web Editor at i4is</div></div>
       <div class="contact">
-        <a href="mailto:&#099;&#100;&#109;&#054;&#064;&#115;&#116;&#045;&#097;&#110;&#100;&#114;&#101;&#119;&#115;&#046;&#097;&#099;&#046;&#117;&#107;"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:conor@macbride.me"><i class="fas fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/conormacbride"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
@@ -28,31 +28,13 @@
     <div id="aboutme">
       <div class="entry">
         <div class="description">
-          <p>Fifth-year mathematics and theoretical physics student at the University of St Andrews.</p>
-          <p>Through work experience and internships at the Humboldt University of Berlin, CERN, the Institute of Physics and DuPont I have gained first-hand knowledge of how the physics learned in the classroom is applied to real-world problems. I enjoy modelling physics and mathematics problems using Python, Fortran and the Wolfram Language as well as developing data science and machine learning skills.</p>
+          <p>Fifth-year mathematics and theoretical physics student at the University of St Andrews. I have a strong interest in solar physics and plan on undertaking a PhD in this area, in particular, magnetohydrodynamics.</p>
+          <p>Through work experience and internships at the University of St Andrews, Humboldt University of Berlin, CERN, the Institute of Physics and more I have gained first-hand knowledge of how the physics learned in the classroom is applied to real-world problems. I enjoy modelling physics and mathematics problems using Python, Fortran and the Wolfram Language as well as developing data science and machine learning skills.</p>
           <p>I am the web editor for a scientific organisation, and I produce a science podcast for the University of St Andrews Physics Society. Also, I enjoy using PHP along with SQL to create web applications, and I have A-levels in Physics, Mathematics, Further Mathematics and Music as well as an AS in Chemistry.</p>
         </div>
       </div>
     </div>
     <h1 class="title">Experience</h1>
-    <div class="entry">
-      <div class="entrycontainer">
-      <div class="logo"><img src="./img/i4is.png" /></div>
-      <div class="entrydetails">
-        <div class="organisation">Initiative for Interstellar Studies</div>
-        <div class="role">Web Editor</div>
-        <div class="dates">Jan 2018 &mdash; Present</div>
-      </div>
-      </div>
-      <div class="description">
-        <ul>
-          <li>Keep online content up-to-date and improve its presentation.</li>
-          <li>Manage the structure of the website and write new content.</li>
-          <li>Ensure website is indexed effectively by search engines by using SEO techniques.</li>
-          <li>Provide advice and assistance on other matters related to the organisation.</li>
-        </ul>
-      </div>
-    </div>
     <div class="entry">
       <div class="entrycontainer">
       <div class="logo"><img src="./img/standrews.png" /></div>
@@ -62,13 +44,39 @@
         <div class="dates">May 2018 &mdash; Jul 2018</div>
       </div>
       </div>
+      <input type="checkbox" id="expand6" class="expand-state" />
       <div class="description">
         <ul>
           <li>I spent six weeks working in the Solar and Magnetospheric Theory group within the School of Mathematics and Statistics.</li>
           <li>My project involved exploring the magnetohydrodynamics equations in the context of the sun, investigating how a magnetic field behaves in the presence of a non-constant Alfv&eacute;n speed, which introduces the process of phase mixing.</li>
           <li>This was later extended to use a modified version of the induction equation &mdash; one with the biharmonic operator instead of the Laplacian. This corresponds to the process of hyper-diffusion. Heating according to this modified induction equation was also explored.</li>
         </ul>
+        <div class="fade-out"></div>
       </div>
+      <label for="expand6" class="toggle-expand"></label>
+    </div>
+    <div class="entry">
+      <div class="entrycontainer">
+      <div class="logo"><img src="./img/i4is.png" /></div>
+      <div class="entrydetails">
+        <div class="organisation">Initiative for Interstellar Studies</div>
+        <div class="role">Web Editor</div>
+        <div class="dates">Jan 2018 &mdash; Present</div>
+      </div>
+      </div>
+      <input type="checkbox" id="expand5" class="expand-state" />
+      <div class="description">
+        <ul>
+          <li>Keep online content up-to-date and improve its presentation.</li>
+          <li>Manage the structure of the website and write new content.</li>
+          <li>Have a key role in the organisation's membership scheme, leading the content of the scheme as well as providing assistance with its technical implementation. This also involves participating in, and occasionally chairing, weekly teleconferences as well as email discussions with other staff around the world.</li>
+          <li>Programmed many new bespoke features into the website, allowing routine tasks to be automated.</li>
+          <li>Ensure website is indexed effectively by search engines by using SEO techniques.</li>
+          <li>Provide advice and assistance on other matters related to the organisation.</li>
+        </ul>
+        <div class="fade-out"></div>
+      </div>
+      <label for="expand5" class="toggle-expand"></label>
     </div>
     <div class="entry">
       <div class="entrycontainer">
@@ -79,19 +87,28 @@
         <div class="dates">Jun 2017 &mdash; Aug 2017</div>
       </div>
       </div>
-      <input type="checkbox" id="expand1" class="expand-state" />
+      <input type="checkbox" id="expand4" class="expand-state" />
       <div class="description">
         <ul>
           <li>Spent three months during summer 2017 working on a project involving using a convolutional neural network to detect, from videos, fish swimming on the surface of sulfur water.</li>
           <li>Wrote a program that takes the fish detected by the neural network and connects the fish across frames in the video. It then filters out poor quality detections by setting a minimum number of frames a chain of detections has to be present in before it is considered to be a fish.</li>
           <li>My program significantly improved the reliability of the output from the neural network. This was proven by comparing the filtered detections with the detections from the neural network using annotated ground truth frames.</li>
           <li>I also read about neural networks and retrained the existing neural network with new training data and different training parameters. I created multiple models then analysed their accuracy to find the optimal parameters.</li>
-          <li>Used BASH extensively throughout to work with files and run programs on the computer. Created scripts to automate many tasks. Developed my skills using Vim.</li>
-          <li>More details regarding the structure of the program are available on LinkedIn.</li>
+          <li>Used Bash extensively throughout to work with files and run programs on the computer. Created scripts to automate many tasks. Developed my skills using Vim.</li>
         </ul>
+        <h4>More details:</h4>
+        <p>Elliptical Gaussians are used to determine probabilities that two detections in neighbouring frames represented the same fish. Fish in adjacent frames are then connected in order of probability.</p>
+        <p>Due to the low quality of the videos all connections could not be made, therefore, more distant probabilities are then processed in a complex algorithm which prioritised high probability links and long chains of detections. This algorithm is able to evaluate previously created links and override them if it finds a better link.</p>
+        <p>Connections between long chains of detections are then made, provided their ends are physically very close.</p>
+        <p>The chains of detections are then filtered based on their length and various plots and diagrams are produced. These plots include position, orientation, density, polarisation and nematic order.</p>
+        <div class="gallery three">
+            <img src="./img/trajectories.jpeg" alt="Trajectories" />
+            <img src="./img/density.jpeg" alt="Density" />
+            <img src="./img/orientation.jpeg" alt="Orientation" />
+        </div>
         <div class="fade-out"></div>
       </div>
-      <label for="expand1" class="toggle-expand"></label>
+      <label for="expand4" class="toggle-expand"></label>
     </div>
     <div class="entry">
       <div class="entrycontainer">
@@ -99,10 +116,10 @@
       <div class="entrydetails">
         <div class="organisation">University of St Andrews Physics Society</div>
         <div class="role">Treasurer | Publicity Officer</div>
-        <div class="dates">May 2016 &mdash; May 2018 | May 2018 &mdash; Present</div>
+        <div class="dates">May 2018 &mdash; Present | May 2016 &mdash; May 2018</div>
       </div>
       </div>
-      <input type="checkbox" id="expand2" class="expand-state" />
+      <input type="checkbox" id="expand3" class="expand-state" />
       <div class="description">
         <ul>
           <li>Worked closely with other committee members to boost attendance at events. Anticipated their needs and took initiative, designing and distributing posters and other media prior to events.</li>
@@ -114,7 +131,7 @@
         </ul>
         <div class="fade-out"></div>
       </div>
-      <label for="expand2" class="toggle-expand"></label>
+      <label for="expand3" class="toggle-expand"></label>
     </div>
     <div class="entry">
       <div class="entrycontainer">
@@ -125,7 +142,7 @@
         <div class="dates">Jul 2014</div>
       </div>
       </div>
-      <input type="checkbox" id="expand3" class="expand-state" />
+      <input type="checkbox" id="expand2" class="expand-state" />
       <div class="description">
         <ul>
           <li>Spent a week visiting sites and attending lectures and meetings. Got to experience what it involves to be a physicist by shadowing the head of operations in the beams department and their colleagues.</li>
@@ -134,7 +151,7 @@
         </ul>
         <div class="fade-out"></div>
       </div>
-      <label for="expand3" class="toggle-expand"></label>
+      <label for="expand2" class="toggle-expand"></label>
     </div>
     <div class="entry">
       <div class="entrycontainer">
@@ -161,7 +178,7 @@
         <div class="dates">Jan 2014 &mdash; June 2015</div>
       </div>
       </div>
-      <input type="checkbox" id="expand4" class="expand-state" />
+      <input type="checkbox" id="expand1" class="expand-state" />
       <div class="description">
         <ul>
           <li>As a peer mentor I liaised with teachers and other peer mentors when teaching a personal development programme to a first year class.</li>
@@ -174,7 +191,7 @@
         </ul>
         <div class="fade-out"></div>
       </div>
-      <label for="expand4" class="toggle-expand"></label>
+      <label for="expand1" class="toggle-expand"></label>
     </div>
   </div>
   <div id="education">

@@ -157,6 +157,10 @@ div.entry {
     font-family: 'Open Sans', sans-serif;
 }
 
+div.gallery.three img {
+    width: 32%;
+}
+
 div#footer {
     float: left;
     width: 100%;
@@ -258,6 +262,30 @@ div.fade-out {
 }
 
 #expand4:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+#expand5:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand5:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand5:checked + .description > div.fade-out {
+  display: none !important;
+}
+
+#expand6:checked + .description {
+  max-height: 100rem;  
+}
+
+#expand6:checked ~ label.toggle-expand:before {
+  content: "Read Less";
+}
+
+#expand6:checked + .description > div.fade-out {
   display: none !important;
 }
 
