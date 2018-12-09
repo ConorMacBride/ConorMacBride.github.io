@@ -25,42 +25,42 @@ td {
     padding-right: 1em;
 }
 
-div#header {
+body > header {
     float: left;
     width: 94%;
     background-color: #eee;
     margin: 0;
     padding: 3%;
 }
-#header div.picture {
+body > header div.picture {
     width: 70%;
     margin: 0 auto;
     padding: 0;
 }
-#header .picture img {
+body > header .picture img {
     width: 100%;
     border-radius: 50%;
 }
 
-#header div.profile {
+div.profile {
     width: 100%;
     float: left;
 }
 
-.profile {
+div.profile {
     text-align: center;
 }
 
-.profile div.name {
+div.profile div.name {
     font-size: 3rem;
     padding: 2rem 0;
 }
 
-.profile .name span.lastname {
+div.profile div.name span.lastname {
     font-weight: bold;
 }
 
-.profile .headline {
+div.profile div.headline {
     font-size: 1.5rem;
     font-weight: 200;
     color: #444;
@@ -68,16 +68,16 @@ div#header {
     width: 100%;
     padding: 0 0 2rem 0;
 }
-.profile .headline div.txt {
+div.profile div.headline div.txt {
     float: right;
     width: 100%;
 }
 
-.profile .contact {
+div.profile div.contact {
     float: right;
     width: 100%;
 }
-.profile .contact a{
+div.profile .contact a{
     font-size: 3rem;
     color: #333;
     padding: 0 0 0 1rem;
@@ -89,19 +89,19 @@ div.container {
     flex-direction: column;
 }
 
-div#experience {
+section#experience {
     order: 2;
     width: 96%;
     margin: 2%;
 }
 
-div#education {
+section#education {
     order: 3;
     width: 96%;
     margin: 2% 2% 0 2%;
 }
 
-.container .title {
+div.container .title {
     font-weight: 300;
     font-size: 2.5rem;
     text-align: center;
@@ -109,7 +109,7 @@ div#education {
     padding: 0 1rem 1rem 1rem;
 }
 
-div.entry {
+section.entry {
     float: left;
     width: 95%;
     padding: 2%;
@@ -117,58 +117,58 @@ div.entry {
     margin-bottom: 2%;
 }
 
-.entrycontainer {
+section.entry header {
     display: flex;
     flex-direction: row;
 }
 
-.entry .logo {
+section.entry header div.logo {
     float: left;
     width: 5rem;
     min-width: 5rem;
     margin-right: 1rem;
 }
-.entry .logo img {
+section.entry header div.logo img {
     width: 100%;
 }
 
-.entry div.organisation {
+section.entry header div.organisation {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #222;
 }
-.entry div.role {
+section.entry header div.role {
     font-size: 2rem;
 }
-#education .entry div.role {
+section#education section.entry header div.role {
     font-size: 1.5rem;
 }
-.entry div.dates {
+section.entry header div.dates {
     font-weight: 300;
     font-size: 1.2rem;
     color: #555;
 }
 
-.entry div.description {
+section.entry div.description {
     position: relative;
     width: 100%;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
 }
 
-div.gallery.three img {
+figure.three img {
     width: 32%;
 }
 
-div#footer {
+footer {
     float: left;
     width: 100%;
     padding: 2rem 0;
     text-align: center;
     background-color: #eee;
 }
-#footer a {
+footer a {
     margin: 0 2rem;
     font-size: 3rem;
     color: #333;
@@ -218,7 +218,7 @@ div.fade-out {
 }
 
 #expand1:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand1:checked ~ label.toggle-expand:before {
@@ -230,7 +230,7 @@ div.fade-out {
 }
 
 #expand2:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand2:checked ~ label.toggle-expand:before {
@@ -242,7 +242,7 @@ div.fade-out {
 }
 
 #expand3:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand3:checked ~ label.toggle-expand:before {
@@ -254,7 +254,7 @@ div.fade-out {
 }
 
 #expand4:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand4:checked ~ label.toggle-expand:before {
@@ -266,7 +266,7 @@ div.fade-out {
 }
 
 #expand5:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand5:checked ~ label.toggle-expand:before {
@@ -278,7 +278,7 @@ div.fade-out {
 }
 
 #expand6:checked + .description {
-  max-height: 100rem;  
+  max-height: 120rem;  
 }
 
 #expand6:checked ~ label.toggle-expand:before {
@@ -292,56 +292,56 @@ div.fade-out {
 /* END Expanding Mechanism */
 
 @media only screen and (min-width: 641px) {
-    .profile div.name {
+    body > header div.profile div.name {
         font-size: 4rem;
         padding: 0 0 1rem 0;
     }
-    #header div.picture {
+    body > header div.picture {
         width: 30%;
         float: left;
     }
-    #header div.profile {
+    body > header div.profile {
         width: 70%;
         text-align: right;
     }
 }
 
 @media only screen and (min-width: 961px) {
-    .profile div.name {
+    body > header div.profile div.name {
         padding: 0 0 2rem 0;
     }
-    .profile .headline {
+    body > header div.profile div.headline {
         font-size: 1.8rem;
     }
-    .profile .headline div.txt {
+    body > header div.profile div.headline div.txt {
         width: 40rem;
     }
     div.container {
         flex-direction: row;
     }
 
-    .container .title{
+    div.container section .title{
         text-align: left;
     }
 
-    div#experience {
+    section#experience {
         order: 3;
         width: 57%;
         margin-left: 1%;
     }
 
-    div#education {
+    section#education {
         order: 1;
         width: 37%;
         margin-right: 1%;
     }
-    div.entry {
+    section.entry {
         width: 96%;
     }
 }
 
 @media only screen and (min-width: 1025px) {
-    .profile div.name {
+    body > header div.profile div.name {
         font-size: 6rem;
     }
 }
