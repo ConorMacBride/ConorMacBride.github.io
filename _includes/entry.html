@@ -1,0 +1,60 @@
+{% assign item = include.entry %}
+
+{% if item.noexpand %}
+  {% assign noexpand = true %}
+{% else %}
+  {% assign noexpand = false %}
+{% endif %}
+
+{% if item.mobcollapse %}
+  {% assign mobcollapse = true %}
+{% else %}
+  {% assign mobcollapse = false %}
+{% endif %}
+
+{% if mobcollapse %}{% capture expand_id %}{% increment var %}{% endcapture %}{% endif %}
+
+{% if item.end == false %}
+  {% assign end_date = "Present" %}
+{% else %}
+  {% assign unix_end = item.end | date: "%s" %}
+  {% assign unix_now = "now" | date: "%s" %}
+  {% if unix_end > unix_now and item.hideend %}
+    {% assign end_date = "Present" %}
+  {% else %}
+    {% assign end_date = item.end | date: "%b %Y" %}
+  {% endif %}
+{% endif %}
+
+{% assign start_date = item.start | date: "%b %Y" %}
+{% if start_date == end_date %}
+  {% assign datestring = start_date %}
+{% else %}
+  {% capture datestring %}{{ start_date }} &mdash; {{ end_date }}{% endcapture %}
+{% endif %}
+
+<section class="entry{% if item.subentry %} sub-entry{% endif %}">
+  <header>
+    {% comment %}<div class="logo"><img src="{{ site.baseurl }}/img/{{ item.logo }}" /></div>{% endcomment %}
+    <div class="entrydetails">
+      <div class="organisation">{{ item.organisation | capitalize }}</div>
+      <div class="role">{{ item.role }}</div>
+      <div class="dates">{{ datestring }}</div>
+    </div>
+  </header>
+  {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" />{% endif %}
+  <div class="description">
+    {{ item.content | markdownify }}
+    {% if noexpand == false and mobcollapse %}<div class="fade-out"></div>{% endif %}
+  </div>
+  {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand{% if noexpand %} noexpand{% endif %}"></label>{% endif %}
+  {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ site.baseurl }}{{ item.link }}"></a>{% endif %}
+</section>
+{% if mobcollapse %}
+<style type="text/css">
+#expand{{ expand_id }}:checked + .description { max-height: 120rem; }
+#expand{{ expand_id }}:checked ~ label.toggle-expand:before { content: "Read Less"; }
+#expand{{ expand_id }}:checked + .description > div.fade-out { display: none !important; }
+</style>
+{% endif %}
+

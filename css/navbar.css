@@ -1,0 +1,23 @@
+@media only screen and (max-width: 640px) {
+    header div.picture {display: none;}
+    header div.profile {
+        width: 100%;
+        float: left;
+    }
+    header div.profile div.name {
+        font-size: 1.5rem;
+        float: left;
+        padding: 0;
+        line-height: 3rem;
+    }
+    header div.profile div.headline {display: none;}
+    header div.profile div.contact {
+        width: auto;
+        line-height: 3rem;
+        max-height: 3rem;
+    }
+    header div.profile div.contact a {
+        font-size: 1.6rem;
+        padding: 0 0 0 0.5rem;
+    }
+}

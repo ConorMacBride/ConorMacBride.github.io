@@ -8,10 +8,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     color: #444;
     padding-left: 2%;
+    line-height: 1;
 }
 
 p {
-    margin: 1em;
+    margin: 1rem;
 }
 
 ul {
@@ -80,7 +81,7 @@ div.profile div.contact {
 div.profile .contact a{
     font-size: 3rem;
     color: #333;
-    padding: 0 0 0 1rem;
+    padding: 0 0.5rem;
 }
 
 div.container {
@@ -117,7 +118,11 @@ section.entry {
     margin-bottom: 2%;
 }
 
-section.entry header {
+section.sub-entry {
+    background-color: #f9f9f9;
+}
+
+/*section.entry header {
     display: flex;
     flex-direction: row;
 }
@@ -130,6 +135,9 @@ section.entry header div.logo {
 }
 section.entry header div.logo img {
     width: 100%;
+}*/
+section.entry header div.entrydetails {
+    padding-left: 2%;
 }
 
 section.entry header div.organisation {
@@ -139,9 +147,6 @@ section.entry header div.organisation {
     color: #222;
 }
 section.entry header div.role {
-    font-size: 2rem;
-}
-section#education section.entry header div.role {
     font-size: 1.5rem;
 }
 section.entry header div.dates {
@@ -155,6 +160,10 @@ section.entry div.description {
     width: 100%;
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
+}
+
+section.entry a.toggle-expand.link {
+    margin-top: 2%;
 }
 
 figure.three img {
@@ -181,10 +190,9 @@ footer a {
 }
 
 .expand-state + .description {
-  max-height: 10rem;
+  max-height: 0rem;
   overflow: hidden;
   transition: all .3s ease;
-  margin-bottom: 2%;
 }
 
 .toggle-expand {
@@ -193,6 +201,9 @@ footer a {
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
 }
 
 .toggle-expand:before {
@@ -204,7 +215,7 @@ footer a {
 div.fade-out {
   display: block;
   position: absolute;
-  top: 4rem;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -217,81 +228,55 @@ div.fade-out {
   );
 }
 
-#expand1:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand1:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand1:checked + .description > div.fade-out {
-  display: none !important;
-}
-
-#expand2:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand2:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand2:checked + .description > div.fade-out {
-  display: none !important;
-}
-
-#expand3:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand3:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand3:checked + .description > div.fade-out {
-  display: none !important;
-}
-
-#expand4:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand4:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand4:checked + .description > div.fade-out {
-  display: none !important;
-}
-
-#expand5:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand5:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand5:checked + .description > div.fade-out {
-  display: none !important;
-}
-
-#expand6:checked + .description {
-  max-height: 120rem;  
-}
-
-#expand6:checked ~ label.toggle-expand:before {
-  content: "Read Less";
-}
-
-#expand6:checked + .description > div.fade-out {
-  display: none !important;
-}
+/* expand[number] moved to HTML */
 
 /* END Expanding Mechanism */
 
-@media only screen and (min-width: 641px) {
+/* BEGIN page.html */
+
+div.pagecontainer {
+  float: left;
+  padding: 0;
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+/* END page.html */
+
+div.pagecontainer h1, div.pagecontainer h2, div.pagecontainer h3, div.pagecontainer h4, div.pagecontainer h5, div.pagecontainer h6, div.pagecontainer {
+    padding-left: 1rem;
+}
+
+ul.blog {
+    list-style-type: none;
+    padding: 0;
+}
+ul.blog h2 {
+    margin: 2rem 0 0 0;
+}
+ul.blog p.meta {
+    margin: 0 1rem;
+}
+ul.blog h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+ul.blog h2 a:hover {
+    text-decoration: none;
+    color: #666;
+}
+div#postnav > div {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+div#postnav > div a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 704px) {
     body > header div.profile div.name {
         font-size: 4rem;
         padding: 0 0 1rem 0;
@@ -304,6 +289,13 @@ div.fade-out {
         width: 70%;
         text-align: right;
     }
+    body > header div.profile div.headline div.txt {
+        width: 30rem;
+    }
+    div.profile .contact a{
+        padding: 0 0 0 1rem;
+    }
+    div.pagecontainer { padding: 2rem 4rem; }
 }
 
 @media only screen and (min-width: 961px) {
@@ -314,7 +306,7 @@ div.fade-out {
         font-size: 1.8rem;
     }
     body > header div.profile div.headline div.txt {
-        width: 40rem;
+        width: 35rem;
     }
     div.container {
         flex-direction: row;
@@ -338,11 +330,17 @@ div.fade-out {
     section.entry {
         width: 96%;
     }
+    div.pagecontainer { padding: 2rem 6rem; }
+    /* BEGIN Expanding Mechanism */
+    .expand-state + .description { max-height: 10rem; }
+    .toggle-expand.noexpand { display: none; }
+    /* END Expanding Mechanism */
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1056px) {
     body > header div.profile div.name {
         font-size: 6rem;
     }
+    div.pagecontainer { padding: 2rem 10rem; }
 }
 

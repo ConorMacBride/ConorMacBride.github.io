@@ -1,0 +1,33 @@
+{% if page.end == false %}
+  {% assign end_date = "Present" %}
+{% else %}
+  {% assign unix_end = page.end | date: "%s" %}
+  {% assign unix_now = "now" | date: "%s" %}
+  {% if unix_end > unix_now and page.hideend %}
+    {% assign end_date = "Present" %}
+  {% else %}
+    {% assign end_date = page.end | date: "%b %Y" %}
+  {% endif %}
+{% endif %}
+
+{% assign start_date = page.start | date: "%b %Y" %}
+{% if start_date == end_date %}
+  {% assign datestring = start_date %}
+{% else %}
+  {% capture datestring %}{{ start_date }} &mdash; {{ end_date }}{% endcapture %}
+{% endif %}
+<section class="entry sub-entry">
+    <header>
+        <div class="entrydetails">
+            <div class="organisation">{{ page.subheading }}</div>
+            <div class="role">{{ page.heading }}</div>
+            <div class="dates">{{ datestring }}</div>
+        </div>
+        {% if page.url %}
+        <a class="toggle-expand external" href="{{ page.url }}"></a>
+        {% endif %}
+    </header>
+    <div class="description">
+        {{ page.content }}
+    </div>
+</section>

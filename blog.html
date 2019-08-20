@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<div class="pagecontainer">
+<h1>Latest Posts</h1>
+
+<ul class="blog">
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="meta"><strong>{{ post.date | date_to_string }} &mdash; {% if post.author %}{{ post.author }}{% else %}Conor MacBride{% endif %}</strong></p>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+</div>

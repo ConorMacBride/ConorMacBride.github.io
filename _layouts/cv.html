@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<div class="container">
+<section id="experience" class="maincontent">
+  <h1 class="title">About Me</h1>
+  <section class="entry">
+    <div class="description">
+      {{ page.content | markdownify }}
+    </div>
+  </section>
+  <h1 class="title">Experience</h1>
+
+  {% capture expand_id %}{% increment var %}{% endcapture %}
+
+  {% assign sorted_experiences = site.experience | reverse %}
+  {% for item in sorted_experiences %}
+
+    {% unless item.subentry %}
+      {% include entry.html entry=item %}
+    {% endunless %}
+ 
+  {% endfor %}
+  
+</section>
+<section id="education">
+  <h1 class="title">Education</h1>
+
+  {% assign sorted_education = site.education | reverse %}
+  {% for item in sorted_education %}
+
+    {% unless item.subentry %}
+      {% include entry.html entry=item %}
+    {% endunless %}
+
+  {% endfor %}
+
+</section>
+</div>
+<script>
+function mobileCollapse() {
+    w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    if (w < 961) {
+        var x = document.getElementsByClassName("noexpand");
+        for (var i = 0; i < x.length; ++i) {
+            var item = x[i];
+            var itemid = item.getAttribute("for");
+            var checkbox = document.getElementById(itemid);
+            checkbox.checked = false;
+        }
+    }
+};
+document.onload = mobileCollapse();
+</script>

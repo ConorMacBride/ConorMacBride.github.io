@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div id="main" class="pagecontainer">
+  <p><strong>{{ page.date | date_to_string }} &mdash; {% if page.author %}{{ page.author }}{% else %}Conor MacBride{% endif %}</strong></p>
+  <h1>{{ page.title }}</h1>
+  {{ page.content | markdownify }}
+  <div id="postnav">
+    <div id="previous">&nbsp;
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}">&larr; Previous</a>
+      {% endif %}
+    </div>
+    <div id="index">
+        <a href="{{ site.baseurl }}{% link blog.html %}">Index</a>
+    </div>
+    <div id="next">&nbsp;
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}">Next &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
