@@ -19,6 +19,10 @@ ul {
     list-style-type: circle;
 }
 
+a:link {
+    color: #000;
+}
+
 table {
     padding: 1em;
 }
@@ -208,6 +212,7 @@ footer a {
 
 .toggle-expand:before {
   content: "Read More";
+  color: #000;
 }
 
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
@@ -343,4 +348,64 @@ div#postnav > div a {
     }
     div.pagecontainer { padding: 2rem 10rem; }
 }
+
+/* BEGIN Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #eee;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #ddd;
+    }
+    a:link {
+        color: #eee;
+    }
+    body > header {
+        background-color: #222;
+    }
+    div.profile div.headline {
+        color: #eee;
+    }
+    div.profile .contact a {
+        color: #ddd;
+    }
+    section.entry {
+        background-color: #111;
+    }
+    section.sub-entry {
+        background-color: #000;
+    }
+    section.entry header div.organisation {
+        color: #ccc;
+    }
+    section.entry header div.dates {
+        color: #aaa;
+    }
+    footer {
+        background-color: #222;
+    }
+    footer a {
+        color: #ddd;
+    }
+    .toggle-expand:before {
+        content: "Read More";
+        color: #ddd;
+    }
+    div.fade-out {
+        background: -webkit-linear-gradient(
+            rgba(17, 17, 17, 0) 0%,
+            rgba(17, 17, 17, 1) 100%
+        );
+    }
+    ul.blog h2 a:hover {
+        color: #aaa;
+    }
+    div#postnav > div a {
+        color: #ccc;
+    }
+}
+
+/* END Dark Mode */
 
