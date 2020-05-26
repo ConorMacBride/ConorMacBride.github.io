@@ -30,6 +30,15 @@ td {
     padding-right: 1em;
 }
 
+div.header-container, div.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+div.main-container {
+    max-width: 1264px;
+    margin: 0 auto;
+}
+
 body > header {
     float: left;
     width: 94%;
