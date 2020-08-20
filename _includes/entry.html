@@ -37,7 +37,7 @@
   <header>
     {% comment %}<div class="logo"><img src="{{ site.baseurl }}/img/{{ item.logo }}" /></div>{% endcomment %}
     <div class="entrydetails">
-      <div class="organisation">{{ item.organisation | capitalize }}</div>
+      <div class="organisation">{{ item.organisation | upcase }}</div>
       <div class="role">{{ item.role }}</div>
       <div class="dates">{{ datestring }}</div>
     </div>
