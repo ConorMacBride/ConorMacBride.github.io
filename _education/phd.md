@@ -10,3 +10,12 @@ Specialising in Solar Physics
 *Astrophysics Research Centre,  
 School of Mathematics and Physics*
 
+## Publications
+
+{% assign sorted_projects = site.education | where: "parent", "phd" | reverse %}
+{% for item in sorted_projects %}
+
+  {% include publication.html entry=item %}
+
+{% endfor %}
+

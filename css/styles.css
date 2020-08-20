@@ -153,19 +153,36 @@ section.entry header div.entrydetails {
     padding-left: 2%;
 }
 
-section.entry header div.organisation {
+section.publication > header > div.entrydetails > div {
+    margin: 0.3rem 0;
+}
+
+section.entry header div.organisation, section.entry section.publication header div.journaldate {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #222;
 }
+section.entry section.publication header div.journaldate {
+    font-size: 1rem;
+}
 section.entry header div.role {
     font-size: 1.5rem;
 }
-section.entry header div.dates {
+section.entry section.publication header div.pubtitle {
+    font-size: 1rem;
+}
+section.entry header div.dates, section.entry section.publication header div.authors {
     font-weight: 300;
     font-size: 1.2rem;
     color: #555;
+}
+section.entry section.publication header div.authors {
+    font-size: 1rem;
+}
+section.entry section.publication header div.fulltext {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
 }
 
 section.entry div.description {
@@ -411,10 +428,10 @@ div#postnav > div a {
     section.sub-entry {
         background-color: #000;
     }
-    section.entry header div.organisation {
+    section.entry header div.organisation, section.entry section.publication header div.journaldate {
         color: #ccc;
     }
-    section.entry header div.dates {
+    section.entry header div.dates, section.entry section.publication header div.authors {
         color: #aaa;
     }
     footer {
