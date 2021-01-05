@@ -92,9 +92,9 @@ div.profile div.contact {
     width: 100%;
 }
 div.profile .contact a{
-    font-size: 3rem;
+    font-size: 10vw;
     color: #333;
-    padding: 0 0.5rem;
+    padding: 0 2vw;
 }
 
 div.container {
@@ -219,8 +219,8 @@ footer {
     background-color: #eee;
 }
 footer a {
-    margin: 0 2rem;
-    font-size: 3rem;
+    margin: 0 2vw;
+    font-size: 10vw;
     color: #333;
 }
 
@@ -335,9 +335,14 @@ div#postnav > div a {
         width: 30rem;
     }
     div.profile .contact a{
+        font-size: 3rem;
         padding: 0 0 0 1rem;
     }
     div.pagecontainer { padding: 2rem 4rem; }
+    footer a {
+        margin: 0 2rem;
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (min-width: 961px) {
