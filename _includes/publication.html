@@ -16,6 +16,9 @@
 
 {% assign pubdate = item.date | date: "%b %Y" %}
 
+{% assign publisher = '' %}
+{% assign ads = '' %}
+{% assign arxiv = '' %}
 {% if item.publisher %}{% capture publisher %}<a href="{{ item.publisher }}">Publisher</a> | {% endcapture %}{% endif %}
 {% if item.ads %}{% capture ads %}<a href="{{ item.ads }}">ADS</a> | {% endcapture %}{% endif %}
 {% if item.arxiv %}{% capture arxiv %}<a href="{{ item.arxiv }}">arXiv</a> | {% endcapture %}{% endif %}
