@@ -52,6 +52,7 @@ body > header div.picture {
     padding: 0;
 }
 body > header .picture img {
+    height: auto;
     width: 100%;
     border-radius: 50%;
 }
@@ -183,6 +184,7 @@ section.entry a.toggle-expand.link {
 }
 
 figure img {
+    height: auto;
     width: 100%;
 }
 

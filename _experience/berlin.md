@@ -22,7 +22,7 @@ Connections between long chains of detections are then made, provided their ends
 The chains of detections are then filtered based on their length and various plots and diagrams are produced. These plots include position, orientation, density, polarisation and nematic order.
 
 <figure class="three">
-  <img src="{{ site.baseurl }}/img/trajectories.jpeg" alt="Trajectories" />
-  <img src="{{ site.baseurl }}/img/density.jpeg" alt="Density" />
-  <img src="{{ site.baseurl }}/img/orientation.jpeg" alt="Orientation" />
+  <img src="{{ site.baseurl }}/img/trajectories.jpeg" width="196" height="180" alt="Trajectories" />
+  <img src="{{ site.baseurl }}/img/density.jpeg" width="196" height="180" alt="Density" />
+  <img src="{{ site.baseurl }}/img/orientation.jpeg" width="196" height="180" alt="Orientation" />
 </figure>
