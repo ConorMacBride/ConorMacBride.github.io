@@ -21,6 +21,9 @@ collections:
   - experience
   - education
 
+sass:
+  style: compressed
+
 defaults:
   - 
     scope:
