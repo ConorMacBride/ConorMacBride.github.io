@@ -5,7 +5,7 @@
 {% include navbar.css %}
 {% endcapture %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
@@ -26,11 +26,11 @@
       </div>
       <div class="headline"><div class="txt">{{ site.headline }}</div></div>
       <div class="contact">
-        <a href="{{ site.baseurl }}{% link index.html %}"><i class="fas fa-home"></i></a>
-        <a href="{{ site.baseurl }}{% link blog.html %}"><i class="fas fa-quote-right"></i></a>
-        <a href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
+        <a href="{{ site.baseurl }}{% link index.html %}" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a>
+        <a href="{{ site.baseurl }}{% link blog.html %}" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a>
+        <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
       </div>
     </div>
     </div>
@@ -41,9 +41,9 @@
   <footer>
     <div class="footer-container">
     <div class="links">
-      <a href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
+      <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+      <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
     </div><br>
     <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;{{ "now" | date: "%Y" }}</div>
     </div>
