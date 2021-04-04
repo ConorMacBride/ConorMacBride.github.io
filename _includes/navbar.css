@@ -11,13 +11,14 @@
         line-height: 3rem;
     }
     header div.profile div.headline {display: none;}
-    header div.profile div.contact {
+    header div.profile nav {
         width: auto;
         line-height: 3rem;
         max-height: 3rem;
     }
-    header div.profile div.contact a {
+    header div.profile nav a {
         font-size: 1.6rem;
         padding: 0 0 0 0.5rem;
     }
 }
+

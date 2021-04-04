@@ -25,13 +25,15 @@
         <span class="lastname">MacBride</span>
       </div>
       <div class="headline"><div class="txt">{{ site.headline }}</div></div>
-      <div class="contact">
-        <a href="{{ site.baseurl }}{% link index.html %}" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a>
-        <a href="{{ site.baseurl }}{% link blog.html %}" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a>
-        <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-      </div>
+      <nav>
+        <ul class="contact">
+          <li><a href="{{ site.baseurl }}{% link index.html %}" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+          <li><a href="{{ site.baseurl }}{% link blog.html %}" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
     </div>
     </div>
   </header>
@@ -40,11 +42,13 @@
   </div>
   <footer>
     <div class="footer-container">
-    <div class="links">
-      <a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-      <a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-    </div><br>
+    <nav>
+      <ul class="links">
+        <li><a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
     <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;{{ "now" | date: "%Y" }}</div>
     </div>
   </footer>

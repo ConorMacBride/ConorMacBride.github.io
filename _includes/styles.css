@@ -88,14 +88,26 @@ div.profile div.headline div.txt {
     width: 100%;
 }
 
-div.profile div.contact {
+nav {
     float: right;
     width: 100%;
 }
-div.profile .contact a{
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    float: left;
+}
+div.profile nav a{
     font-size: 10vw;
     color: #333;
     padding: 0 2vw;
+}
+footer nav {
+    margin: 0 0 1rem 0;
 }
 
 div.container {
@@ -322,7 +334,7 @@ div#postnav > div a {
     body > header div.profile div.headline div.txt {
         width: 30rem;
     }
-    div.profile .contact a{
+    div.profile nav a{
         font-size: 3rem;
         padding: 0 0 0 1rem;
     }
@@ -412,7 +424,7 @@ div#postnav > div a {
     div.profile div.headline {
         color: #eee;
     }
-    div.profile .contact a {
+    div.profile nav a {
         color: #ddd;
     }
     section.entry {
