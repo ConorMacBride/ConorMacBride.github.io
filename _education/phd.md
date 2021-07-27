@@ -14,4 +14,5 @@ School of Mathematics and Physics*
 - <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="{{ site.baseurl }}/img/orcid.svg" width="18" height="18" style="width:1em;margin-right:.5em;vertical-align:middle;" alt="ORCID iD icon">https://orcid.org/0000-0002-9901-8723</a></div>
 
 {% include publications.html context="phd" %}
+{% include talks.html context="phd" %}
 

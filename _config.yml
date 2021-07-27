@@ -21,6 +21,7 @@ collections:
   - experience
   - education
   - publications
+  - talks
 
 sass:
   style: compressed
@@ -37,6 +38,13 @@ defaults:
     scope:
       path: ""
       type: publications
+    values:
+      noexpand: true
+      mobcollapse: false
+  - 
+    scope:
+      path: ""
+      type: talks
     values:
       noexpand: true
       mobcollapse: false
