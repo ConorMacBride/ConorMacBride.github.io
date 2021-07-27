@@ -1,6 +1,5 @@
 ---
-subentry: true
-parent: phd
+context: phd
 date: 2020-05-23
 journal: Zenodo (software archive)
 title: "MCALF: Multi-Component Atmospheric Line Fitting"

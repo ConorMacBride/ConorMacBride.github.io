@@ -8,12 +8,14 @@ First-class honours
 
 Deans' List — 2015/16, 2016/17, 2017/18, 2018/19
 
+<section class="sub-group">
 {% assign sorted_projects = site.education | where: "parent", "mphys" | reverse %}
 {% for item in sorted_projects %}
 
   {% include entry.html entry=item %}
 
 {% endfor %}
+</section>
 
 ## Courses
 

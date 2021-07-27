@@ -1,6 +1,5 @@
 ---
-subentry: true
-parent: phd
+context: phd
 date: 2020-09-14
 journal: Philosophical Transactions of the Royal Society A
 title: Spectropolarimetric Fluctuations in a Sunspot Chromosphere

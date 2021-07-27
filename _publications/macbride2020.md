@@ -1,6 +1,5 @@
 ---
-subentry: true
-parent: phd
+context: phd
 date: 2020-07-01
 journal: Philosophical Transactions of the Royal Society A
 title: Accurately constraining velocity information from spectral imaging observations using machine learning techniques

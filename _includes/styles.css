@@ -128,7 +128,7 @@ section#education {
     margin: 2% 2% 0 2%;
 }
 
-div.container .title {
+div.container h1.title {
     font-weight: 300;
     font-size: 2.5rem;
     text-align: center;
@@ -144,7 +144,12 @@ section.entry {
     margin-bottom: 2%;
 }
 
-section.sub-entry {
+section.sub-group {
+    display: inline-block;
+    width: 100%;
+}
+
+section.sub-group section.entry {
     background-color: #f9f9f9;
 }
 
@@ -152,34 +157,34 @@ section.entry header div.entrydetails {
     padding-left: 2%;
 }
 
-section.publication > header > div.entrydetails > div {
+section.sub-group section.entry header div.entrydetails div {
     margin: 0.3rem 0;
 }
 
-section.entry header div.organisation, section.entry section.publication header div.journaldate {
+section.entry header div.organisation, section.entry header div.date {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #222;
 }
-section.entry section.publication header div.journaldate {
+section.entry header div.date { 
     font-size: 1rem;
 }
 section.entry header div.role {
     font-size: 1.5rem;
 }
-section.entry section.publication header div.pubtitle {
+section.sub-group section.entry header div.title {
     font-size: 1rem;
 }
-section.entry header div.dates, section.entry section.publication header div.authors {
+section.entry header div.dates, section.entry header div.authors {
     font-weight: 300;
     font-size: 1.2rem;
     color: #555;
 }
-section.entry section.publication header div.authors {
+section.sub-group section.entry header div.authors {
     font-size: 1rem;
 }
-section.entry section.publication header div.fulltext {
+section.entry header div.links {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
 }
@@ -359,7 +364,7 @@ div#postnav > div a {
         flex-direction: row;
     }
 
-    div.container section .title{
+    div.container section h1.title{
         text-align: left;
     }
 
@@ -430,13 +435,13 @@ div#postnav > div a {
     section.entry {
         background-color: #111;
     }
-    section.sub-entry {
+    section.sub-group section.entry {
         background-color: #000;
     }
-    section.entry header div.organisation, section.entry section.publication header div.journaldate {
+    section.entry header div.organisation, section.entry header div.date {
         color: #ccc;
     }
-    section.entry header div.dates, section.entry section.publication header div.authors {
+    section.entry header div.dates, section.entry header div.authors {
         color: #aaa;
     }
     footer {

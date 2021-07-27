@@ -20,6 +20,7 @@ markdown: kramdown
 collections:
   - experience
   - education
+  - publications
 
 sass:
   style: compressed
@@ -29,6 +30,13 @@ defaults:
     scope:
       path: ""
       type: education
+    values:
+      noexpand: true
+      mobcollapse: false
+  - 
+    scope:
+      path: ""
+      type: publications
     values:
       noexpand: true
       mobcollapse: false

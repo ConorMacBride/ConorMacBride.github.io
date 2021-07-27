@@ -1,6 +1,5 @@
 ---
-subentry: true
-parent: phd
+context: phd
 date: 2021-05-17
 journal: Journal of Open Source Software
 title: "MCALF: Multi-Component Atmospheric Line Fitting"
