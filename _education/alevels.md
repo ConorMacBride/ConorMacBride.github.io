@@ -1,9 +1,8 @@
 ---
-date: 2008-09-01
+date: 2015-06-01
+start: 2008-09-01
 organisation: St Columb's College
 role: A-levels
-start: September 2008
-end: June 2015
 ---
 <table>
   <tr><td>Physics</td><td>A</td></tr>

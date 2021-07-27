@@ -1,9 +1,8 @@
 ---
-date: 2015-09-01
+date: 2019-06-01
+start: 2015-09-01
 organisation: University of St Andrews
 role: MPhys (Hons) Mathematics and Theoretical Physics
-start: September 2015
-end: June 2019
 ---
 First-class honours
 

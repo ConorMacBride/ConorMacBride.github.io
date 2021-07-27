@@ -1,9 +1,8 @@
 ---
-date: 2016-05-01
+date: 2019-04-01
+start: 2016-05-01
 organisation: University of St Andrews Physics Society
 role: Treasurer | Publicity Officer
-start: May 2016
-end: April 2019
 ---
 - Worked closely with other committee members to boost attendance at events. Anticipated their needs and took initiative, designing and distributing posters and other media prior to events.
 - Adapted my schedule when old projects changed and when new projects started.

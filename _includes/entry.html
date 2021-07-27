@@ -14,16 +14,11 @@
 
 {% if mobcollapse %}{% capture expand_id %}{% increment var %}{% endcapture %}{% endif %}
 
-{% if item.end == false %}
+{% assign unix_end = item.date | date: "%s" | plus: 0 %}
+{% if unix_end > 5000000000 %}
   {% assign end_date = "Present" %}
 {% else %}
-  {% assign unix_end = item.end | date: "%s" %}
-  {% assign unix_now = "now" | date: "%s" %}
-  {% if unix_end > unix_now and item.hideend %}
-    {% assign end_date = "Present" %}
-  {% else %}
-    {% assign end_date = item.end | date: "%b %Y" %}
-  {% endif %}
+  {% assign end_date = item.date | date: "%b %Y" %}
 {% endif %}
 
 {% assign start_date = item.start | date: "%b %Y" %}

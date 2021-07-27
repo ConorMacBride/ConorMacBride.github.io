@@ -1,9 +1,8 @@
 ---
-date: 2014-01-01
+date: 2015-06-01
+start: 2014-01-01
 organisation: Student at St Columb's College
 role: Peer Mentor and Prefect
-start: January 2014
-end: June 2015
 ---
 - As a peer mentor I liaised with teachers and other peer mentors when teaching a personal development programme to a first year class.
 - Created various additional worksheets which the teacher retained to integrate into the next programme.

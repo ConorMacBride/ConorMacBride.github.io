@@ -1,9 +1,8 @@
 ---
-date: 2017-06-01
+date: 2017-08-01
+start: 2017-06-01
 organisation: Humboldt University of Berlin
 role: Student Intern
-start: June 2017
-end: August 2017
 ---
 - Spent three months during summer 2017 working on a project involving using a convolutional neural network to detect, from videos, fish swimming on the surface of sulfur water.
 - Wrote a program that takes the fish detected by the neural network and connects the fish across frames in the video. It then filters out poor quality detections by setting a minimum number of frames a chain of detections has to be present in before it is considered to be a fish.

@@ -1,9 +1,8 @@
 ---
-date: 2018-01-01
+date: 9999-01-01
+start: 2018-01-01
 organisation: Initiative for Interstellar Studies
 role: Web Editor
-start: Jan 2018
-end: false
 ---
 - Keep online content up-to-date and enhance its presentation.
 - Manage the structure of the website and write new content.
