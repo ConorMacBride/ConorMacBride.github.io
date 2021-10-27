@@ -30,7 +30,12 @@ td {
     padding-right: 1em;
 }
 
-div.header-container, div.footer-container {
+div.header-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 4%;
+}
+div.footer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -41,34 +46,29 @@ div.main-container {
 
 body > header {
     float: left;
-    width: 94%;
+    width: 100%;
     background-color: #eee;
     margin: 0;
-    padding: 3%;
 }
 body > header div.picture {
-    width: 70%;
-    margin: 0 auto;
+    height: 15rem;
+    margin: 0 auto 2rem;
     padding: 0;
 }
 body > header .picture img {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     border-radius: 50%;
+    display: block;
 }
 
 div.profile {
-    width: 100%;
-    float: left;
-}
-
-div.profile {
+    height: 11rem;
     text-align: center;
 }
 
 div.profile div.name {
     font-size: 3rem;
-    padding: 2rem 0;
 }
 
 div.profile div.name span.lastname {
@@ -79,16 +79,14 @@ div.profile div.headline {
     font-size: 1.5rem;
     font-weight: 200;
     color: #444;
-    float: right;
-    width: 100%;
-    padding: 0 0 2rem 0;
 }
 div.profile div.headline div.txt {
-    float: right;
-    width: 100%;
 }
 
-nav {
+header nav {
+    padding: 2rem 0 0;
+}
+footer nav {
     float: right;
     width: 100%;
 }
@@ -324,23 +322,29 @@ div#postnav > div a {
 }
 
 @media only screen and (min-width: 704px) {
+    body > header {
+        height: 19rem;
+    }
+    div.header-container {
+        height: 15rem;
+    }
     body > header div.profile div.name {
-        font-size: 4rem;
-        padding: 0 0 1rem 0;
+        font-size: 3.3rem;
+        padding: 0;
     }
     body > header div.picture {
-        width: 30%;
         float: left;
+        margin: 0 auto;
     }
     body > header div.profile {
-        width: 70%;
         text-align: right;
+        padding: 2rem 0;
     }
-    body > header div.profile div.headline div.txt {
-        width: 30rem;
+    div.profile div.headline {
+        font-size: 1.7rem;
     }
     div.profile nav a{
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 0 0 0 1rem;
     }
     div.pagecontainer { padding: 2rem 4rem; }
@@ -351,15 +355,6 @@ div#postnav > div a {
 }
 
 @media only screen and (min-width: 961px) {
-    body > header div.profile div.name {
-        padding: 0 0 2rem 0;
-    }
-    body > header div.profile div.headline {
-        font-size: 1.8rem;
-    }
-    body > header div.profile div.headline div.txt {
-        width: 35rem;
-    }
     div.container {
         flex-direction: row;
     }
@@ -404,9 +399,6 @@ div#postnav > div a {
 }
 
 @media only screen and (min-width: 1056px) {
-    body > header div.profile div.name {
-        font-size: 6rem;
-    }
     div.pagecontainer { padding: 2rem 10rem; }
 }
 
