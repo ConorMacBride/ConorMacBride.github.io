@@ -391,6 +391,9 @@ div#postnav > div a {
     section.entry header label.toggle-expand {
         display: none;
     }
+    section.sub-group section.entry .toggle-expand {
+        padding: 0;
+    }
 }
 
 @media only screen and (min-width: 961px) {
