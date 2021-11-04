@@ -154,6 +154,9 @@ section#experience section.entry:nth-of-type(1) {
 section.entry.no-content {
     padding: 2% !important;
 }
+
+section.entry details summary {
+    padding-left: 1rem;
 }
 
 section.sub-group {
