@@ -28,14 +28,16 @@
   {% capture datestring %}{{ start_date }} &mdash; {{ end_date }}{% endcapture %}
 {% endif %}
 
-<section class="entry{% if item.subentry %} sub-entry{% endif %}">
+<section class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}">
   <header>
+    {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
     <div class="entrydetails">
       <div class="organisation">{{ item.organisation | upcase }}</div>
       <div class="role">{{ item.role }}</div>
       <div class="dates">{{ datestring }}</div>
     </div>
   </header>
+  {% if item.content.size > 1 %}
   {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" aria-hidden="true" />{% endif %}
   <div class="description">
     {{ item.content | markdownify }}
@@ -43,6 +45,7 @@
   </div>
   {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand{% if noexpand %} noexpand{% endif %}" aria-hidden="true"></label>{% endif %}
   {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ site.baseurl }}{{ item.link }}" aria-label="read more"></a>{% endif %}
+  {% endif %}
 </section>
 {% if mobcollapse %}
 <style type="text/css">

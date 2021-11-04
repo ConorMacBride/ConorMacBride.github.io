@@ -140,6 +140,20 @@ section.entry {
     padding: 2%;
     background-color: #eee;
     margin-bottom: 2%;
+    position: relative;
+}
+
+section#experience section.entry {
+    padding: 2% 2% 3rem;
+}
+
+section#experience section.entry:nth-of-type(1) {
+    padding: 2%;
+}
+
+section.entry.no-content {
+    padding: 2% !important;
+}
 }
 
 section.sub-group {
@@ -149,6 +163,14 @@ section.sub-group {
 
 section.sub-group section.entry {
     background-color: #f9f9f9;
+}
+
+section#experience section.entry header label.toggle-expand {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 section.entry header div.entrydetails {
@@ -230,47 +252,55 @@ footer a {
 /* BEGIN Expanding Mechanism */
 
 .expand-state {
-  display:none;  
+    display:none;
 }
 
 .expand-state + .description {
-  max-height: 0rem;
-  overflow: hidden;
-  transition: all .3s ease;
+    max-height: 0rem;
+    overflow: hidden;
+    transition: all .3s ease;
 }
 
 .toggle-expand {
-  display: block;
-  text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
-  font-size: 1rem;
+    display: block;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    padding: 1rem 0;
 }
 
-.toggle-expand:before {
-  content: "Read More";
-  color: #000;
+section#experience .toggle-expand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section > .toggle-expand:before {
+    content: "Read More";
+    color: #000;
 }
 
 @keyframes fadein { from { opacity:0; } to { opacity:1; } }
 
 div.fade-out {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  animation: fadein ease-in 1;
-  animation-duration: .3s;
-  background: -webkit-linear-gradient(
-    rgba(238, 238, 238, 0) 0%,
-    rgba(238, 238, 238, 1) 100%
-  );
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    animation: fadein ease-in 1;
+    animation-duration: .3s;
+    background: -webkit-linear-gradient(
+        rgba(238, 238, 238, 0) 0%,
+        rgba(238, 238, 238, 1) 100%
+    );
 }
 
 /* expand[number] moved to HTML */
@@ -351,6 +381,12 @@ div#postnav > div a {
     footer a {
         margin: 0 2rem;
         font-size: 3rem;
+    }
+    section.entry.hide-read-more {
+        padding: 2% !important;
+    }
+    section.entry header label.toggle-expand {
+        display: none;
     }
 }
 
@@ -442,7 +478,7 @@ div#postnav > div a {
     footer a {
         color: #ddd;
     }
-    .toggle-expand:before {
+    section > .toggle-expand:before {
         content: "Read More";
         color: #ddd;
     }
