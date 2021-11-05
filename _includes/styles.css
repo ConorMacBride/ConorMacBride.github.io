@@ -63,7 +63,7 @@ body > header .picture img {
 }
 
 div.profile {
-    height: 11rem;
+    height: auto;
     text-align: center;
 }
 
@@ -162,10 +162,20 @@ section.entry details summary {
 section.sub-group {
     display: inline-block;
     width: 100%;
+    position: relative;
 }
 
 section.sub-group section.entry {
     background-color: #f9f9f9;
+}
+
+section.sub-group.publications .filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.4rem 0 0;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 section#experience section.entry header label.toggle-expand {
@@ -196,7 +206,10 @@ section.entry header div.date {
 section.entry header div.role {
     font-size: 1.5rem;
 }
-section.sub-group section.entry header div.title {
+section.publications header, section.talks header {
+    line-height: 1.4;
+}
+section.publications header div.title, section.talks header div.title {
     font-size: 1rem;
 }
 section.entry header div.dates, section.entry header div.authors {
@@ -204,7 +217,7 @@ section.entry header div.dates, section.entry header div.authors {
     font-size: 1.2rem;
     color: #555;
 }
-section.sub-group section.entry header div.authors {
+section.publications header div.authors {
     font-size: 1rem;
 }
 section.entry header div.links {

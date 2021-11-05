@@ -1,8 +1,10 @@
 @media only screen and (max-width: 640px) {
+    div.header-container {
+        margin: 0.5rem 0 3.8rem;
+    }
     header div.picture {display: none;}
     header div.profile {
         width: 100%;
-        float: left;
     }
     header div.profile div.name {
         font-size: 1.5rem;
@@ -15,6 +17,8 @@
         width: auto;
         line-height: 3rem;
         max-height: 3rem;
+        padding: 0;
+        float: right;
     }
     header div.profile nav a {
         font-size: 1.6rem;
