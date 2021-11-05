@@ -334,7 +334,10 @@ div.pagecontainer {
 
 /* END page.html */
 
-div.pagecontainer h1, div.pagecontainer h2, div.pagecontainer h3, div.pagecontainer h4, div.pagecontainer h5, div.pagecontainer h6, div.pagecontainer {
+div.pagecontainer {
+    padding: 0 1rem;
+}
+div.pagecontainer h1, div.pagecontainer h2, div.pagecontainer h3, div.pagecontainer h4, div.pagecontainer h5, div.pagecontainer h6 {
     padding-left: 1rem;
 }
 
