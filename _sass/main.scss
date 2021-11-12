@@ -410,6 +410,10 @@ div#postnav > div a {
     section.sub-group section.entry .toggle-expand {
         padding: 0;
     }
+    /* BEGIN Expanding Mechanism */
+    .expand-state + .description { max-height: 10rem; }
+    .toggle-expand.noexpand { display: none; }
+    /* END Expanding Mechanism */
 }
 
 @media only screen and (min-width: 961px) {
@@ -436,10 +440,6 @@ div#postnav > div a {
         width: 96%;
     }
     div.pagecontainer { padding: 2rem 6rem; }
-    /* BEGIN Expanding Mechanism */
-    .expand-state + .description { max-height: 10rem; }
-    .toggle-expand.noexpand { display: none; }
-    /* END Expanding Mechanism */
     figure.floatr {
         float: right;
         width: 400px;
