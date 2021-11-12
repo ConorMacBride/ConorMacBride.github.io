@@ -2,6 +2,9 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.bundle/
+.idea/
+vendor/
 
 .DS_Store
 ._*
