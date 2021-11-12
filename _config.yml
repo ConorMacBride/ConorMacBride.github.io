@@ -1,22 +1,35 @@
 # Site settings
 title: Conor MacBride
+tagline: Astrophysics PhD Student
 email: conor@macbride.me
 profile_picture: conor.jpeg
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm Conor MacBride, a PhD student at Queen's University Belfast.
+  My research is focused on energy dissipation in the atmosphere of
+  the Sun. This involves designing numerical simulations, and
+  processing and analysing large data sets to extract novel insights.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com
-headline: Astrophysics PhD Student
 linkedin_username: conormacbride
 github_username: ConorMacBride
+social:
+  name: Conor MacBride
+  links:
+    - https://www.linkedin.com/in/conormacbride/
+    - https://github.com/ConorMacBride
+twitter:
+  profile: conormacbride
+  card: summary_large_image
+logo: /assets/images/conor.jpeg
+locale: en_GB
 images: /assets/images
 
 # Build settings
 markdown: kramdown
 sass:
   style: compressed
+plugins:
+  - jekyll-seo-tag
 
 collections:
   - experience
@@ -25,31 +38,38 @@ collections:
   - talks
 
 defaults:
-  - 
+  -
     scope:
       path: ""
       type: education
     values:
       noexpand: true
       mobcollapse: false
-  - 
+  -
     scope:
       path: ""
       type: publications
     values:
       noexpand: true
       mobcollapse: false
-  - 
+  -
     scope:
       path: ""
       type: talks
     values:
       noexpand: true
       mobcollapse: false
-  - 
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      author: Conor MacBride
+  -
     scope:
       path: ""
     values:
       subentry: false
       link: false
       mobcollapse: true
+      image: /assets/images/default-card.png

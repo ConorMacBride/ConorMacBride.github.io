@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="main" class="pagecontainer">
-  <p><strong>{{ page.date | date_to_string }} &mdash; {% if page.author %}{{ page.author }}{% else %}Conor MacBride{% endif %}</strong></p>
+  <p><strong>{{ page.date | date_to_string }} &mdash; {{ page.author }}</strong></p>
   <h1>{{ page.title }}</h1>
   {{ page.content | markdownify }}
   <div id="postnav">

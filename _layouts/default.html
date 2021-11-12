@@ -5,8 +5,10 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   {% if page.url != "/" %}<link rel="stylesheet" href="/assets/css/navbar.css">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  {% seo %}
 </head>
 <body>
   <header>
@@ -17,7 +19,7 @@
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
       </div>
-      <div class="headline"><div class="txt">{{ site.headline }}</div></div>
+      <div class="headline"><div class="txt">{{ site.tagline }}</div></div>
       <nav>
         <ul class="contact">
           <li><a href="{% link index.html %}" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
