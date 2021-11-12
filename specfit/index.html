@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Accurately constraining velocity information from spectral imaging observations using machine learning techniques | Conor MacBride</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Accurately constraining velocity information from spectral imaging observations using machine learning techniques" />
+<meta name="author" content="Conor MacBride" />
+<meta property="og:locale" content="en_GB" />
+<meta name="description" content="This poster was presented at a Royal Society Theo Murphy international scientific meeting on High resolution wave dynamics in the lower solar atmosphere at Chicheley Hall, Buckinghamshire, UK on 10th February 2020." />
+<meta property="og:description" content="This poster was presented at a Royal Society Theo Murphy international scientific meeting on High resolution wave dynamics in the lower solar atmosphere at Chicheley Hall, Buckinghamshire, UK on 10th February 2020." />
+<link rel="canonical" href="https://macbride.me/specfit/" />
+<meta property="og:url" content="https://macbride.me/specfit/" />
+<meta property="og:site_name" content="Conor MacBride" />
+<meta property="og:image" content="https://macbride.me/assets/images/default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://macbride.me/assets/images/default-card.png" />
+<meta property="twitter:title" content="Accurately constraining velocity information from spectral imaging observations using machine learning techniques" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Conor MacBride" />
+<script type="application/ld+json">
+{"dateModified":"2020-02-10T00:00:00+00:00","datePublished":"2020-02-10T00:00:00+00:00","url":"https://macbride.me/specfit/","mainEntityOfPage":{"@type":"WebPage","@id":"https://macbride.me/specfit/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"},"name":"Conor MacBride"},"author":{"@type":"Person","name":"Conor MacBride"},"description":"This poster was presented at a Royal Society Theo Murphy international scientific meeting on High resolution wave dynamics in the lower solar atmosphere at Chicheley Hall, Buckinghamshire, UK on 10th February 2020.","image":"https://macbride.me/assets/images/default-card.png","@type":"BlogPosting","headline":"Accurately constraining velocity information from spectral imaging observations using machine learning techniques","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+    <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride" /></div>
+    <div class="profile">
+      <div class="name">
+        <span class="firstname">Conor</span>
+        <span class="lastname">MacBride</span>
+      </div>
+      <div class="headline"><div class="txt">Astrophysics PhD Student</div></div>
+      <nav>
+        <ul class="contact">
+          <li><a href="/" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+          <li><a href="/blog/" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <div id="main" class="pagecontainer">
+  <p><strong>10 Feb 2020 &mdash; Conor MacBride</strong></p>
+  <h1>Accurately constraining velocity information from spectral imaging observations using machine learning techniques</h1>
+  <figure class="floatr">
+<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/390008936?loop=1&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</figure>
+<p><strong>Conor D. MacBride<sup>1</sup> and David B. Jess<sup>1</sup></strong><br />
+<sup>1</sup>Astrophysics Research Centre, School of Mathematics and Physics, Queen’s University Belfast, Belfast, UK</p>
+
+<p><a href="/poster_feb20.pdf" class="button">Download Poster</a></p>
+
+<p><strong>This poster was presented at a Royal Society Theo Murphy international scientific meeting on <a href="https://royalsociety.org/science-events-and-lectures/2020/02/solar-wave-dynamics/"><em>High resolution wave dynamics in the lower solar atmosphere</em></a> at Chicheley Hall, Buckinghamshire, UK on 10<sup>th</sup> February 2020.</strong></p>
+
+<h2 id="abstract">Abstract</h2>
+<p>Determining accurate plasma velocities from spectroscopic measurements is a challenging endeavour, especially when considering weak chromospheric absorption lines are often rapidly evolving and contain multiple plasma profiles in their composition.
+Here, Mr MacBride presents a novel method that employs machine learning to identify the underlying components present within an observed spectral line, before constraining the constituent profiles through Gaussian and/or Voigt fits, alongside minimisation tests to validate the reliability of the results.
+With this method, automatic adjustments can be made to the models fitted such that active and quiescent components present in each particular spectrum can be identified accurately.
+Lastly, Mr MacBride utilises a Ca II 8542 Å spectral imaging dataset of a sunspot as a proof-of-concept study to show the potential of his team’s method for reliably extracting two-component atmospheric profiles that are commonly present in dynamic sunspot umbral chromospheres.</p>
+
+<figure class="floatr">
+<img src="/img/velocity_map.svg" alt="Quiescent umbral Doppler velocity map" />
+<figcaption>
+<strong>Figure 1:</strong> Plot showing the velocities found for the Ca II 8542 Å line spectra inside a sunspot's umbra at a particular time. 
+Their classifications are shown in Figure 1.
+</figcaption>
+</figure>
+
+<h2 id="introduction">Introduction</h2>
+<p>Having accurate velocity information for plasma in the solar atmosphere is important for studying the properties of waves present within.
+Using spectroscopic measurements of the Sun, velocities can be found by calculating the Doppler shift of a particular absorption line core[1].</p>
+
+<p>Different spectral lines are formed across different atmospheric heights, therefore, by choosing a particular line, waves at a particular atmospheric height can be studied[1,2].
+Some spectral lines, including Ca II 8542 Å, include an active emission component as well as the quiescent absorption component.
+Separate absorption and emission profiles must be fitted to each spectrum.
+The fitted profiles are then used to find the Doppler velocities of the quiescent/active atmospheric components.</p>
+
+<p>Preliminary profile fitting methods struggled to accurately fit a profile across every region of a sunspot’s umbra.
+This was due to the spectra having a variety of different profiles due to the active component that was often present among the quiescent component.</p>
+
+<p>Even if emission was not present in a particular spectrum, the fit would still “improve” if the algorithm fitted a significant non-zero emission profile as it could filter out some noise in the absorption profile.</p>
+
+<h3 id="machine-learning">Machine Learning</h3>
+<p>Using machine learning, spectra can be accurately classified into discrete categories based on the ratio of their active component to their quiescent component.
+This allows the fitting method to be tailored to the physics that is present in each spectrum.</p>
+
+<figure>
+<img src="/img/classes.svg" alt="Neural network classifications" />
+<figcaption>
+<strong>Figure 2:</strong> Plots of stacked Ca II 8542 Å line spectra grouped by their neural network classification.
+<em>Bottom right:</em> Map showing how the neural network classified the Ca II 8542 Å line spectra present within a sunspot's umbra at a particular time.
+</figcaption>
+</figure>
+
+<h2 id="methods">Methods</h2>
+<p><em>For a description of the method used please download the poster <a href="/poster_feb20.pdf">here</a>.</em></p>
+
+<hr />
+
+<figure class="grid2">
+<img src="/img/location.svg" alt="Location map" />
+<img src="/img/distance_time.svg" alt="Distance time plot" />
+<figcaption>
+<strong>Figure 3:</strong> A time-distance diagram of the quiescent umbral Doppler velocities (second panel), extracted from a one-dimensional slice taken through the middle of the sunspot umbra (solid red line; first panel).
+The solid yellow line in the left hand panel represents the umbra-penumbra boundary used to isolate the umbral regions.
+</figcaption>
+</figure>
+
+<figure class="grid2">
+<img src="/img/profile_abs_emi.svg" alt="Combined profile" />
+<img src="/img/abs_emi.svg" alt="Absorption and emission profile" />
+<figcaption>
+<strong>Figure 4:</strong> Example fit of a spectrum of class 4.
+Sigma profile represented by shaded areas.
+<em>First:</em> Combined profile.
+<em>Second:</em> Absorption profile and emission profile plotted separately.
+</figcaption>
+</figure>
+
+<figure class="grid2">
+<img src="/img/profile_abs.svg" alt="Absorption profile" />
+<figcaption>
+<strong>Figure 5:</strong> Example fit of a spectrum of class 0.
+Sigma profile represented by shaded areas.
+</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="references">References</h2>
+<p><strong>[1]</strong> David Jess et al. 2019, <em>Nat. Astron.</em><br />
+<strong>[2]</strong> Krishna Prasad et al. 2017, <em>ApJ</em>, <strong>847</strong>, 5<br />
+<strong>[3]</strong> Mofreh Zaghloul 2007, <em>Mon. Not. R. Astron. Soc.</em>, <strong>375</strong>, 1-6</p>
+
+
+  <div id="postnav">
+    <div id="previous">&nbsp;
+      
+    </div>
+    <div id="index">
+        <a href="/blog/">Index</a>
+    </div>
+    <div id="next">&nbsp;
+      
+        <a href="/mcalf/">Next &rarr;</a>
+      
+    </div>
+  </div>
+</div>
+
+  </div>
+  <footer>
+    <div class="footer-container">
+    <nav>
+      <ul class="links">
+        <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+    <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2021</div>
+    </div>
+  </footer>
+</html>
