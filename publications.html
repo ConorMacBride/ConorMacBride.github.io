@@ -5,18 +5,17 @@ permalink: /publications/
 ---
 <div class="pagecontainer">
 <h1 id="publications">Publications</h1>
-
 <section class="publications">
-  {% assign sorted_publications = site.publications | sort: 'date' | reverse %}
-  {% for item in sorted_publications %}
-    {% assign github = '' %}
-    {% assign publisher = '' %}
-    {% assign ads = '' %}
-    {% assign arxiv = '' %}
-    {% if item.github %}{% capture github %}<a href="https://github.com/{{ item.github }}">GitHub</a> | {% endcapture %}{% endif %}
-    {% if item.publisher %}{% capture publisher %}<a href="{{ item.publisher }}">Publisher</a> | {% endcapture %}{% endif %}
-    {% if item.ads %}{% capture ads %}<a href="{{ item.ads }}">ADS</a> | {% endcapture %}{% endif %}
-    {% if item.arxiv %}{% capture arxiv %}<a href="{{ item.arxiv }}">arXiv</a> | {% endcapture %}{% endif %}
+  {%- assign sorted_publications = site.publications | sort: 'date' | reverse -%}
+  {% for item in sorted_publications -%}
+    {% assign github = '' -%}
+    {% assign publisher = '' -%}
+    {% assign ads = '' -%}
+    {% assign arxiv = '' -%}
+    {% if item.github %}{% capture github %}<a href="https://github.com/{{ item.github }}">GitHub</a> | {% endcapture %}{% endif -%}
+    {% if item.publisher %}{% capture publisher %}<a href="{{ item.publisher }}">Publisher</a> | {% endcapture %}{% endif -%}
+    {% if item.ads %}{% capture ads %}<a href="{{ item.ads }}">ADS</a> | {% endcapture %}{% endif -%}
+    {% if item.arxiv %}{% capture arxiv %}<a href="{{ item.arxiv }}">arXiv</a> | {% endcapture %}{% endif -%}
     {% capture links %}{{ github }}{{ publisher }}{{ ads }}{{ arxiv }}{% endcapture %}
     <section class="entry">
       <header>
@@ -27,13 +26,13 @@ permalink: /publications/
           <div class="links">{{ links | split: "" | reverse | join: "" | remove_first: " | " | split: "" | reverse | join: "" }}</div>
         </div>
       </header>
-      {% if item.content.size > 1 %}
+      {% if item.content.size > 1 -%}
         <div class="description">{{ item.content | markdownify }}</div>
-      {% endif %}
-      {% if item.link %}
+      {% endif -%}
+      {%- if item.link -%}
         <a class="toggle-expand link" href="{{ item.link }}" aria-label="read more"></a>
-      {% endif %}
+      {% endif -%}
     </section>
-  {% endfor %}
+  {% endfor -%}
 </section>
 </div>

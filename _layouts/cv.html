@@ -11,29 +11,29 @@ layout: default
   </section>
   <h1 class="title">Experience</h1>
 
-  {% capture expand_id %}{% increment var %}{% endcapture %}
+  {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
 
-  {% assign sorted_experiences = site.experience | reverse %}
-  {% for item in sorted_experiences %}
+  {%- assign sorted_experiences = site.experience | reverse -%}
+  {%- for item in sorted_experiences -%}
 
-    {% unless item.subentry %}
-      {% include entry.html entry=item %}
-    {% endunless %}
+    {%- unless item.subentry -%}
+      {% include entry.html entry=item -%}
+    {%- endunless -%}
  
-  {% endfor %}
+  {%- endfor -%}
   
 </section>
 <section id="education">
   <h1 class="title">Education</h1>
 
-  {% assign sorted_education = site.education | reverse %}
-  {% for item in sorted_education %}
+  {% assign sorted_education = site.education | reverse -%}
+  {%- for item in sorted_education -%}
 
-    {% unless item.subentry %}
-      {% include entry.html entry=item %}
-    {% endunless %}
+    {%- unless item.subentry -%}
+      {% include entry.html entry=item -%}
+    {%- endunless -%}
 
-  {% endfor %}
+  {%- endfor -%}
 
 </section>
 </div>
