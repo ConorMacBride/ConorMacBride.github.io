@@ -10,4 +10,4 @@ publisher: https://doi.org/10.5281/zenodo.3924527
 github: ConorMacBride/mcalf
 ---
 [![latest version deposited](https://img.shields.io/github/v/release/ConorMacBride/mcalf?color=white&label=latest%20version&sort=semver)](https://doi.org/10.5281/zenodo.3924527)
-[![documentation](/img/docs-shield.svg)](https://mcalf.macbride.me)
+[![documentation](/assets/images/docs-shield.svg)](https://mcalf.macbride.me)

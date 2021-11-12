@@ -1,16 +1,9 @@
-{% capture styles %}
-{% include styles.css %}
-{% endcapture %}
-{% capture navbar %}
-{% include navbar.css %}
-{% endcapture %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <style>{{ styles | scssify }}</style>
-  {% if page.url != "/" %}<style>{{ navbar | scssify }}</style>{% endif %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {% if page.url != "/" %}<link rel="stylesheet" href="/assets/css/navbar.css">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&display=swap" rel="stylesheet">
@@ -18,7 +11,7 @@
 <body>
   <header>
     <div class="header-container">
-    <div class="picture"><img src="{{ site.baseurl }}/img/{{ site.profile_picture }}" alt="Conor MacBride" /></div>
+    <div class="picture"><img src="{{ site.images }}/{{ site.profile_picture }}" alt="Conor MacBride" /></div>
     <div class="profile">
       <div class="name">
         <span class="firstname">Conor</span>

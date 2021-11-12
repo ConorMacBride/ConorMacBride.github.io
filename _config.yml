@@ -11,18 +11,18 @@ url: "https://macbride.me" # the base hostname & protocol for your site, e.g. ht
 headline: Astrophysics PhD Student
 linkedin_username: conormacbride
 github_username: ConorMacBride
+images: /assets/images
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 
 collections:
   - experience
   - education
   - publications
   - talks
-
-sass:
-  style: compressed
 
 defaults:
   - 
