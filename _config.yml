@@ -9,7 +9,9 @@ description: >-
   the Sun. This involves designing numerical simulations, and
   processing and analysing large data sets to extract novel insights.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com # LIVE
+#host: 0.0.0.0 # DEV
+#port: 80 # DEV
 linkedin_username: conormacbride
 github_username: ConorMacBride
 social:
