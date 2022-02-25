@@ -11,7 +11,7 @@ noexpand: true
 - Reviewing pull requests to maintain a high-quality, well-tested codebase.
 
 ### Contributions to the ecosystem
-- Maintain the OpenAstronomy [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates), which are relied upon by other projects, including [AstroPy](https://github.com/astropy/astropy).
+- Maintain the OpenAstronomy [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates), [GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) and [`build-python-dist` action](https://github.com/OpenAstronomy/build-python-dist), which are relied upon by other projects, including [AstroPy](https://github.com/astropy/astropy).
 - Significant improvements to Matplotlib's [`pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin, including,
     - a new test suite, and infrastructure, to validate the internal state of the plugin across a wide range of configurations, and
     - [HTML summary reports](https://macbride.me/pytest-mpl/) with interactive filtering of the image comparison test results. These reports are used by popular Python packages including [NetworkX](https://github.com/networkx/networkx) and [Cartopy](https://github.com/SciTools/cartopy).
