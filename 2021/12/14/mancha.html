@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Ambipolar Diffusion in the Lower Solar Atmosphere: MHD Simulations of a Sunspot | Conor MacBride</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Ambipolar Diffusion in the Lower Solar Atmosphere: MHD Simulations of a Sunspot" />
+<meta name="author" content="Conor MacBride" />
+<meta property="og:locale" content="en_GB" />
+<meta name="description" content="To investigate the role of ambipolar diffusion in energy transfer and dissipation in the chromosphere, we analyze a 2D numerical model of magnetoacoustic waves propagating through the chromosphere above the umbra of a sunspot. Using energy spectra, we analyze the chromospheric dynamics of our simulation and gather insights into the role of ambipolar diffusion, and partial ionization, in energy transfer and dissipation in the lower solar atmosphere." />
+<meta property="og:description" content="To investigate the role of ambipolar diffusion in energy transfer and dissipation in the chromosphere, we analyze a 2D numerical model of magnetoacoustic waves propagating through the chromosphere above the umbra of a sunspot. Using energy spectra, we analyze the chromospheric dynamics of our simulation and gather insights into the role of ambipolar diffusion, and partial ionization, in energy transfer and dissipation in the lower solar atmosphere." />
+<link rel="canonical" href="https://macbride.me/2021/12/14/mancha.html" />
+<meta property="og:url" content="https://macbride.me/2021/12/14/mancha.html" />
+<meta property="og:site_name" content="Conor MacBride" />
+<meta property="og:image" content="https://macbride.me/assets/images/default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://macbride.me/assets/images/default-card.png" />
+<meta property="twitter:title" content="Ambipolar Diffusion in the Lower Solar Atmosphere: MHD Simulations of a Sunspot" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Conor MacBride" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Conor MacBride"},"dateModified":"2021-12-14T00:00:00+00:00","datePublished":"2021-12-14T00:00:00+00:00","description":"To investigate the role of ambipolar diffusion in energy transfer and dissipation in the chromosphere, we analyze a 2D numerical model of magnetoacoustic waves propagating through the chromosphere above the umbra of a sunspot. Using energy spectra, we analyze the chromospheric dynamics of our simulation and gather insights into the role of ambipolar diffusion, and partial ionization, in energy transfer and dissipation in the lower solar atmosphere.","headline":"Ambipolar Diffusion in the Lower Solar Atmosphere: MHD Simulations of a Sunspot","image":"https://macbride.me/assets/images/default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://macbride.me/2021/12/14/mancha.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"},"name":"Conor MacBride"},"url":"https://macbride.me/2021/12/14/mancha.html"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></head>
+<body>
+  <header>
+    <div class="header-container">
+    <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride" /></div>
+    <div class="profile">
+      <div class="name">
+        <span class="firstname">Conor</span>
+        <span class="lastname">MacBride</span>
+      </div>
+      <div class="headline"><div class="txt">Astrophysics PhD Student</div></div>
+      <nav>
+        <ul class="contact">
+          <li><a href="/" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+          <li><a href="/blog/" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <div id="main" class="pagecontainer">
+  <p><strong>14 Dec 2021 &mdash; Conor MacBride</strong></p>
+  <h1>Ambipolar Diffusion in the Lower Solar Atmosphere: MHD Simulations of a Sunspot</h1>
+  <p><strong>Conor D. MacBride<sup>1</sup>, David B. Jess<sup>1,2</sup> and Elena Khomenko<sup>3,4</sup></strong><br /></p>
+<p style="font-size:0.8rem"><sup>1</sup>Astrophysics Research Centre, School of Mathematics and Physics, Queen’s University Belfast, Belfast BT7 1NN, UK;
+<sup>2</sup>Department of Physics and Astronomy, California State University Northridge, Northridge, CA 91330, USA;
+<sup>3</sup>Instituto de Astrofísica de Canarias, 38205 La Laguna, Tenerife, Spain;
+<sup>4</sup>Departamento de Astrofísica, Universidad de La Laguna, 38205 La Laguna, Tenerife, Spain</p>
+
+<p><strong>This poster was presented at the AGU Fall Meeting 2021.</strong></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Behind MHD is the assumption that there is a low degree of plasma ionization. However, in the upper photosphere and chromosphere a reduced temperature often results in the partial ionization of the plasma. The interaction between the decoupled neutral and ionized components of such a partially ionized plasma produce ambipolar diffusion. To investigate the role of ambipolar diffusion in energy transfer and dissipation in the chromosphere, we analyze a 2D numerical model of magnetoacoustic waves propagating through the chromosphere above the umbra of a sunspot. We solve the ideal MHD equations for perturbations to the magnetostatic equilibrium using the Mancha code. The effect of ambipolar diffusion is isolated by varying the inclusion of additional terms in the MHD equations which account for this process. Data-driven perturbations are introduced in the photosphere using observational SDO/HMI umbral velocity time series. Using energy spectra, we analyze the chromospheric dynamics of our simulation and gather insights into the role of ambipolar diffusion, and partial ionization, in energy transfer and dissipation in the lower solar atmosphere.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The low degree of plasma ionization in the solar atmosphere can affect the plasma properties significantly. The abundance of neutral particles can result in additional physical processes, such as Hall diffusion, the Biermann battery effect and ambipolar diffusion.</p>
+
+<p>When the neutral plasma component interacts with the ionized plasma component, which is manipulated by the magnetic field, the friction between the particles leads to the process of ambipolar diffusion. This study focuses on ambipolar diffusion occuring in the atmosphere above a sunspot’s umbra.</p>
+
+<p>We use numerical MHD simulations to investigate the effect ambipolar diffusion has within the lower solar atmosphere above a sunspot.</p>
+
+<h2 id="mancha3d-code">Mancha3D Code</h2>
+
+<p>We use the Mancha3D code <em>(Khomenko &amp; Collados (2006); Felipe et al. (2010))</em> to solve the 3D nonlinear ideal magnetohydrodynamic (MHD) equations for perturbations to the magnetostatic equilibrium.</p>
+
+<p>Mancha3D includes terms modeling ambipolar diffusion in the MHD equations, and optionally allows these terms to be excluded. The parameter controlling ambipolar diffusion is,</p>
+
+<p>\(\eta_A = \dfrac{\xi_n^2 \vert\mathbf{B}\vert^2}{\alpha_n}\),</p>
+
+<p>where \(\xi_n\) is the fraction of neutrals, \(\mathbf{B}\) is the magnetic field and \(\alpha_n\) is the neutral collisional parameter. Within the MHD equations, this term acts on the perpendicular component of the plasma current \(\mathbf{J}_\perp\).</p>
+
+<h2 id="key-results">Key Results</h2>
+
+<p>Two simulations are computed: one with ambipolar diffusion terms in the MHD equations, and one without. We compare the two simulations to see the effect of ambipolar diffusion and investigate the role it plays in the lower solar atmosphere.</p>
+
+<figure class="floatr">
+<img src="/assets/images/aguposter/vz_ad.png" alt="velocity with ambipolar diffusion" />
+</figure>
+
+<figure class="floatr">
+<img src="/assets/images/aguposter/vz_nad.png" alt="velocity without ambipolar diffusion" />
+</figure>
+
+<p>The simulations are run for a total of 3 hours each, with snapshots saved every 10 seconds. The plots above show the z component of velocity along the axis of the sunspot throughout time for both simulations.</p>
+
+<p>Energy spectral densities are calculated for each simulation and at each atmospheric height along the axis of the sunspot. We measure the gradient (power law index) by fitting a power law to the spectral densities above the enhancement frequency of 6.1 mHz, as shown in the example plot below for the ambipolar diffusion simulation at photospheric height,</p>
+
+<figure class="floatr">
+<img src="/assets/images/aguposter/esd_0000km_ad.png" alt="energy spectral density at the photosphere" />
+</figure>
+
+<p>We focus our analysis at the atmospheric heights from 500 km to 1000 km as these heights are associated with wave activity pushing up from the mid-photosphere to the chromosphere <em>(Prasad et al. (2017))</em>. The power law indicies from the two simulations are plotted throughout this height range in the following plot,</p>
+
+<figure class="floatr">
+<img src="/assets/images/aguposter/grad_500.png" alt="power law indicies throughout height" />
+</figure>
+
+<p>A decrease in power law index (steeper energy spectral density gradient) is observed in the ambipolar diffusion simulation between the heights of 680 km and 920 km.</p>
+
+<h2 id="model-sunspot-atmosphere-and-simulation-configuration">Model Sunspot Atmosphere and Simulation Configuration</h2>
+
+<p>The sunspot model atmosphere is created according to Khomenko &amp; Collados (2008). It is transformed to a 2D model in Cartesian coordinates centered along the axis of the sunspot, and adjusted to be convection-stable.</p>
+
+<p>It is 13.2 Mm in the horizontal direction and 2.8 Mm in the vertical direction, with 1 Mm above the photosphere. Grid points are spaced 50 km along the horizontal and 20 km along the vertical. The time step is 0.008 seconds.</p>
+
+<p>Periodic boundaries are used on the left and right, and perfectly matched layers (PMLs) are used on the upper and lower.</p>
+
+<p>Perturbations are applied along the z-axis at photospheric height at the center of the sunspot. To use a realistic driver signature, amplitudes are extracted from Doppler velocity observations from HMI/SDO.</p>
+
+<figure class="floatr">
+<img src="/assets/images/aguposter/driver.png" alt="inputted driving force throughout time" />
+</figure>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+  <li>Evaluated two MHD simulations of the atmosphere above a sunspot — with and without ambipolar diffusion.</li>
+  <li>Analyzed and compared the energy spectral density of both simulations between the heights of 500 km – 1000 km.</li>
+  <li>Significant difference between the power law indices of both simulations between the atmospheric heights of 680 km – 920 km.</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Felipe, T., Khomenko, E., &amp; Collados, M. 2010, The Astrophysical Journal, 719, 357, doi: 10.1088/0004-637X/719/1/357</li>
+  <li>Khomenko, E., &amp; Collados, M. 2006, The Astrophysical Journal, 653, 739, doi: 10.1086/507760</li>
+  <li>Khomenko, E., &amp; Collados, M. 2008, The Astrophysical Journal, 689, 1379, doi: 10.1086/592681</li>
+  <li>Prasad, S. K., Jess, D. B., Doorsselaere, T. V., et al. 2017, The Astrophysical Journal, 847, 5, doi: 10.3847/1538-4357/aa86b5</li>
+</ul>
+
+  <div id="postnav">
+    <div id="previous">&nbsp;
+      
+        <a href="/mcalf/">&larr; Previous</a>
+      
+    </div>
+    <div id="index">
+        <a href="/blog/">Index</a>
+    </div>
+    <div id="next">&nbsp;
+      
+    </div>
+  </div>
+</div>
+
+  </div>
+  <footer>
+    <div class="footer-container">
+    <nav>
+      <ul class="links">
+        <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+    <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2022</div>
+    </div>
+  </footer>
+</body>
+</html>
