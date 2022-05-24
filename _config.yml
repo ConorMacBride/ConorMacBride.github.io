@@ -71,3 +71,4 @@ defaults:
       link: false
       mobcollapse: true
       image: /assets/images/default-card.png
+      mathjax: false
