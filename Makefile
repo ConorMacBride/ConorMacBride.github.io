@@ -1,3 +1,4 @@
+BUNDLE= /opt/homebrew/opt/ruby/bin/bundle
 LOCAL= _site
 LIVE= _live
 RM= rm -rf
@@ -11,20 +12,20 @@ help:
 	@echo "clean   -- remove '${LOCAL}'"
 
 install:
-	bundle config set --local path "vendor/bundle"
-	bundle install
+	$(BUNDLE) config set --local path "vendor/bundle"
+	$(BUNDLE) install
 
 upgrade:
-	bundle update --all
+	$(BUNDLE) update --all
 
 build:
-	bundle exec jekyll build --destination $(LOCAL)
+	$(BUNDLE) exec jekyll build --destination $(LOCAL)
 
 serve:
-	bundle exec jekyll serve --destination $(LOCAL) -P 80 -H 0.0.0.0 --livereload
+	$(BUNDLE) exec jekyll serve --destination $(LOCAL) -P 80 -H 0.0.0.0 --livereload
 
 publish:
-	JEKYLL_ENV=production bundle exec jekyll build --destination $(LIVE)
+	JEKYLL_ENV=production $(BUNDLE) exec jekyll build --destination $(LIVE)
 
 clean :
 	$(RM) $(LOCAL)
