@@ -231,9 +231,15 @@ section.entry div.description {
     font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
 }
+section.publications div.description > p {
+    margin-bottom: 0;
+}
 
 section.entry a.toggle-expand.link {
     margin-top: 2%;
+}
+section.publications a.toggle-expand.link {
+    padding: 0;
 }
 
 figure img {
