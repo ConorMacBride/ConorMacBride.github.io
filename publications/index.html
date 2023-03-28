@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Publications" />
 <meta property="og:locale" content="en_GB" />
-<meta name="description" content="I’m Conor MacBride, a PhD student at Queen’s University Belfast. My research is focused on energy dissipation in the atmosphere of the Sun. This involves designing numerical simulations, and processing and analysing large data sets to extract novel insights." />
-<meta property="og:description" content="I’m Conor MacBride, a PhD student at Queen’s University Belfast. My research is focused on energy dissipation in the atmosphere of the Sun. This involves designing numerical simulations, and processing and analysing large data sets to extract novel insights." />
+<meta name="description" content="I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In my free time I contribute to open source projects. I obtained a PhD in astrophysics from Queen’s University Belfast in 2023, which involved studying waves in the Sun’s atmosphere using numerical simulations. Prior to that, I obtained an MPhys Mathematics and Theoretical Physics (first-class honours) from the University of St Andrews in 2019." />
+<meta property="og:description" content="I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In my free time I contribute to open source projects. I obtained a PhD in astrophysics from Queen’s University Belfast in 2023, which involved studying waves in the Sun’s atmosphere using numerical simulations. Prior to that, I obtained an MPhys Mathematics and Theoretical Physics (first-class honours) from the University of St Andrews in 2019." />
 <link rel="canonical" href="https://macbride.me/publications/" />
 <meta property="og:url" content="https://macbride.me/publications/" />
 <meta property="og:site_name" content="Conor MacBride" />
@@ -25,7 +25,7 @@
 <meta property="twitter:title" content="Publications" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"I’m Conor MacBride, a PhD student at Queen’s University Belfast. My research is focused on energy dissipation in the atmosphere of the Sun. This involves designing numerical simulations, and processing and analysing large data sets to extract novel insights.","headline":"Publications","image":"https://macbride.me/assets/images/default-card.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"}},"url":"https://macbride.me/publications/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In my free time I contribute to open source projects. I obtained a PhD in astrophysics from Queen’s University Belfast in 2023, which involved studying waves in the Sun’s atmosphere using numerical simulations. Prior to that, I obtained an MPhys Mathematics and Theoretical Physics (first-class honours) from the University of St Andrews in 2019.","headline":"Publications","image":"https://macbride.me/assets/images/default-card.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"}},"url":"https://macbride.me/publications/"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 <body>
@@ -34,22 +34,24 @@
     <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride" /></div>
     <div class="profile">
       <div class="name">
+        <span class="title">Dr</span>
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
       </div>
-      <div class="headline"><div class="txt"><span>Data Scientist</span> & <span>Astrophysics PhD Student</span></div></div>
+      <div class="headline"><div class="txt">Data Scientist</div></div>
       <nav>
         <ul class="contact">
-          <li><a href="/" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-          <li><a href="/blog/" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a></li>
-          <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+          <li><a href="/cv/" aria-label="CV" title="CV"><i class="fas fa-briefcase" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:conor@macbride.me" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
     </div>
   </header>
+  <div class="main-container-outer">
   <div class="main-container">
     <div class="pagecontainer">
 <h1 id="publications">Publications</h1>
@@ -58,7 +60,7 @@
       <header>
         <div class="entrydetails">
           <div class="date">THE ASTROPHYSICAL JOURNAL | Oct 2022</div>
-          <div class="title">Ambipolar Diffusion in the Lower Solar Atmosphere: Magnetohydrodynamic Simulations of a Sunspot</div>
+          <div class="title">Ambipolar diffusion in the lower solar atmosphere: Magnetohydrodynamic simulations of a sunspot</div>
           <div class="authors"><em>MacBride, CD</em>; Jess, DB; Khomenko, E; Grant, SDT</div>
           <div class="links"><a href="https://doi.org/10.3847/1538-4357/ac94c3">Publisher</a> | <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...938..154M/abstract">ADS</a> | <a href="https://arxiv.org/abs/2209.14366">arXiv</a></div>
         </div>
@@ -163,6 +165,7 @@
 </div>
 
   </div>
+  </div>
   <footer>
     <div class="footer-container">
     <nav>
@@ -175,5 +178,13 @@
     <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2023</div>
     </div>
   </footer>
+  <script>
+    // Make the header clickable when on a mobile device
+    document.querySelector('div.name').addEventListener('click', function() {
+      if ((window.innerWidth < 641) && (window.location.pathname != '/')) {
+        window.location.href = "/";
+      }
+    });
+  </script>
 </body>
 </html>
