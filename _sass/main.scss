@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #eee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,19 +40,22 @@ div.footer-container {
     max-width: 1200px;
     margin: 0 auto;
 }
+div.main-container-outer {
+    background-color: #fff;
+}
 div.main-container {
     max-width: 1264px;
     margin: 0 auto;
 }
 
 body > header {
-    float: left;
+    display: inline-block;
     width: 100%;
     background-color: #eee;
     margin: 0;
 }
 body > header div.picture {
-    height: 15rem;
+    height: 50vw;
     margin: 0 auto 2rem;
     padding: 0;
 }
@@ -68,15 +72,18 @@ div.profile {
 }
 
 div.profile div.name {
-    font-size: 3rem;
+    font-size: 10vw;
 }
 
+div.profile div.name span.title {
+    font-weight: lighter;
+}
 div.profile div.name span.lastname {
     font-weight: bold;
 }
 
 div.profile div.headline {
-    font-size: 1.5rem;
+    font-size: 7vw;
     font-weight: 200;
     color: #444;
 }
@@ -117,13 +124,13 @@ div.container {
     flex-direction: column;
 }
 
-section#experience {
+section#column-right {
     order: 2;
     width: 96%;
     margin: 2%;
 }
 
-section#education {
+section#column-left {
     order: 3;
     width: 96%;
     margin: 2% 2% 0 2%;
@@ -131,7 +138,7 @@ section#education {
 
 div.container h1.title {
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin: 0;
     padding: 0 1rem 1rem 1rem;
@@ -146,11 +153,11 @@ section.entry {
     position: relative;
 }
 
-section#experience section.entry {
+section#column-right section.entry {
     padding: 2% 2% 3rem;
 }
 
-section#experience section.entry:nth-of-type(1) {
+section#column-right section.entry:nth-of-type(1) {
     padding: 2%;
 }
 
@@ -181,7 +188,7 @@ section.sub-group.publications .filter {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-section#experience section.entry header label.toggle-expand {
+section#column-right section.entry header label.toggle-expand {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -197,16 +204,16 @@ section.sub-group section.entry header div.entrydetails div {
     margin: 0.3rem 0;
 }
 
-section.entry header div.organisation, section.entry header div.date {
+section.entry header div.heading-above, section.entry header div.date {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
     text-transform: uppercase;
     color: #222;
 }
-section.entry header div.date { 
+section.entry header div.date {
     font-size: 1rem;
 }
-section.entry header div.role {
+section.entry header div.heading {
     font-size: 1.5rem;
 }
 section.publications header, section.talks header {
@@ -215,7 +222,7 @@ section.publications header, section.talks header {
 section.publications header div.title, section.talks header div.title {
     font-size: 1rem;
 }
-section.entry header div.dates, section.entry header div.authors {
+section.entry header div.heading-below, section.entry header div.authors {
     font-weight: 300;
     font-size: 1.2rem;
     color: #555;
@@ -231,7 +238,6 @@ section.entry header div.links {
 section.entry div.description {
     position: relative;
     width: 100%;
-    font-size: 1.1rem;
     font-family: 'Open Sans', sans-serif;
 }
 section.publications div.description > p {
@@ -262,7 +268,6 @@ a.button {
 }
 
 footer {
-    float: left;
     width: 100%;
     padding: 2rem 0;
     text-align: center;
@@ -298,7 +303,7 @@ footer a {
     padding: 1rem 0;
 }
 
-section#experience .toggle-expand {
+section#column-right .toggle-expand {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -335,20 +340,20 @@ div.fade-out {
 /* BEGIN page.html */
 
 div.pagecontainer {
-  float: left;
-  padding: 0;
-  line-height: 2;
-  font-size: 1.1rem;
-}
-
-/* END page.html */
-
-div.pagecontainer {
     padding: 0 1rem;
+    line-height: 1.4;
+    font-size: 1.1rem;
 }
+
 div.pagecontainer h1, div.pagecontainer h2, div.pagecontainer h3, div.pagecontainer h4, div.pagecontainer h5, div.pagecontainer h6 {
     padding-left: 1rem;
 }
+
+div.pagecontainer > section {
+    display: inline-block;
+}
+
+/* END page.html */
 
 ul.blog {
     list-style-type: none;
@@ -368,6 +373,10 @@ ul.blog h2 a:hover {
     text-decoration: none;
     color: #666;
 }
+div#postnav {
+    display: inline-block;
+    width: 100%;
+}
 div#postnav > div {
     float: left;
     width: 33.3%;
@@ -379,7 +388,13 @@ div#postnav > div a {
     font-weight: bold;
 }
 
-@media only screen and (min-width: 704px) {
+@media screen and (max-width: 960px) {
+    section.experience div.description {
+        display: none;
+    }
+}
+
+@mixin wide-header {
     body > header {
         height: 19rem;
     }
@@ -387,10 +402,11 @@ div#postnav > div a {
         height: 15rem;
     }
     body > header div.profile div.name {
-        font-size: 3.3rem;
+        font-size: 6vw;
         padding: 0;
     }
     body > header div.picture {
+        height: 15rem;
         float: left;
         margin: 0 auto;
     }
@@ -405,6 +421,17 @@ div#postnav > div a {
         font-size: 2.5rem;
         padding: 0 0 0 1rem;
     }
+}
+@media only screen and (min-width: 641px) and (orientation: landscape) {
+    @include wide-header;
+}
+@media only screen and (min-width: 749px) {
+    @include wide-header;
+}
+@media only screen and (min-width: 749px) and (orientation: portrait), (min-width: 961px) {
+    body > header div.profile div.name {
+        font-size: 3.3rem;
+    }
     div.pagecontainer { padding: 2rem 4rem; }
     footer a {
         margin: 0 2rem;
@@ -418,6 +445,9 @@ div#postnav > div a {
     }
     section.sub-group section.entry .toggle-expand {
         padding: 0;
+    }
+    section.hide-read-more div.description {
+        max-height: 100%;
     }
     /* BEGIN Expanding Mechanism */
     .expand-state + .description { max-height: 10rem; }
@@ -434,13 +464,13 @@ div#postnav > div a {
         text-align: left;
     }
 
-    section#experience {
+    section#column-right {
         order: 3;
         width: 57%;
         margin-left: 1%;
     }
 
-    section#education {
+    section#column-left {
         order: 1;
         width: 37%;
         margin-right: 1%;
@@ -473,7 +503,7 @@ div#postnav > div a {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #000;
+        background-color: #222;
         color: #eee;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -481,6 +511,9 @@ div#postnav > div a {
     }
     a:link, a:visited {
         color: #eee;
+    }
+    div.main-container-outer {
+        background-color: #000;
     }
     body > header {
         background-color: #222;
@@ -497,10 +530,10 @@ div#postnav > div a {
     section.sub-group section.entry {
         background-color: #000;
     }
-    section.entry header div.organisation, section.entry header div.date {
+    section.entry header div.heading-above, section.entry header div.date {
         color: #ccc;
     }
-    section.entry header div.dates, section.entry header div.authors {
+    section.entry header div.heading-below, section.entry header div.authors {
         color: #aaa;
     }
     footer {

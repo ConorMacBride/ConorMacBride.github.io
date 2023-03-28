@@ -1,13 +1,15 @@
 # Site settings
 title: Conor MacBride
-tagline: "<span>Data Scientist</span> & <span>Astrophysics PhD Student</span>"
+tagline: Data Scientist
 email: conor@macbride.me
 profile_picture: conor.jpeg
 description: >-
-  I'm Conor MacBride, a PhD student at Queen's University Belfast.
-  My research is focused on energy dissipation in the atmosphere of
-  the Sun. This involves designing numerical simulations, and
-  processing and analysing large data sets to extract novel insights.
+  I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In
+  my free time I contribute to open source projects. I obtained a PhD in
+  astrophysics from Queen’s University Belfast in 2023, which involved studying
+  waves in the Sun’s atmosphere using numerical simulations. Prior to that, I
+  obtained an MPhys Mathematics and Theoretical Physics (first-class honours)
+  from the University of St Andrews in 2019.
 url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: conormacbride
 github_username: ConorMacBride
@@ -28,6 +30,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-seo-tag
+  - liquid_reading_time
 
 collections:
   - experience
@@ -43,6 +46,7 @@ defaults:
     values:
       noexpand: true
       mobcollapse: false
+      homepage: false
   -
     scope:
       path: ""
@@ -72,3 +76,4 @@ defaults:
       mobcollapse: true
       image: /assets/images/default-card.png
       mathjax: false
+      homepage: false

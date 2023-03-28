@@ -2,13 +2,7 @@
 layout: default
 ---
 <div class="container">
-<section id="experience" class="maincontent">
-  <h1 class="title">About Me</h1>
-  <section class="entry">
-    <div class="description">
-      {{ page.content | markdownify }}
-    </div>
-  </section>
+<section id="column-right" class="maincontent experience">
   <h1 class="title">Experience</h1>
 
   {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
@@ -17,20 +11,20 @@ layout: default
   {%- for item in sorted_experiences -%}
 
     {%- unless item.subentry -%}
-      {% include entry.html entry=item -%}
+      {% include entry.html entry=item full=true -%}
     {%- endunless -%}
  
   {%- endfor -%}
   
 </section>
-<section id="education">
+<section id="column-left">
   <h1 class="title">Education</h1>
 
   {% assign sorted_education = site.education | reverse -%}
   {%- for item in sorted_education -%}
 
     {%- unless item.subentry -%}
-      {% include entry.html entry=item -%}
+      {% include entry.html entry=item full=true -%}
     {%- endunless -%}
 
   {%- endfor -%}
@@ -38,6 +32,15 @@ layout: default
 </section>
 </div>
 <script>
+function scrollToBlock(id) {
+    var el = document.getElementById(id);
+    var rect = el.getBoundingClientRect();
+    if (rect.top < -10) {
+        var offset = window.pageYOffset || document.documentElement.scrollTop;
+        var top = rect.top + offset;
+        window.scrollTo({left: 0, top: top, behavior: "smooth"});
+    }
+}
 function mobileCollapse() {
     w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     if (w < 961) {
@@ -47,6 +50,15 @@ function mobileCollapse() {
             var itemid = item.getAttribute("for");
             var checkbox = document.getElementById(itemid);
             checkbox.checked = false;
+        }
+    }
+    var x = document.getElementsByClassName("experience")[0]
+            .getElementsByClassName("entry");
+    for (var i = 0; i < x.length; ++i) {
+        var item = x[i];
+        var descriptions = item.getElementsByClassName("description");
+        if (descriptions.length > 0) {
+            descriptions[0].style.display = "block";
         }
     }
 };

@@ -11,7 +11,10 @@ noexpand: true
 - Reviewing pull requests to maintain a high-quality, well-tested codebase.
 
 ### Contributions to the ecosystem
-- Maintain the OpenAstronomy [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates), [GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) and [`build-python-dist` action](https://github.com/OpenAstronomy/build-python-dist), which are relied upon by other projects, including [AstroPy](https://github.com/astropy/astropy).
-- Significant improvements to Matplotlib's [`pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin, including,
+- Being involved since the project's inception, I developed most of the OpenAstronomy [GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) for testing, building, and publishing Python packages.
+  - These CI workflows are used extensively by the astrophysics community, including [Astropy](https://github.com/astropy/astropy), [SunPy](https://github.com/sunpy/sunpy), and the [Space Telescope Science Institute](https://github.com/spacetelescope) who operate the Hubble Space Telescope and the next generation JWST. Notably, the workflows are used for testing the software pipeline which calibrates the raw images captured by the JWST.
+  - Maintaining other OpenAstronomy projects including [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates) and [`build-python-dist` action](https://github.com/OpenAstronomy/build-python-dist).
+  - Advising projects on how to configure their testing and publishing infrastructure.
+- Maintaining Matplotlib's [`pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin, with my significant development work including,
     - a new test suite, and infrastructure, to validate the internal state of the plugin across a wide range of configurations, and
-    - [HTML summary reports](https://macbride.me/pytest-mpl/) with interactive filtering of the image comparison test results. These reports are used by popular Python packages including [NetworkX](https://github.com/networkx/networkx) and [Cartopy](https://github.com/SciTools/cartopy).
+    - [HTML summary reports](https://matplotlib.org/pytest-mpl/latest/sample/test_html/fig_comparison.html) with interactive filtering of the image comparison test results. These reports are used by popular Python packages including [NetworkX](https://github.com/networkx/networkx) and [Cartopy](https://github.com/SciTools/cartopy).

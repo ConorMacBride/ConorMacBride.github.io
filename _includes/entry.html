@@ -1,4 +1,6 @@
 {%- assign item = include.entry -%}
+<!--{%- assign itemid = item.organisation | append: '_' | append: item.start | downcase | replace: " ", "_" | replace: "'", "" -%}-->
+{%- assign itemid = item.path | split: "/" | last | replace: ".md", "" -%}
 
 {%- if item.noexpand -%}
   {%- assign noexpand = true -%}
@@ -27,18 +29,18 @@
 {%- else -%}
   {%- capture datestring -%}{{ start_date }} &mdash; {{ end_date }}{%- endcapture -%}
 {%- endif -%}
-
-<section class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}">
+{%- if include.full == false %}<a href="/cv/#{{ itemid }}">{% endif -%}
+<section id="{{ itemid }}" class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}">
   <header>
-    {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
+    {% if mobcollapse and include.full and item.content.size > 1 %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
     <div class="entrydetails">
-      <div class="organisation">{{ item.organisation | upcase }}</div>
-      <div class="role">{{ item.role }}</div>
-      <div class="dates">{{ datestring }}</div>
+      <div class="heading-above">{{ item.organisation | upcase }}</div>
+      <div class="heading">{{ item.role }}</div>
+      <div class="heading-below">{{ datestring }}</div>
     </div>
   </header>
-  {%- if item.content.size > 1 %}
-  {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" aria-hidden="true" />{% endif %}
+  {%- if item.content.size > 1 and include.full %}
+  {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')" />{% endif %}
   <div class="description">
     {{ item.content | markdownify }}
     {% if noexpand == false and mobcollapse %}<div class="fade-out" aria-hidden="true"></div>{% endif %}
@@ -47,7 +49,8 @@
   {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ item.link }}" aria-label="read more"></a>{% endif -%}
   {% endif %}
 </section>
-{% if mobcollapse -%}
+{%- if include.full == false %}</a>{% endif -%}
+{% if mobcollapse and include.full -%}
 <style type="text/css">
 #expand{{ expand_id }}:checked + .description { max-height: 120rem; }
 #expand{{ expand_id }}:checked ~ label.toggle-expand:before { content: "Read Less"; }

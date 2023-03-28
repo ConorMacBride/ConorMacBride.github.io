@@ -10,7 +10,7 @@ permalink: /blog/
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="meta"><strong>{{ post.date | date_to_string }} &mdash; {{ post.author }}</strong></p>
+      <p class="meta"><strong>{{ post.date | date_to_string }} &mdash; {{ post.content | reading_time | pluralize: "minute" | replace: " ", "&nbsp;" }}</strong></p>
       {{ post.excerpt }}
     </li>
   {% endfor %}

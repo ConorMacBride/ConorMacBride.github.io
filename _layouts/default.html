@@ -20,24 +20,27 @@
     <div class="picture"><img src="{{ site.images }}/{{ site.profile_picture }}" alt="Conor MacBride" /></div>
     <div class="profile">
       <div class="name">
+        <span class="title">Dr</span>
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
       </div>
       <div class="headline"><div class="txt">{{ site.tagline }}</div></div>
       <nav>
         <ul class="contact">
-          <li><a href="{% link index.html %}" aria-label="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-          <li><a href="{% link blog.html %}" aria-label="Blog"><i class="fas fa-quote-right" aria-hidden="true"></i></a></li>
-          <li><a href="mailto:{{ site.email }}" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a href="https://github.com/{{ site.github_username }}" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="{% link index.html %}" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
+          <li><a href="{% link cv.html %}" aria-label="CV" title="CV"><i class="fas fa-briefcase" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:{{ site.email }}" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/{{ site.github_username }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
     </div>
   </header>
+  <div class="main-container-outer">
   <div class="main-container">
     {{ content }}
+  </div>
   </div>
   <footer>
     <div class="footer-container">
@@ -51,5 +54,13 @@
     <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;{{ "now" | date: "%Y" }}</div>
     </div>
   </footer>
+  <script>
+    // Make the header clickable when on a mobile device
+    document.querySelector('div.name').addEventListener('click', function() {
+      if ((window.innerWidth < 641) && (window.location.pathname != '/')) {
+        window.location.href = "{% link index.html %}";
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,10 +1,29 @@
 ---
-date: 9999-01-01
+date: 2023-02-20
 start: 2019-09-23
 organisation: Queen's University Belfast
-role: PhD Student
+role: PhD Physics
+homepage: true
 ---
-Specialising in Solar Physics
+
+My research focused on energy dissipation in the atmosphere of the Sun.
+This involved designing numerical simulations, and processing and analysing large datasets to extract novel insights.
+
+I created an open source Python package, [`mcalf`](https://github.com/ConorMacBride/mcalf), which extracts velocity measurements from observations of the Sun.
+By utilising machine learning techniques, the method adapts to the physics present in each region of the Sun.
+
+<section class="sub-group publications">
+<section class="entry">
+  <header>
+    <div class="entrydetails">
+      <div class="date">THESIS</div>
+      <div class="title">Wave and Energy Characterisation in the Atmosphere of Sunspots</div>
+      <div class="authors"><em>MacBride, CD</em></div>
+      <!--<div class="links"><a href="">Queen's Research Portal</a></div>-->
+    </div>
+  </header>
+</section>
+</section>
 
 *Astrophysics Research Centre,  
 School of Mathematics and Physics*

@@ -3,18 +3,22 @@ date: 2019-06-01
 start: 2015-09-01
 organisation: University of St Andrews
 role: MPhys (Hons) Mathematics and Theoretical Physics
+homepage: true
 ---
 First-class honours
 
 Deans' List — 2015/16, 2016/17, 2017/18, 2018/19
 
-<section class="sub-group">
-{% assign sorted_projects = site.education | where: "parent", "mphys" | reverse %}
-{% for item in sorted_projects %}
-
-  {% include entry.html entry=item %}
-
-{% endfor %}
+<section class="sub-group publications">
+<section class="entry">
+  <header>
+    <div class="entrydetails">
+      <div class="date">DISSERTATION (GRADE 19.6/20.0)</div>
+      <div class="title">Instabilities &amp; Flux Emergence</div>
+      <div class="authors">Sep 2018 &mdash; Apr 2019</div>
+    </div>
+  </header>
+</section>
 </section>
 
 <details markdown="1">
