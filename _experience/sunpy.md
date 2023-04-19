@@ -12,7 +12,7 @@ noexpand: true
 
 ### Contributions to the ecosystem
 - Being involved since the project's inception, I developed most of the OpenAstronomy [GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) for testing, building, and publishing Python packages.
-  - These CI workflows are used extensively by the astrophysics community, including [Astropy](https://github.com/astropy/astropy), [SunPy](https://github.com/sunpy/sunpy), and the [Space Telescope Science Institute](https://github.com/spacetelescope) who operate the Hubble Space Telescope and the next generation JWST. Notably, the workflows are used for testing the software pipeline which calibrates the raw images captured by the JWST.
+  - These CI workflows are used extensively by the astrophysics community, including [Astropy](https://github.com/astropy/astropy), [SunPy](https://github.com/sunpy/sunpy), and the [Space Telescope Science Institute](https://github.com/spacetelescope) who operate the Hubble Space Telescope and the next generation JWST. Notably, the workflows are used for testing the software pipeline that calibrates the raw images captured by the JWST.
   - Maintaining other OpenAstronomy projects including [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates) and [`build-python-dist` action](https://github.com/OpenAstronomy/build-python-dist).
   - Advising projects on how to configure their testing and publishing infrastructure.
 - Maintaining Matplotlib's [`pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin, with my significant development work including,
