@@ -28,7 +28,6 @@ By utilising machine learning techniques, the method adapts to the physics prese
 *Astrophysics Research Centre,  
 School of Mathematics and Physics*
 
-- [University Profile](https://pure.qub.ac.uk/en/persons/conor-macbride)
 - [School Profile](https://www.qub.ac.uk/schools/SchoolofMathematicsandPhysics/Research/culture-environment/PhDResearchStudents/ConorMacBride-StudentProfile/)
 - <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="{{ site.images }}/orcid.svg" width="18" height="18" style="width:1em;margin-right:.5em;vertical-align:middle;" alt="ORCID iD icon">https://orcid.org/0000-0002-9901-8723</a></div>
 
