@@ -1,5 +1,5 @@
 ---
-date: 9999-01-01
+date: 2023-05-31
 start: 2018-01-01
 organisation: Initiative for Interstellar Studies
 role: Web Editor
