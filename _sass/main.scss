@@ -1,7 +1,12 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #eee;
+    font-size: 1.6rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin: 1rem;
+    margin: 1.6rem;
 }
 
 ul {
@@ -25,15 +30,15 @@ a:link, a:visited {
 }
 
 table {
-    padding: 1em;
+    padding: 1.6rem;
 }
 td {
-    padding-right: 1em;
+    padding-right: 1.6rem;
 }
 
 div.header-container {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 3.2rem auto;
     padding: 0 4%;
 }
 div.footer-container {
@@ -56,7 +61,7 @@ body > header {
 }
 body > header div.picture {
     height: 50vw;
-    margin: 0 auto 2rem;
+    margin: 0 auto 3.2rem;
     padding: 0;
 }
 body > header .picture img {
@@ -94,7 +99,7 @@ div.profile div.headline div.txt span {
 }
 
 header nav {
-    padding: 2rem 0 0;
+    padding: 3.2rem 0 0;
 }
 footer nav {
     float: right;
@@ -138,10 +143,10 @@ section#column-left {
 
 div.container h1.title {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 3.2rem;
     text-align: center;
     margin: 0;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1.6rem 1.6rem 1.6rem;
 }
 
 section.entry {
@@ -154,7 +159,7 @@ section.entry {
 }
 
 section#column-right section.entry {
-    padding: 2% 2% 3rem;
+    padding: 2% 2% 4.8rem;
 }
 
 section#column-right section.entry:nth-of-type(1) {
@@ -166,7 +171,7 @@ section.entry.no-content {
 }
 
 section.entry details summary {
-    padding-left: 1rem;
+    padding-left: 1.6rem;
 }
 
 section.sub-group {
@@ -183,8 +188,8 @@ section.sub-group.publications .filter {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.4rem 0 0;
-    font-size: 1rem;
+    margin: 2.2rem 0 0;
+    font-size: 1.6rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -201,38 +206,38 @@ section.entry header div.entrydetails {
 }
 
 section.sub-group section.entry header div.entrydetails div {
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
 }
 
 section.entry header div.heading-above, section.entry header div.date {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
     color: #222;
 }
 section.entry header div.date {
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 section.entry header div.heading {
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 section.publications header, section.talks header {
     line-height: 1.4;
 }
 section.publications header div.title, section.talks header div.title {
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 section.entry header div.heading-below, section.entry header div.authors {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     color: #555;
 }
 section.publications header div.authors {
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 section.entry header div.links {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 
 section.entry div.description {
@@ -262,14 +267,14 @@ figure.three img {
 
 a.button {
     background-color: cadetblue;
-    padding: 0.5em;
-    margin-right: 0.5em;
+    padding: 0.8rem;
+    margin-right: 0.8rem;
     text-decoration: none;
 }
 
 footer {
     width: 100%;
-    padding: 2rem 0;
+    padding: 3.2rem 0;
     text-align: center;
     background-color: #eee;
 }
@@ -299,8 +304,8 @@ footer a {
     cursor: pointer;
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
-    padding: 1rem 0;
+    font-size: 1.6rem;
+    padding: 1.6rem 0;
 }
 
 section#column-right .toggle-expand {
@@ -340,13 +345,13 @@ div.fade-out {
 /* BEGIN page.html */
 
 div.pagecontainer {
-    padding: 0 1rem;
+    padding: 0 1.6rem;
     line-height: 1.4;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
 }
 
 div.pagecontainer h1, div.pagecontainer h2, div.pagecontainer h3, div.pagecontainer h4, div.pagecontainer h5, div.pagecontainer h6 {
-    padding-left: 1rem;
+    padding-left: 1.6rem;
 }
 
 div.pagecontainer > section {
@@ -360,10 +365,10 @@ ul.blog {
     padding: 0;
 }
 ul.blog h2 {
-    margin: 2rem 0 0 0;
+    margin: 3.2rem 0 0 0;
 }
 ul.blog p.meta {
-    margin: 0 1rem;
+    margin: 0 1.6rem;
 }
 ul.blog h2 a {
     text-decoration: none;
@@ -396,30 +401,30 @@ div#postnav > div a {
 
 @mixin wide-header {
     body > header {
-        height: 19rem;
+        height: 30.4rem;
     }
     div.header-container {
-        height: 15rem;
+        height: 24rem;
     }
     body > header div.profile div.name {
         font-size: 6vw;
         padding: 0;
     }
     body > header div.picture {
-        height: 15rem;
+        height: 24rem;
         float: left;
         margin: 0 auto;
     }
     body > header div.profile {
         text-align: right;
-        padding: 2rem 0;
+        padding: 3.2rem 0;
     }
     div.profile div.headline {
-        font-size: 1.7rem;
+        font-size: 2.7rem;
     }
     div.profile nav a{
-        font-size: 2.5rem;
-        padding: 0 0 0 1rem;
+        font-size: 4rem;
+        padding: 0 0 0 1.6rem;
     }
 }
 @media only screen and (min-width: 641px) and (orientation: landscape) {
@@ -430,12 +435,12 @@ div#postnav > div a {
 }
 @media only screen and (min-width: 749px) and (orientation: portrait), (min-width: 961px) {
     body > header div.profile div.name {
-        font-size: 3.3rem;
+        font-size: 5.3rem;
     }
     div.pagecontainer { padding: 2rem 4rem; }
     footer a {
-        margin: 0 2rem;
-        font-size: 3rem;
+        margin: 0 3.2rem;
+        font-size: 4.8rem;
     }
     section.entry.hide-read-more {
         padding: 2% !important;
@@ -496,7 +501,7 @@ div#postnav > div a {
 }
 
 @media only screen and (min-width: 1056px) {
-    div.pagecontainer { padding: 2rem 10rem; }
+    div.pagecontainer { padding: 3.2rem 16rem; }
 }
 
 /* BEGIN Dark Mode */
