@@ -1,6 +1,7 @@
 @media only screen and (max-width: 640px) {
     div.header-container {
         padding: 0.5rem 1rem;
+        height: inherit;
     }
     header div.picture {display: none;}
     header div.profile {

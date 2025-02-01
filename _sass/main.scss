@@ -45,9 +45,11 @@ details {
 }
 
 div.header-container {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3.2rem 4%;
+    padding: 3.2rem 0;
 }
 div.footer-container {
     max-width: 1200px;
@@ -68,14 +70,13 @@ body > header {
     margin: 0;
     border-bottom: 1px solid #aaa
 }
-body > header div.picture {
-    height: 50vw;
+body > header .picture {
+    max-width: 50vw;
     margin: 0 auto 3.2rem;
-    padding: 0;
 }
 body > header .picture img {
-    height: 100%;
-    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
     border-radius: 50%;
     display: block;
 }
@@ -417,24 +418,23 @@ div#postnav > div a {
 }
 
 @mixin wide-header {
-    body > header {
-        height: 30.4rem;
-    }
     div.header-container {
-        height: 24rem;
+        height: 20rem;
+        flex-direction: row;
+        width: 96%;
+    }
+    body > header .picture {
+        max-width: revert;
+        margin: revert;
     }
     body > header div.profile div.name {
         font-size: 6vw;
         padding: 0;
     }
-    body > header div.picture {
-        height: 24rem;
-        float: left;
-        margin: 0 auto;
-    }
     body > header div.profile {
+        align-content: center;
         text-align: right;
-        padding: 3.2rem 0;
+        white-space: nowrap;
     }
     div.profile div.headline {
         font-size: 2.7rem;
