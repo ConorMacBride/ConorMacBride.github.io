@@ -5,7 +5,6 @@ html {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #eee;
     font-size: 1.6rem;
 }
 
@@ -18,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    margin: 1.6rem;
+    margin: 1rem;
 }
 
 ul {
@@ -36,10 +35,19 @@ td {
     padding-right: 1.6rem;
 }
 
+details {
+    margin: 1rem 0;
+}
+
+.nobg {
+    background: none !important;
+    border: none !important;
+}
+
 div.header-container {
     max-width: 1200px;
-    margin: 3.2rem auto;
-    padding: 0 4%;
+    margin: 0 auto;
+    padding: 3.2rem 4%;
 }
 div.footer-container {
     max-width: 1200px;
@@ -49,15 +57,16 @@ div.main-container-outer {
     background-color: #fff;
 }
 div.main-container {
-    max-width: 1264px;
+    width: 96%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 body > header {
-    display: inline-block;
     width: 100%;
     background-color: #eee;
     margin: 0;
+    border-bottom: 1px solid #aaa
 }
 body > header div.picture {
     height: 50vw;
@@ -92,8 +101,7 @@ div.profile div.headline {
     font-weight: 200;
     color: #444;
 }
-div.profile div.headline div.txt {
-}
+
 div.profile div.headline div.txt span {
     white-space: nowrap;
 }
@@ -122,23 +130,29 @@ div.profile nav a{
 footer nav {
     margin: 0 0 1rem 0;
 }
+footer .credit {
+    font-size: 1.2rem;
+}
 
 div.container {
+    margin: 2.4rem 0;
     width: 100%;
     display: flex;
     flex-direction: column;
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
 }
 
 section#column-right {
     order: 2;
-    width: 96%;
-    margin: 2%;
 }
 
 section#column-left {
     order: 3;
-    width: 96%;
-    margin: 2% 2% 0 2%;
+}
+
+section#column-left > a {
+    text-decoration: none;
 }
 
 div.container h1.title {
@@ -146,28 +160,19 @@ div.container h1.title {
     font-size: 3.2rem;
     text-align: center;
     margin: 0;
-    padding: 0 1.6rem 1.6rem 1.6rem;
+    padding: 0 1.6rem 1.4rem;
 }
 
 section.entry {
-    float: left;
-    width: 95%;
-    padding: 2%;
+    padding: 1rem 1rem 3.6rem 1rem;
     background-color: #eee;
-    margin-bottom: 2%;
     position: relative;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #aaa;
 }
 
-section#column-right section.entry {
-    padding: 2% 2% 4.8rem;
-}
-
-section#column-right section.entry:nth-of-type(1) {
-    padding: 2%;
-}
-
-section.entry.no-content {
-    padding: 2% !important;
+section.entry.never-collapse, section.entry.no-content, section.sub-group > section.entry, section.publications > section.entry {
+    padding: 1rem;
 }
 
 section.entry details summary {
@@ -175,22 +180,33 @@ section.entry details summary {
 }
 
 section.sub-group {
-    display: inline-block;
+    display: flex;
     width: 100%;
     position: relative;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 section.sub-group section.entry {
     background-color: #f9f9f9;
+    border-color: #ddd;
 }
 
-section.sub-group.publications .filter {
-    position: absolute;
-    top: 0;
-    right: 0;
+section.publications > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.publications .filter {
     margin: 2.2rem 0 0;
     font-size: 1.6rem;
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+section#column-left, section#column-right, section#single-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 section#column-right section.entry header label.toggle-expand {
@@ -202,7 +218,7 @@ section#column-right section.entry header label.toggle-expand {
 }
 
 section.entry header div.entrydetails {
-    padding-left: 2%;
+    padding: 1rem;
 }
 
 section.sub-group section.entry header div.entrydetails div {
@@ -211,7 +227,7 @@ section.sub-group section.entry header div.entrydetails div {
 
 section.entry header div.heading-above, section.entry header div.date {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     color: #222;
 }
@@ -219,7 +235,7 @@ section.entry header div.date {
     font-size: 1.6rem;
 }
 section.entry header div.heading {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
 }
 section.publications header, section.talks header {
     line-height: 1.4;
@@ -229,7 +245,7 @@ section.publications header div.title, section.talks header div.title {
 }
 section.entry header div.heading-below, section.entry header div.authors {
     font-weight: 300;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     color: #555;
 }
 section.publications header div.authors {
@@ -277,6 +293,7 @@ footer {
     padding: 3.2rem 0;
     text-align: center;
     background-color: #eee;
+    border-top: 1px solid #aaa;
 }
 footer a {
     margin: 0 2vw;
@@ -443,7 +460,7 @@ div#postnav > div a {
         font-size: 4.8rem;
     }
     section.entry.hide-read-more {
-        padding: 2% !important;
+        padding: 1rem;
     }
     section.entry header label.toggle-expand {
         display: none;
@@ -471,17 +488,12 @@ div#postnav > div a {
 
     section#column-right {
         order: 3;
-        width: 57%;
-        margin-left: 1%;
+        width: 60%;
     }
 
     section#column-left {
         order: 1;
-        width: 37%;
-        margin-right: 1%;
-    }
-    section.entry {
-        width: 96%;
+        width: 40%;
     }
     div.pagecontainer { padding: 2rem 6rem; }
     figure.floatr {
@@ -508,7 +520,7 @@ div#postnav > div a {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #222;
+        background-color: #000;
         color: #eee;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -522,6 +534,7 @@ div#postnav > div a {
     }
     body > header {
         background-color: #222;
+        border-bottom: none;
     }
     div.profile div.headline {
         color: #eee;
@@ -531,9 +544,11 @@ div#postnav > div a {
     }
     section.entry {
         background-color: #111;
+        border-color: #222;
     }
     section.sub-group section.entry {
         background-color: #000;
+        border-color: #222;
     }
     section.entry header div.heading-above, section.entry header div.date {
         color: #ccc;
@@ -543,6 +558,7 @@ div#postnav > div a {
     }
     footer {
         background-color: #222;
+        border-top: none;
     }
     footer a {
         color: #ddd;

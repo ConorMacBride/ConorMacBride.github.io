@@ -1,9 +1,11 @@
 @media only screen and (max-width: 640px) {
     div.header-container {
-        margin: 0.8rem 0 6.1rem;
+        padding: 0.5rem 1rem;
     }
     header div.picture {display: none;}
     header div.profile {
+        display: flex;
+        justify-content: space-between;
         width: 100%;
     }
     header div.profile div.name {

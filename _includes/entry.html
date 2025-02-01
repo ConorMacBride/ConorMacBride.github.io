@@ -30,7 +30,7 @@
   {%- capture datestring -%}{{ start_date }} &mdash; {{ end_date }}{%- endcapture -%}
 {%- endif -%}
 {%- if include.full == false %}<a href="/cv/#{{ itemid }}">{% endif -%}
-<section id="{{ itemid }}" class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}">
+<section id="{{ itemid }}" class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}{% if mobcollapse == false %} never-collapse{% endif %}">
   <header>
     {% if mobcollapse and include.full and item.content.size > 1 %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
     <div class="entrydetails">

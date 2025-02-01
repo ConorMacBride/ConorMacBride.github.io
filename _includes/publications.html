@@ -1,6 +1,9 @@
-<section class="sub-group publications">
-<h2>Publications</h2>
-<p class="filter"><strong>1<sup>st</sup> author</strong> | <a href="/publications/">see all</a></p>
+<section class="publications">
+  <div>
+    <h2>Publications</h2>
+    <p class="filter"><strong>1<sup>st</sup> author</strong> | <a href="/publications/">see all</a></p>
+  </div>
+  <section class="sub-group">
 {%- assign sorted_publications = site.publications | sort: 'date' | reverse -%}
 {%- for item in sorted_publications -%}
   {%- if item.context == include.context and item.leading_author -%}
@@ -57,4 +60,5 @@
   {%- endif -%}
 
 {%- endfor %}
+  </section>
 </section>

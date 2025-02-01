@@ -5,7 +5,7 @@ permalink: /publications/
 ---
 <div class="pagecontainer">
 <h1 id="publications">Publications</h1>
-<section class="publications">
+<section id="single-column" class="publications">
   {%- assign sorted_publications = site.publications | sort: 'date' | reverse -%}
   {% for item in sorted_publications -%}
     {% assign github = '' -%}
