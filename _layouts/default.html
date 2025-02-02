@@ -28,6 +28,7 @@
     <div class="picture"><img src="{{ site.images }}/{{ site.profile_picture }}" alt="Conor MacBride" /></div>
     <div class="profile">
       <div class="name">
+        <img src="{{ site.images }}/{{ site.profile_picture }}" alt="Conor MacBride" />
         <span class="title">Dr</span>
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
@@ -35,8 +36,8 @@
       <div class="headline"><div class="txt">{{ site.tagline }}</div></div>
       <nav>
         <ul class="contact">
-          <li><a href="{% link index.html %}" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-          <li><a href="{% link cv.html %}" aria-label="CV" title="CV"><i class="fas fa-briefcase" aria-hidden="true"></i></a></li>
+          <li{% if page.url == "/" %} class="active"{% endif %}><a href="{% link index.html %}" aria-label="About" title="About">About</a></li>
+          <li{% if page.url == "/cv/" %} class="active"{% endif %}><a href="{% link cv.html %}" aria-label="CV" title="CV">CV</a></li>
           <li><a href="mailto:{{ site.email }}" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
           <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
           <li><a href="https://github.com/{{ site.github_username }}" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
