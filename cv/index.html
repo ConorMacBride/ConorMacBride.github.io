@@ -27,6 +27,14 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In my free time I contribute to open source projects. I obtained a PhD in astrophysics from Queen’s University Belfast in 2023, which involved studying waves in the Sun’s atmosphere using numerical simulations. Prior to that, I obtained an MPhys Mathematics and Theoretical Physics (first-class honours) from the University of St Andrews in 2019.","headline":"Conor MacBride","image":"https://macbride.me/assets/images/default-card.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"}},"url":"https://macbride.me/cv/"}</script>
 <!-- End Jekyll SEO tag -->
+<meta
+    name="theme-color"
+    content="#EEEEEE"
+    media="(prefers-color-scheme: light)" />
+  <meta
+    name="theme-color"
+    content="#222222"
+    media="(prefers-color-scheme: dark)" />
 </head>
 <body>
   <header>
@@ -34,6 +42,7 @@
     <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride" /></div>
     <div class="profile">
       <div class="name">
+        <img src="/assets/images/conor.jpeg" alt="Conor MacBride" />
         <span class="title">Dr</span>
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
@@ -41,8 +50,8 @@
       <div class="headline"><div class="txt">Data Scientist</div></div>
       <nav>
         <ul class="contact">
-          <li><a href="/" aria-label="Home" title="Home"><i class="fas fa-home" aria-hidden="true"></i></a></li>
-          <li><a href="/cv/" aria-label="CV" title="CV"><i class="fas fa-briefcase" aria-hidden="true"></i></a></li>
+          <li><a href="/" aria-label="About" title="About">About</a></li>
+          <li class="active"><a href="/cv/" aria-label="CV" title="CV">CV</a></li>
           <li><a href="mailto:conor@macbride.me" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
           <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
           <li><a href="https://github.com/ConorMacBride" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
@@ -284,7 +293,7 @@ In September 2013, I was a CERN Mini Expo Guide explaining particle physics to p
 <section id="column-left">
   <h1 class="title">Education</h1>
 
-  <!----><section id="phd" class="entry hide-read-more">
+  <!----><section id="phd" class="entry hide-read-more never-collapse">
   <header>
     
     <div class="entrydetails">
@@ -324,9 +333,12 @@ School of Mathematics and Physics</em></p>
   </li>
 </ul>
 
-<section class="sub-group publications">
-<h2>Publications</h2>
-<p class="filter"><strong>1<sup>st</sup> author</strong> | <a href="/publications/">see all</a></p>
+<section class="publications">
+  <div>
+    <h2>Publications</h2>
+    <p class="filter"><strong>1<sup>st</sup> author</strong> | <a href="/publications/">see all</a></p>
+  </div>
+  <section class="sub-group">
 
 <section class="entry">
   <header>
@@ -388,10 +400,11 @@ School of Mathematics and Physics</em></p>
 </div>
   
 </section>
+  </section>
 </section>
 
-<section class="sub-group talks">
 <h2>Talks</h2>
+<section class="sub-group talks">
     
     
     
@@ -461,7 +474,7 @@ School of Mathematics and Physics</em></p>
     
   </div>
   
-</section><!----><section id="mphys" class="entry hide-read-more">
+</section><!----><section id="mphys" class="entry hide-read-more never-collapse">
   <header>
     
     <div class="entrydetails">
@@ -544,7 +557,7 @@ School of Mathematics and Physics</em></p>
     
   </div>
   
-</section><!----><section id="alevels" class="entry hide-read-more">
+</section><!----><section id="alevels" class="entry hide-read-more never-collapse">
   <header>
     
     <div class="entrydetails">
@@ -614,7 +627,7 @@ document.onload = mobileCollapse();
         <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
-    <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2023</div>
+    <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2025</div>
     </div>
   </footer>
   <script>
