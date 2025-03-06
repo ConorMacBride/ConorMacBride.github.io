@@ -13,6 +13,7 @@ description: >-
 url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: conormacbride
 github_username: ConorMacBride
+gh: <i class="fab fa-github" aria-hidden="true"></i>
 social:
   name: Conor MacBride
   links:

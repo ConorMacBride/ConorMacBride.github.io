@@ -5,6 +5,6 @@ organisation: Queen's University Belfast
 role: Teaching Assistant
 noexpand: true
 ---
-- Secured funding to host a [Software Carpentry workshop](https://macbride.me/2022-03-14-qub-online/) for postgraduate researchers within the School of Mathematics and Physics.
-- Supporting and guiding students in the level-one Computational Physics course as they solve problems using Python. Most of the students are new to programming.
-- Marking and providing feedback on assignments for the level-two Mathematical Physics course.
+- Secured funding and organised a [Software Carpentry workshop](https://macbride.me/2022-03-14-qub-online/) for postgraduate researchers, fostering skills in programming and data analysis tools.
+- Mentored students in Computational Physics, guiding them through Python problem-solving techniques, and ensuring effective learning for those new to programming.
+- Marked and provided constructive feedback on assignments for the Mathematical Physics course.

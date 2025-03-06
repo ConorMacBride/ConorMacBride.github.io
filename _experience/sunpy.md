@@ -1,20 +1,23 @@
 ---
 date: 9999-08-01
-start: 2021-11-24
-organisation: SunPy
-role: Continuous Integration Maintainer
+start: 2021-10-24
+role: Open Source Contributions
 noexpand: true
 ---
-- Maintaining the CI/CD pipelines across various platforms including Azure Pipelines, GitHub Actions and CircleCI, and investigating and recommending new CI services.
-- Configuring Python testing environments and ensuring unit tests are sufficient.
-- Implementing new functionality, as well as fixing bugs and optimising existing code.
-- Reviewing pull requests to maintain a high-quality, well-tested codebase.
+### Matplotlib’s `pytest-mpl` Plugin *(Dec 2021 – Present)*
+- Maintained the [{{ site.gh }} `pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin for image comparison testing.
+- Led key developments, including:
+  - A new test suite and infrastructure to validate the plugin across diverse configurations.
+  - [HTML summary reports](https://matplotlib.org/pytest-mpl/latest/sample/test_html/fig_comparison.html) with interactive filtering of the image comparison test results.
 
-### Contributions to the ecosystem
-- Being involved since the project's inception, I developed most of the OpenAstronomy [GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) for testing, building, and publishing Python packages.
-  - These CI workflows are used extensively by the astrophysics community, including [Astropy](https://github.com/astropy/astropy), [SunPy](https://github.com/sunpy/sunpy), and the [Space Telescope Science Institute](https://github.com/spacetelescope) who operate the Hubble Space Telescope and the next generation JWST. Notably, the workflows are used for testing the software pipeline that calibrates the raw images captured by the JWST.
-  - Maintaining other OpenAstronomy projects including [Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates) and [`build-python-dist` action](https://github.com/OpenAstronomy/build-python-dist).
-  - Advising projects on how to configure their testing and publishing infrastructure.
-- Maintaining Matplotlib's [`pytest-mpl`](https://github.com/matplotlib/pytest-mpl) plugin, with my significant development work including,
-    - a new test suite, and infrastructure, to validate the internal state of the plugin across a wide range of configurations, and
-    - [HTML summary reports](https://matplotlib.org/pytest-mpl/latest/sample/test_html/fig_comparison.html) with interactive filtering of the image comparison test results. These reports are used by popular Python packages including [NetworkX](https://github.com/networkx/networkx) and [Cartopy](https://github.com/SciTools/cartopy).
+### OpenAstronomy GitHub Actions Workflows *(Oct 2021 – Present)*
+- Since the inception of the project, I have played a pivotal role in its development, designing and implementing the majority of the OpenAstronomy [{{ site.gh }} GitHub Actions workflows](https://github.com/OpenAstronomy/github-actions-workflows) for testing, building, and publishing Python packages.
+- Workflows are widely used by the astrophysics community, including [Astropy](https://github.com/astropy/astropy), [SunPy](https://github.com/sunpy/sunpy), and the [Space Telescope Science Institute](https://github.com/spacetelescope), supporting software pipelines for the JWST.
+- Maintained additional OpenAstronomy projects, including [{{ site.gh }} Azure Pipelines templates](https://github.com/OpenAstronomy/azure-pipelines-templates) and [{{ site.gh }} `build-python-dist`](https://github.com/OpenAstronomy/build-python-dist).
+- Advised projects on CI/CD best practices for testing and publishing infrastructure.
+
+### SunPy Continuous Integration Maintainer *(Nov 2021 – Mar 2023)*
+- Managed [{{ site.gh }} SunPy](https://github.com/sunpy/sunpy) CI/CD pipelines across Azure Pipelines, GitHub Actions, and CircleCI, evaluating and integrating new CI services.
+- Configured Python testing environments and ensured comprehensive unit testing.
+- Implemented new functionality, optimized existing code, and resolved bugs.
+- Reviewed pull requests to uphold a high-quality, well-tested codebase.

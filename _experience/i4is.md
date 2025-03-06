@@ -5,7 +5,7 @@ organisation: Initiative for Interstellar Studies
 role: Web Editor
 noexpand: true
 ---
-- Keep online content up-to-date and enhance its presentation.
-- Manage content creation for the organisation's membership scheme and assist with the scheme's technical implementation. This involves participating in, and occasionally chairing, teleconferences and email discussions with project stakeholders around the world.
-- Implement custom features into the website using PHP and document extensively. This allows routine tasks to be automated.
-- Provide advice and assistance on procuring service contracts and on business matters.
+- Maintained and enhanced website content, improving presentation and user experience.
+- Led content creation and technical implementation for the membership scheme.
+- Developed PHP-based custom features to automate routine tasks.
+- Advised on service contracts and business strategies.
