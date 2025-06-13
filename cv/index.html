@@ -66,15 +66,36 @@
 <section id="column-right" class="maincontent experience">
   <h1 class="title">Experience</h1>
 
-  <!----><section id="allstate" class="entry no-content">
+  <!----><section id="allstate" class="entry hide-read-more">
   <header>
-    
+    <label for="expand1" class="toggle-expand" aria-hidden="true"></label>
     <div class="entrydetails">
       <div class="heading-above">ALLSTATE NORTHERN IRELAND</div>
       <div class="heading">Data Scientist</div>
       <div class="heading-below">Sep 2022 &mdash; Present</div>
     </div>
   </header>
+  <input checked type="checkbox" id="expand1" class="expand-state" aria-hidden="true" onchange="scrollToBlock('allstate')" />
+  <div class="description">
+    <h3 id="generative-ai--full-stack-innovation-15-years">Generative AI &amp; Full-Stack Innovation <em>(1.5 years)</em></h3>
+<ul>
+  <li>Designed, built, and deployed one of Allstate’s first generative AI solutions aimed at enhancing the customer experience through improved communication workflows.</li>
+  <li>The project was showcased regularly to executive leadership (VP and above), received international media attention, and was shortlisted for the 2024 Belfast Telegraph IT Awards.</li>
+  <li>Worked as part of a cross-functional team, contributing across the full stack—leveraging Java (Spring Boot), TypeScript (React), MongoDB, Azure OpenAI, Terraform, and S3.</li>
+  <li>Applied prompt engineering techniques, test-driven development, and agile/XP practices to ensure reliability and maintainability in a rapidly evolving space.</li>
+</ul>
+
+<h3 id="natural-language-processing-for-claims-1-year">Natural Language Processing for Claims <em>(1 year)</em></h3>
+<ul>
+  <li>Developed and evaluated NLP models to support claim segmentation and liability assessment at first notice of loss (FNOL).</li>
+  <li>Built BERT-based and tree-based models using Hugging Face, spaCy, and XGBoost, applying these to structured and unstructured claims data.</li>
+  <li>Delivered proof-of-concept pipelines and model performance analysis to support decision-making around automation feasibility.</li>
+  <li>Partnered with domain experts and product managers to identify bottlenecks and define model success criteria.</li>
+</ul>
+
+    
+  </div>
+  <label for="expand1" class="toggle-expand noexpand" aria-hidden="true"></label>
 </section><style type="text/css">
 #expand1:checked + .description { max-height: 120rem; }
 #expand1:checked ~ label.toggle-expand:before { content: "Read Less"; }
@@ -157,7 +178,7 @@
     <label for="expand4" class="toggle-expand" aria-hidden="true"></label>
     <div class="entrydetails">
       <div class="heading-above">QUEEN'S UNIVERSITY BELFAST</div>
-      <div class="heading">Teaching Assistant</div>
+      <div class="heading">PhD Teaching Assistant</div>
       <div class="heading-below">Sep 2019 &mdash; Sep 2022</div>
     </div>
   </header>
@@ -253,41 +274,27 @@
 #expand7:checked ~ label.toggle-expand:before { content: "Read Less"; }
 #expand7:checked + .description > div.fade-out { display: none !important; }
 </style>
-<!----><section id="stcolumbs" class="entry no-content">
-  <header>
-    
-    <div class="entrydetails">
-      <div class="heading-above">STUDENT AT ST COLUMB'S COLLEGE</div>
-      <div class="heading">Peer Mentor and Prefect</div>
-      <div class="heading-below">Jan 2014 &mdash; Jun 2015</div>
-    </div>
-  </header>
-</section><style type="text/css">
-#expand8:checked + .description { max-height: 120rem; }
-#expand8:checked ~ label.toggle-expand:before { content: "Read Less"; }
-#expand8:checked + .description > div.fade-out { display: none !important; }
-</style>
 <!----><section id="cern" class="entry hide-read-more">
   <header>
-    <label for="expand9" class="toggle-expand" aria-hidden="true"></label>
+    <label for="expand8" class="toggle-expand" aria-hidden="true"></label>
     <div class="entrydetails">
       <div class="heading-above">CERN</div>
       <div class="heading">Student Intern</div>
       <div class="heading-below">Jul 2014</div>
     </div>
   </header>
-  <input checked type="checkbox" id="expand9" class="expand-state" aria-hidden="true" onchange="scrollToBlock('cern')" />
+  <input checked type="checkbox" id="expand8" class="expand-state" aria-hidden="true" onchange="scrollToBlock('cern')" />
   <div class="description">
     <p>Shadowed the Head of Operations and colleagues in the Beams Department.
 In September 2013, I also served as a CERN Mini Expo Guide, where I explained particle physics concepts to primary and secondary school students in my city.</p>
 
     
   </div>
-  <label for="expand9" class="toggle-expand noexpand" aria-hidden="true"></label>
+  <label for="expand8" class="toggle-expand noexpand" aria-hidden="true"></label>
 </section><style type="text/css">
-#expand9:checked + .description { max-height: 120rem; }
-#expand9:checked ~ label.toggle-expand:before { content: "Read Less"; }
-#expand9:checked + .description > div.fade-out { display: none !important; }
+#expand8:checked + .description { max-height: 120rem; }
+#expand8:checked ~ label.toggle-expand:before { content: "Read Less"; }
+#expand8:checked + .description > div.fade-out { display: none !important; }
 </style>
 </section>
 <section id="column-left">
@@ -304,11 +311,10 @@ In September 2013, I also served as a CERN Mini Expo Guide, where I explained pa
   </header>
   
   <div class="description">
-    <p>My research focused on energy dissipation in the atmosphere of the Sun.
-This involved designing numerical simulations, and processing and analysing large datasets to extract novel insights.</p>
+    <p>Researched energy dissipation in the Sun’s atmosphere, developing numerical simulations and analysing large datasets to uncover new insights.</p>
 
-<p>I created an open source Python package, <a href="https://github.com/ConorMacBride/mcalf"><code class="language-plaintext highlighter-rouge">mcalf</code></a>, which extracts velocity measurements from observations of the Sun.
-By utilising machine learning techniques, the method adapts to the physics present in each region of the Sun.</p>
+<p>Created <a href="https://github.com/ConorMacBride/mcalf"><code class="language-plaintext highlighter-rouge">mcalf</code></a>, an open-source Python package for extracting velocity measurements from solar observations.
+Leveraged machine learning to adapt the method to the unique physics of different solar regions.</p>
 
 <section class="sub-group publications">
 <section class="entry">
@@ -327,7 +333,6 @@ By utilising machine learning techniques, the method adapts to the physics prese
 School of Mathematics and Physics</em></p>
 
 <ul>
-  <li><a href="https://www.qub.ac.uk/schools/SchoolofMathematicsandPhysics/Research/culture-environment/PhDResearchStudents/ConorMacBride-StudentProfile/">School Profile</a></li>
   <li>
     <div itemscope="" itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="/assets/images/orcid.svg" width="18" height="18" style="width:1em;margin-right:.5em;vertical-align:middle;" alt="ORCID iD icon" />https://orcid.org/0000-0002-9901-8723</a></div>
   </li>
@@ -487,7 +492,7 @@ School of Mathematics and Physics</em></p>
   <div class="description">
     <p>First-class honours</p>
 
-<p>Deans’ List — 2015/16, 2016/17, 2017/18, 2018/19</p>
+<p>Deans’ List — 2016, 2017, 2018 &amp; 2019</p>
 
 <section class="sub-group publications">
 <section class="entry">
@@ -501,81 +506,50 @@ School of Mathematics and Physics</em></p>
 </section>
 </section>
 
-<details>
-  <summary>Courses</summary>
+<!-- <details markdown="1">
+<summary>Courses</summary>
 
-  <h3 id="mphys-year">MPhys Year</h3>
+### MPhys Year
 
-  <ul>
-    <li><a href="https://web.archive.org/web/20151005055055/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/AS5001.pdf">Advanced Data Analysis</a></li>
-    <li><a href="https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5810">Advanced Solar Theory</a></li>
-    <li>General Relativity</li>
-    <li>Magnetofluids and Space Plasmas</li>
-    <li><a href="https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5802">Advanced Analytical Techniques</a></li>
-    <li><a href="https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5999">Advanced Project in Mathematics</a></li>
-  </ul>
+*   [Advanced Data Analysis](https://web.archive.org/web/20151005055055/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/AS5001.pdf)
+*   [Advanced Solar Theory](https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5810)
+*   General Relativity
+*   Magnetofluids and Space Plasmas
+*   [Advanced Analytical Techniques](https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5802)
+*   [Advanced Project in Mathematics](https://web.archive.org/web/20170217002358/http://www.st-andrews.ac.uk/maths/current/ug/modules/5000-level/#MT5999)
 
-  <h3 id="senior-honours">Senior Honours</h3>
+### Senior Honours
 
-  <ul>
-    <li><a href="https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#MT4112">Computing in Mathematics</a></li>
-    <li><a href="https://web.archive.org/web/20151005064434/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4039.pdf">Introduction to Condensed Matter Physics</a></li>
-    <li><a href="https://web.archive.org/web/20151005062033/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4040.pdf">Nuclear and Particle Physics with Advanced Skills</a></li>
-    <li>Special Relativity and Fields</li>
-    <li><a href="https://web.archive.org/web/20151005062115/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4028.pdf">Advanced Quantum Mechanics</a></li>
-    <li><a href="https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#d.en.264949">Mathematical Biology 1</a></li>
-    <li><a href="https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#MT4510">Solar Theory</a></li>
-    <li>Thermal and Statistical Physics</li>
-  </ul>
+*   [Computing in Mathematics](https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#MT4112)
+*   [Introduction to Condensed Matter Physics](https://web.archive.org/web/20151005064434/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4039.pdf)
+*   [Nuclear and Particle Physics with Advanced Skills](https://web.archive.org/web/20151005062033/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4040.pdf)
+*   Special Relativity and Fields
+*   [Advanced Quantum Mechanics](https://web.archive.org/web/20151005062115/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4028.pdf)
+*   [Mathematical Biology 1](https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#d.en.264949)
+*   [Solar Theory](https://web.archive.org/web/20170205153202/http://www.st-andrews.ac.uk/maths/current/ug/modules/4000-level/#MT4510)
+*   Thermal and Statistical Physics
 
-  <h3 id="junior-honours">Junior Honours</h3>
+### Junior Honours
 
-  <ul>
-    <li><a href="https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3503">Complex Analysis</a></li>
-    <li><a href="https://web.archive.org/web/20151005061956/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3080.pdf">Computational Physics</a></li>
-    <li><a href="https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3504">Differential Equations</a></li>
-    <li><a href="https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3501">Linear Mathematics 2</a></li>
-    <li><a href="https://web.archive.org/web/20151005064157/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3061.pdf">Quantum Mechanics 1</a></li>
-    <li><a href="https://web.archive.org/web/20151005073852/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3007.pdf">Electromagnetism</a></li>
-    <li><a href="https://web.archive.org/web/20151005073754/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4038.pdf">Lagrangian and Hamiltonian Dynamics</a></li>
-    <li><a href="https://web.archive.org/web/20151005061607/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3062.pdf">Quantum Mechanics 2</a></li>
-    <li><a href="https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#d.en.264895">Techniques of Applied Mathematics</a></li>
-  </ul>
+*   [Complex Analysis](https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3503)
+*   [Computational Physics](https://web.archive.org/web/20151005061956/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3080.pdf)
+*   [Differential Equations](https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3504)
+*   [Linear Mathematics 2](https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#MT3501)
+*   [Quantum Mechanics 1](https://web.archive.org/web/20151005064157/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3061.pdf)
+*   [Electromagnetism](https://web.archive.org/web/20151005073852/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3007.pdf)
+*   [Lagrangian and Hamiltonian Dynamics](https://web.archive.org/web/20151005073754/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH4038.pdf)
+*   [Quantum Mechanics 2](https://web.archive.org/web/20151005061607/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH3062.pdf)
+*   [Techniques of Applied Mathematics](https://web.archive.org/web/20170217145611/http://www.st-andrews.ac.uk/maths/current/ug/modules/3000-level/#d.en.264895)
 
-  <h3 id="second-year">Second Year</h3>
+### Second Year
 
-  <ul>
-    <li><a href="https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2501">Linear Mathematics</a></li>
-    <li><a href="https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2503">Multivariate Calculus</a></li>
-    <li><a href="https://web.archive.org/web/20151005051415/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH2011.pdf">Physics 2A</a></li>
-    <li><a href="https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2507">Mathematical Modelling</a></li>
-    <li><a href="https://web.archive.org/web/20151005070443/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH2012.pdf">Physics 2B</a></li>
-    <li><a href="https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2506">Vector Calculus</a></li>
-  </ul>
-</details>
-
-    
-  </div>
-  
-</section><!----><section id="alevels" class="entry hide-read-more never-collapse">
-  <header>
-    
-    <div class="entrydetails">
-      <div class="heading-above">ST COLUMB'S COLLEGE</div>
-      <div class="heading">A-levels</div>
-      <div class="heading-below">Sep 2008 &mdash; Jun 2015</div>
-    </div>
-  </header>
-  
-  <div class="description">
-    <table>
-  <tr><td>Physics</td><td>A</td></tr>
-  <tr><td>Mathematics</td><td>A*</td></tr>
-  <tr><td>Further Mathematics</td><td>A*</td></tr>
-  <tr><td>Music</td><td>A*</td></tr>
-  <tr><td>Chemistry <i>(AS only)</i></td><td><i>B</i></td></tr>
-</table>
-<p>GCSEs: 6 A*, 4 A &amp; 1 B</p>
+*   [Linear Mathematics](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2501)
+*   [Multivariate Calculus](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2503)
+*   [Physics 2A](https://web.archive.org/web/20151005051415/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH2011.pdf)
+*   [Mathematical Modelling](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2507)
+*   [Physics 2B](https://web.archive.org/web/20151005070443/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH2012.pdf)
+*   [Vector Calculus](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2506)
+</details> -->
 
     
   </div>
