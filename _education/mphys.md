@@ -7,7 +7,7 @@ homepage: true
 ---
 First-class honours
 
-Deans' List — 2015/16, 2016/17, 2017/18, 2018/19
+Deans' List — 2016, 2017, 2018 & 2019
 
 <section class="sub-group publications">
 <section class="entry">
@@ -21,7 +21,7 @@ Deans' List — 2015/16, 2016/17, 2017/18, 2018/19
 </section>
 </section>
 
-<details markdown="1">
+<!-- <details markdown="1">
 <summary>Courses</summary>
 
 ### MPhys Year
@@ -64,4 +64,4 @@ Deans' List — 2015/16, 2016/17, 2017/18, 2018/19
 *   [Mathematical Modelling](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2507)
 *   [Physics 2B](https://web.archive.org/web/20151005070443/http://www.st-andrews.ac.uk/physics/modules/modulepdfs/PH2012.pdf)
 *   [Vector Calculus](https://web.archive.org/web/20160308100702/http://www.st-andrews.ac.uk:80/maths/current/ug/modules/2000-level/#MT2506)
-</details>
+</details> -->

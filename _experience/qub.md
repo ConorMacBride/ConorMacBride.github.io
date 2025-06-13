@@ -2,7 +2,7 @@
 date: 2022-09-01
 start: 2019-09-01
 organisation: Queen's University Belfast
-role: Teaching Assistant
+role: PhD Teaching Assistant
 noexpand: true
 ---
 - Secured funding and organised a [Software Carpentry workshop](https://macbride.me/2022-03-14-qub-online/) for postgraduate researchers, fostering skills in programming and data analysis tools.

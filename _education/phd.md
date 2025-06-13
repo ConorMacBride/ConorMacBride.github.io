@@ -5,12 +5,10 @@ organisation: Queen's University Belfast
 role: PhD Physics
 homepage: true
 ---
+Researched energy dissipation in the Sun’s atmosphere, developing numerical simulations and analysing large datasets to uncover new insights.
 
-My research focused on energy dissipation in the atmosphere of the Sun.
-This involved designing numerical simulations, and processing and analysing large datasets to extract novel insights.
-
-I created an open source Python package, [`mcalf`](https://github.com/ConorMacBride/mcalf), which extracts velocity measurements from observations of the Sun.
-By utilising machine learning techniques, the method adapts to the physics present in each region of the Sun.
+Created [`mcalf`](https://github.com/ConorMacBride/mcalf), an open-source Python package for extracting velocity measurements from solar observations.
+Leveraged machine learning to adapt the method to the unique physics of different solar regions.
 
 <section class="sub-group publications">
 <section class="entry">
@@ -28,7 +26,6 @@ By utilising machine learning techniques, the method adapts to the physics prese
 *Astrophysics Research Centre,  
 School of Mathematics and Physics*
 
-- [School Profile](https://www.qub.ac.uk/schools/SchoolofMathematicsandPhysics/Research/culture-environment/PhDResearchStudents/ConorMacBride-StudentProfile/)
 - <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="{{ site.images }}/orcid.svg" width="18" height="18" style="width:1em;margin-right:.5em;vertical-align:middle;" alt="ORCID iD icon">https://orcid.org/0000-0002-9901-8723</a></div>
 
 {% include publications.html context="phd" %}
