@@ -36,6 +36,7 @@ plugins:
 collections:
   - experience
   - education
+  - volunteering
   - publications
   - talks
 

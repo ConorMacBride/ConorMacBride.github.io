@@ -1,47 +1,51 @@
 ---
 layout: default
 ---
-<div class="container">
-<section id="column-right" class="maincontent">
-  <section class="entry nobg never-collapse">
-    <div class="description">
-      {{ page.content | markdownify }}
-    </div>
-  </section>
-</section>
-<section id="column-left">
+<div class="container home">
+  <div class="column left">
+    <section id="column-left">
 
-  {%- assign sorted_experiences = site.experience | reverse -%}
-  {%- for item in sorted_experiences -%}
-
-    {%- unless item.homepage == false -%}
-    {%- unless item.subentry -%}
-      {% include entry.html entry=item full=false -%}
-    {%- endunless -%}
-    {%- endunless -%}
-
-  {%- endfor -%}
-
-  {% assign sorted_education = site.education | reverse -%}
-  {%- for item in sorted_education -%}
-
-    {%- unless item.homepage == false -%}
-    {%- unless item.subentry -%}
-      {% include entry.html entry=item full=false -%}
-    {%- endunless -%}
-    {%- endunless -%}
-
-  {%- endfor -%}
-
-  <a href="/cv/">
-    <section class="entry no-content">
-      <header>
-        <div class="entrydetails">
-          <div class="heading-above" style="text-transform: none;">See all my experience and education in my CV &#187;</div>
-        </div>
-      </header>
+      {%- assign sorted_experiences = site.experience | reverse -%}
+      {%- for item in sorted_experiences -%}
+    
+        {%- unless item.homepage == false -%}
+        {%- unless item.subentry -%}
+          {% include entry.html entry=item full=false -%}
+        {%- endunless -%}
+        {%- endunless -%}
+    
+      {%- endfor -%}
+    
+      {% assign sorted_education = site.education | reverse -%}
+      {%- for item in sorted_education -%}
+    
+        {%- unless item.homepage == false -%}
+        {%- unless item.subentry -%}
+          {% include entry.html entry=item full=false -%}
+        {%- endunless -%}
+        {%- endunless -%}
+    
+      {%- endfor -%}
+    
+      <a href="/cv/">
+        <section class="entry no-content">
+          <header>
+            <div class="entrydetails">
+              <div class="heading-above" style="text-transform: none;">See all my experience and education in&nbsp;my&nbsp;CV&nbsp;&#187;</div>
+            </div>
+          </header>
+        </section>
+      </a>
+    
     </section>
-  </a>
-
-</section>
+  </div>
+  <div class="column right">
+    <section id="column-right">
+      <section class="entry nobg never-collapse">
+        <div class="description">
+          {{ page.content | markdownify }}
+        </div>
+      </section>
+    </section>
+  </div>
 </div>

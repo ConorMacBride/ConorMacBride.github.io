@@ -1,35 +1,59 @@
 ---
 layout: default
 ---
-<div class="container">
-<section id="column-right" class="maincontent experience">
-  <h1 class="title">Experience</h1>
-
-  {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
-
-  {%- assign sorted_experiences = site.experience | reverse -%}
-  {%- for item in sorted_experiences -%}
-
-    {%- unless item.subentry -%}
-      {% include entry.html entry=item full=true -%}
-    {%- endunless -%}
- 
-  {%- endfor -%}
-  
-</section>
-<section id="column-left">
-  <h1 class="title">Education</h1>
-
-  {% assign sorted_education = site.education | reverse -%}
-  {%- for item in sorted_education -%}
-
-    {%- unless item.subentry -%}
-      {% include entry.html entry=item full=true -%}
-    {%- endunless -%}
-
-  {%- endfor -%}
-
-</section>
+<div class="container cv">
+  <div class="column left">
+    <section id="education">
+      <h1 class="title">Education</h1>
+    
+      {% assign sorted_education = site.education | reverse -%}
+      {%- for item in sorted_education -%}
+    
+        {%- unless item.subentry -%}
+          {% include entry.html entry=item full=true -%}
+        {%- endunless -%}
+    
+      {%- endfor -%}
+    </section>
+    <section id="certifications">
+      <h1 class="title">Certifications</h1>
+      <div class="certifications">
+        <div class="certification">
+          <a href="https://www.credly.com/badges/bd9b0930-bb38-44c4-9a96-a4592e6aa6da">
+            <img src="{{ site.images }}/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect - Associate"/>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="column right">
+    <section id="experience" class="experience">
+      <h1 class="title">Experience</h1>
+    
+      {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
+    
+      {%- assign sorted_experiences = site.experience | reverse -%}
+      {%- for item in sorted_experiences -%}
+    
+        {%- unless item.subentry -%}
+          {% include entry.html entry=item full=true -%}
+        {%- endunless -%}
+     
+      {%- endfor -%}
+    </section>
+    <section id="volunteering">
+      <h1 class="title">Volunteering</h1>
+    
+      {%- assign sorted_volunteering = site.volunteering | reverse -%}
+      {%- for item in sorted_volunteering -%}
+    
+        {%- unless item.subentry -%}
+          {% include entry.html entry=item full=true -%}
+        {%- endunless -%}
+     
+      {%- endfor -%}
+    </section>
+  </div>
 </div>
 <script>
 function scrollToBlock(id) {
