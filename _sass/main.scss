@@ -459,6 +459,14 @@ div#postnav > div a {
     font-weight: bold;
 }
 
+@media screen and (max-width: 960px) {
+    section.experience, section.volunteering {
+        div.description {
+            display: none;
+        }
+    }
+}
+
 @mixin wide-header {
     div.header-container {
         height: 18rem;
