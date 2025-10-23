@@ -1,15 +1,11 @@
 # Site settings
 title: Conor MacBride
-tagline: Data Scientist
+tagline: Senior Data Scientist
 email: conor@macbride.me
 profile_picture: conor.jpeg
 description: >-
-  I’m Conor MacBride, a data scientist based in Belfast, Northern Ireland. In
-  my free time I contribute to open source projects. I obtained a PhD in
-  astrophysics from Queen’s University Belfast in 2023, which involved studying
-  waves in the Sun’s atmosphere using numerical simulations. Prior to that, I
-  obtained an MPhys Mathematics and Theoretical Physics (first-class honours)
-  from the University of St Andrews in 2019.
+  Senior Data Scientist at Allstate NI specialising in AI, NLP, and generative AI,
+  with a background in physics and open-source development.
 url: "https://macbride.me" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: conormacbride
 github_username: ConorMacBride
