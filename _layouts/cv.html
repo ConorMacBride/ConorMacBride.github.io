@@ -5,14 +5,14 @@ layout: default
   <div class="column left">
     <section id="education">
       <h1 class="title">Education</h1>
-    
+
       {% assign sorted_education = site.education | reverse -%}
       {%- for item in sorted_education -%}
-    
+
         {%- unless item.subentry -%}
           {% include entry.html entry=item full=true -%}
         {%- endunless -%}
-    
+
       {%- endfor -%}
     </section>
     <section id="certifications">
@@ -29,28 +29,29 @@ layout: default
   <div class="column right">
     <section id="experience" class="experience">
       <h1 class="title">Experience</h1>
-    
+
       {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
-    
+
       {%- assign sorted_experiences = site.experience | reverse -%}
-      {%- for item in sorted_experiences -%}
-    
-        {%- unless item.subentry -%}
-          {% include entry.html entry=item full=true -%}
+      {%- assign grouped_experiences = sorted_experiences | group_by: "organisation" -%}
+      {%- for group in grouped_experiences -%}
+
+        {%- unless group.items[0].subentry -%}
+          {% include entry.html entry=group.items full=true -%}
         {%- endunless -%}
-     
+
       {%- endfor -%}
     </section>
     <section id="volunteering">
       <h1 class="title">Volunteering</h1>
-    
+
       {%- assign sorted_volunteering = site.volunteering | reverse -%}
       {%- for item in sorted_volunteering -%}
-    
+
         {%- unless item.subentry -%}
           {% include entry.html entry=item full=true -%}
         {%- endunless -%}
-     
+
       {%- endfor -%}
     </section>
   </div>

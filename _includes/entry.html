@@ -1,4 +1,19 @@
-{%- assign item = include.entry -%}
+{%- assign raw = include.entry -%}
+{%- if raw.path -%}
+  {%- assign is_group = false -%}
+  {%- assign item = raw -%}
+{%- else -%}
+  {%- assign group = raw -%}
+  {%- assign group_size = group.items | size -%}
+  {%- if group_size == 1 -%}
+    {%- assign is_group = false -%}
+    {%- assign item = group.items | first -%}
+  {%- else -%}
+    {%- assign is_group = true -%}
+    {%- assign item = group.items | first -%}
+  {%- endif -%}
+{%- endif -%}
+
 {%- assign itemid = item.path | split: "/" | last | replace: ".md", "" -%}
 
 {%- if item.noexpand -%}
@@ -15,40 +30,92 @@
 
 {%- if mobcollapse -%}{%- capture expand_id -%}{%- increment var -%}{%- endcapture -%}{%- endif -%}
 
-{%- assign unix_end = item.date | date: "%s" | plus: 0 -%}
-{%- if unix_end > 5000000000 -%}
-  {%- assign end_date = "Present" -%}
-{%- else -%}
-  {%- assign end_date = item.date | date: "%b %Y" -%}
-{%- endif -%}
+{%- comment -%}Header dates are not a single value for groups; individual roles show their own dates.{%- endcomment -%}
 
-{%- assign start_date = item.start | date: "%b %Y" -%}
-{%- if start_date == end_date -%}
-  {%- assign datestring = start_date -%}
-{%- else -%}
-  {%- capture datestring -%}{{ start_date }} &mdash; {{ end_date }}{%- endcapture -%}
-{%- endif -%}
 {%- if include.full == false %}<a href="/cv/#{{ itemid }}">{% endif -%}
-<section id="{{ itemid }}" class="entry{% if item.subentry %} sub-entry{% endif %}{% if item.content.size < 2 or include.full == false %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}{% if mobcollapse == false %} never-collapse{% endif %}">
+<section id="{{ itemid }}" class="entry{% if item.subentry %} sub-entry{% endif %}{% if is_group == false and (item.content.size < 2 or include.full == false) %} no-content{% endif %}{% if noexpand %} hide-read-more{% endif %}{% if mobcollapse == false %} never-collapse{% endif %}">
+  {%- comment -%}Only render the original single header for non-group entries{%- endcomment -%}
+  {% unless is_group %}
   <header>
-    {% if mobcollapse and include.full and item.content.size > 1 %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
+    {% if mobcollapse and include.full and (is_group == false and item.content.size > 1) %}<label for="expand{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
     <div class="entrydetails">
       <div class="heading-above">{{ item.organisation | upcase }}</div>
-      <div class="heading">{{ item.role }}</div>
-      <div class="heading-below">{{ datestring }}</div>
+      {% if is_group == false %}
+        <div class="heading">{{ item.role }}</div>
+        {%- assign unix_end = item.date | date: "%s" | plus: 0 -%}
+        {%- if unix_end > 5000000000 -%}
+          {%- assign end_date = "Present" -%}
+        {%- else -%}
+          {%- assign end_date = item.date | date: "%b %Y" -%}
+        {%- endif -%}
+
+        {%- assign start_date = item.start | date: "%b %Y" -%}
+        {%- if start_date == end_date -%}
+          {%- assign datestring = start_date -%}
+        {%- else -%}
+          {%- capture datestring -%}{{ start_date }} &mdash; {{ end_date }}{%- endcapture -%}
+        {%- endif -%}
+        <div class="heading-below">{{ datestring }}</div>
+      {% else %}
+      {% endif %}
+        {%- comment -%}Group header: organisation only; roles/dates are rendered inside description.{%- endcomment -%}
     </div>
   </header>
-  {%- if item.content.size > 1 and include.full %}
-  {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')" />{% endif %}
-  <div class="description">
-    {{ item.content | markdownify }}
-    {% if noexpand == false and mobcollapse %}<div class="fade-out" aria-hidden="true"></div>{% endif %}
-  </div>
-  {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand{% if noexpand %} noexpand{% endif %}" aria-hidden="true"></label>{% endif -%}
-  {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ item.link }}" aria-label="read more"></a>{% endif -%}
-  {% endif %}
+  {% endunless %}
+
+  {%- if is_group %}
+    {%- comment -%}Show grouped entries as stacked header + description pairs inside one section{%- endcomment -%}
+    {%- for e in group.items -%}
+      {%- comment -%}unique expand id per group entry when mobcollapse is enabled{%- endcomment -%}
+      {%- if mobcollapse -%}{%- capture entry_expand_id -%}{{ expand_id }}-{{ forloop.index }}{%- endcapture -%}{%- endif -%}
+
+      {% if mobcollapse %}<input{% if e.noexpand %} checked{% endif %} type="checkbox" id="expand{{ entry_expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')" />{% endif %}
+      <header>
+        {% if mobcollapse and include.full and (e.content.size > 1) %}<label for="expand{{ entry_expand_id }}" class="toggle-expand" aria-hidden="true"></label>{% endif %}
+        <div class="entrydetails">
+          {% if forloop.first %}<div class="heading-above group">{% if e.organisation %}{{ e.organisation | upcase }}{% else %}{{ group.organisation | upcase }}{% endif %}</div>{% endif %}
+          <div class="heading">{{ e.role }}</div>
+            {%- assign unix_end = e.date | date: "%s" | plus: 0 -%}
+            {%- if unix_end > 5000000000 -%}
+              {%- assign end_date = "Present" -%}
+            {%- else -%}
+              {%- assign end_date = e.date | date: "%b %Y" -%}
+            {%- endif -%}
+
+            {%- assign start_date = e.start | date: "%b %Y" -%}
+            {%- if start_date == end_date -%}
+              {%- assign datestring_e = start_date -%}
+            {%- else -%}
+              {%- capture datestring_e -%}{{ start_date }} &mdash; {{ end_date }}{%- endcapture -%}
+            {%- endif -%}
+          <div class="heading-below">{{ datestring_e }}</div>
+        </div>
+      </header>
+
+      <div class="description">
+        <div class="group-entry">
+          <div class="content">{{ e.content | markdownify }}</div>
+        </div>
+        {% if (e.noexpand == false or e.noexpand == nil) and mobcollapse %}<div class="fade-out" aria-hidden="true"></div>{% endif %}
+      </div>
+
+      {% if mobcollapse %}<label for="expand{{ entry_expand_id }}" class="toggle-expand{% if e.noexpand %} noexpand{% endif %}" aria-hidden="true"></label>{% endif %}
+    {%- endfor -%}
+  {%- else -%}
+  {%- endif %}
+
+    {%- if item.content.size > 1 and include.full %}
+      {% if mobcollapse %}<input{% if noexpand %} checked{% endif %} type="checkbox" id="expand{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')" />{% endif %}
+      <div class="description">
+        {{ item.content | markdownify }}
+        {% if noexpand == false and mobcollapse %}<div class="fade-out" aria-hidden="true"></div>{% endif %}
+      </div>
+      {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand{% if noexpand %} noexpand{% endif %}" aria-hidden="true"></label>{% endif -%}
+      {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ item.link }}" aria-label="read more"></a>{% endif -%}
+    {%- endif %}
 </section>
 {%- if include.full == false %}</a>{% endif -%}
+
 {% if mobcollapse and include.full -%}
 <style type="text/css">
 #expand{{ expand_id }}:checked + .description { max-height: 120rem; }
