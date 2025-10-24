@@ -249,6 +249,14 @@ div.container > section, section#single-column {
     row-gap: 1rem;
 }
 
+header.merged {
+    display: none;
+}
+
+header.unmerged .heading-above {
+    margin-bottom: 1.5rem;
+}
+
 div.container section.entry header label.toggle-expand {
     position: absolute;
     top: 0;
@@ -361,7 +369,7 @@ footer a {
     display:none;
 }
 
-.expand-state + .details {
+.expand-state + header + .details {
     max-height: 0rem;
     overflow: hidden;
     transition: all .3s ease;
@@ -528,7 +536,7 @@ div#postnav > div a {
         max-height: 100%;
     }
     /* BEGIN Expanding Mechanism */
-    .expand-state + .details { max-height: 10rem; }
+    .expand-state + header + .details { max-height: 10rem; }
     .toggle-expand.noexpand { display: none; }
     /* END Expanding Mechanism */
 }

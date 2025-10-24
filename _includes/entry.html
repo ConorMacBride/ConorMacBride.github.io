@@ -2,7 +2,11 @@
 
 {%- assign is_group = ent.is_group | default: false -%}
 {%- assign itemid = ent.itemid -%}
-{%- assign organisation = ent.organisation_upcase -%}
+{% if ent.organisation_upcase == 'N/A' %}
+  {%- assign organisation = null -%}
+{% else %}
+  {%- assign organisation = ent.organisation_upcase -%}
+{% endif %}
 {%- assign mobcollapse = ent.mobcollapse | default: false -%}
 {%- assign expand_id = ent.expand_id -%}
 {%- assign noexpand = ent.noexpand | default: false -%}
@@ -20,6 +24,9 @@
 {%- endif -%}
 {%- if include.full == true -%}
     {% if (is_group and mobcollapse) %}
+        {% if mobcollapse and ent.group_has_content %}
+        <input checked type="checkbox" id="{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')"/>
+        {% endif %}
         <header class="merged">
            <label for="{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>
            <div class="entrydetails">
@@ -28,14 +35,14 @@
              <div class="heading-below">{{ ent.group_datestring }}</div>
             </div>
         </header>
-        {% if mobcollapse and ent.group_has_content %}
-        <input checked type="checkbox" id="{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')"/>
-        {% endif %}
     {%- endif -%}
     {% for entry in ent.items %}
         {% if is_group and entry.is_first %}<div class="details">{% endif %}
-        <header>
-            {% if is_group == false and mobcollapse %}
+        {% if is_group == false and mobcollapse and ent.group_has_content %}
+        <input checked type="checkbox" id="{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')"/>
+        {% endif %}
+        <header{% if (is_group and mobcollapse and entry.is_first) %} class="unmerged"{% endif %}>
+            {% if mobcollapse and entry.is_first %}
             <label for="{{ expand_id }}" class="toggle-expand" aria-hidden="true"></label>
             {% endif %}
             <div class="entrydetails">
@@ -44,9 +51,6 @@
               <div class="heading-below">{{ entry.datestring }}</div>
             </div>
         </header>
-        {% if is_group == false and mobcollapse and ent.group_has_content %}
-        <input checked type="checkbox" id="{{ expand_id }}" class="expand-state" aria-hidden="true" onchange="scrollToBlock('{{ itemid }}')"/>
-        {% endif %}
         {% if is_group == false %}<div class="details">{% endif %}
         <div class="description">
             {{ entry.content_html }}
@@ -61,9 +65,10 @@
 </section>
 {%- if mobcollapse and include.full -%}
 <style type="text/css">
-#{{ expand_id }}:checked + .details { max-height: 120rem; }
+#{{ expand_id }}:not(:checked) + header.merged { display: block; }
+#{{ expand_id }}:checked + header + .details { max-height: 120rem; }
 #{{ expand_id }}:checked ~ label.toggle-expand:before { content: "Read Less"; }
-#{{ expand_id }}:checked + .details > div.fade-out { display: none !important; }
+#{{ expand_id }}:checked + header + .details > div.fade-out { display: none !important; }
 </style>
 {% endif -%}
 {%- if include.full == false %}</a>{%- endif -%}
