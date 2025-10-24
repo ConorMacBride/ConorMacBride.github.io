@@ -5,15 +5,10 @@ layout: default
   <div class="column left">
     <section id="education">
       <h1 class="title">Education</h1>
-
-      {% assign sorted_education = site.education | reverse -%}
-      {%- for item in sorted_education -%}
-
-        {%- unless item.subentry -%}
-          {% include entry.html entry=item full=true -%}
-        {%- endunless -%}
-
-      {%- endfor -%}
+      {% assign grouped_education = site.data.grouped_education %}
+      {% for group in grouped_education %}
+        {% include entry.html entry=group full=true %}
+      {% endfor %}
     </section>
     <section id="certifications">
       <h1 class="title">Certifications</h1>
@@ -29,29 +24,16 @@ layout: default
   <div class="column right">
     <section id="experience" class="experience">
       <h1 class="title">Experience</h1>
-
-      {% capture expand_id -%}{%- increment var -%}{%- endcapture -%}
-
-      {%- assign sorted_experiences = site.experience | reverse -%}
-      {%- assign grouped_experiences = sorted_experiences | group_by: "organisation" -%}
-      {%- for group in grouped_experiences -%}
-
-        {%- unless group.items[0].subentry -%}
-          {% include entry.html entry=group.items full=true -%}
-        {%- endunless -%}
-
-      {%- endfor -%}
+      {% assign grouped_experiences = site.data.grouped_experience %}
+      {% for group in grouped_experiences %}
+        {% include entry.html entry=group full=true %}
+      {% endfor %}
     </section>
     <section id="volunteering">
       <h1 class="title">Volunteering</h1>
-
-      {%- assign sorted_volunteering = site.volunteering | reverse -%}
-      {%- for item in sorted_volunteering -%}
-
-        {%- unless item.subentry -%}
-          {% include entry.html entry=item full=true -%}
-        {%- endunless -%}
-
+      {%- assign grouped_volunteering = site.data.grouped_volunteering -%}
+      {%- for group in grouped_volunteering -%}
+        {% include entry.html entry=group full=true -%}
       {%- endfor -%}
     </section>
   </div>
@@ -81,7 +63,7 @@ function mobileCollapse() {
             .getElementsByClassName("entry");
     for (var i = 0; i < x.length; ++i) {
         var item = x[i];
-        var descriptions = item.getElementsByClassName("description");
+        var descriptions = item.getElementsByClassName("details");
         if (descriptions.length > 0) {
             descriptions[0].style.display = "block";
         }

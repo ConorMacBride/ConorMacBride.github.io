@@ -296,6 +296,11 @@ section.entry header div.links {
     font-size: 1.6rem;
 }
 
+section.entry div.details {
+    position: relative;
+    width: 100%;
+}
+
 section.entry div.description {
     position: relative;
     width: 100%;
@@ -356,7 +361,7 @@ footer a {
     display:none;
 }
 
-.expand-state + .description {
+.expand-state + .details {
     max-height: 0rem;
     overflow: hidden;
     transition: all .3s ease;
@@ -461,7 +466,7 @@ div#postnav > div a {
 
 @media screen and (max-width: 960px) {
     section.experience, section.volunteering {
-        div.description {
+        div.details {
             display: none;
         }
     }
@@ -519,11 +524,11 @@ div#postnav > div a {
     section.sub-group section.entry .toggle-expand {
         padding: 0;
     }
-    section.hide-read-more div.description {
+    section.hide-read-more div.details {
         max-height: 100%;
     }
     /* BEGIN Expanding Mechanism */
-    .expand-state + .description { max-height: 10rem; }
+    .expand-state + .details { max-height: 10rem; }
     .toggle-expand.noexpand { display: none; }
     /* END Expanding Mechanism */
 }

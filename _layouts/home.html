@@ -4,29 +4,18 @@ layout: default
 <div class="container home">
   <div class="column left">
     <section id="column-left">
-
-      {%- assign sorted_experiences = site.experience | reverse -%}
-      {%- for item in sorted_experiences -%}
-    
-        {%- unless item.homepage == false -%}
-        {%- unless item.subentry -%}
-          {% include entry.html entry=item full=false -%}
-        {%- endunless -%}
-        {%- endunless -%}
-    
+      {%- assign grouped_experience = site.data.grouped_experience -%}
+      {%- for group in grouped_experience -%}
+        {%- if group.homepage -%}
+          {% include entry.html entry=group full=false -%}
+        {%- endif -%}
       {%- endfor -%}
-    
-      {% assign sorted_education = site.education | reverse -%}
-      {%- for item in sorted_education -%}
-    
-        {%- unless item.homepage == false -%}
-        {%- unless item.subentry -%}
-          {% include entry.html entry=item full=false -%}
-        {%- endunless -%}
-        {%- endunless -%}
-    
+      {%- assign grouped_education = site.data.grouped_education -%}
+      {%- for group in grouped_education -%}
+        {%- if group.homepage -%}
+          {% include entry.html entry=group full=false -%}
+        {%- endif -%}
       {%- endfor -%}
-    
       <a href="/cv/">
         <section class="entry no-content">
           <header>
@@ -36,7 +25,6 @@ layout: default
           </header>
         </section>
       </a>
-    
     </section>
   </div>
   <div class="column right">
