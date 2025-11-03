@@ -1,5 +1,5 @@
 ---
-date: 2025-10-31
+date: 2025-11-01
 start: 2022-09-19
 organisation: Allstate Northern Ireland
 role: Data Scientist
