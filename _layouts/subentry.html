@@ -24,7 +24,7 @@
             <div class="heading-below">{{ datestring }}</div>
         </div>
         {%- if page.url -%}
-        <a class="toggle-expand external" href="{{ page.url }}"></a>
+        <a class="toggle-expand external" href="{{ page.url }}" target="_blank" rel="noopener noreferrer"></a>
         {%- endif -%}
     </header>
     <div class="description">{{ page.content }}</div>

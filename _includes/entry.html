@@ -54,7 +54,7 @@
         {% if is_group == false %}<div class="details">{% endif %}
         <div class="description">
             {{ entry.content_html }}
-            {% if item.link %}<a class="toggle-expand link" href="{{ item.link }}" aria-label="read more"></a>{% endif %}
+            {% if item.link %}<a class="toggle-expand link" href="{{ item.link }}" aria-label="read more" target="_blank" rel="noopener noreferrer"></a>{% endif %}
         </div>
     {% endfor %}
     </div>

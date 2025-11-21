@@ -17,7 +17,7 @@ Leveraged machine learning to adapt the method to the unique physics of differen
       <div class="date">THESIS</div>
       <div class="title">Wave and Energy Characterisation in the Atmosphere of Sunspots</div>
       <div class="authors"><em>MacBride, CD</em></div>
-      <div class="links"><a href="https://pure.qub.ac.uk/en/studentTheses/wave-and-energy-characterisation-in-the-atmosphere-of-sunspots">Queen's Research Portal</a></div>
+      <div class="links"><a href="https://pure.qub.ac.uk/en/studentTheses/wave-and-energy-characterisation-in-the-atmosphere-of-sunspots" target="_blank" rel="noopener noreferrer">Queen's Research Portal</a></div>
     </div>
   </header>
 </section>

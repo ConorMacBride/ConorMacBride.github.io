@@ -22,10 +22,10 @@
     {%- assign paper = '' -%}
     {%- assign slides = '' -%}
     {%- assign recording = '' -%}
-    {% if item.project %}{% capture project %}<a href="{{ item.project }}">Project</a> | {% endcapture %}{% endif %}
-    {% if item.paper %}{% capture paper %}<a href="{{ item.paper }}">Paper</a> | {% endcapture %}{% endif %}
-    {% if item.slides %}{% capture slides %}<a href="{{ item.slides }}">Slides</a> | {% endcapture %}{% endif %}
-    {% if item.recording %}{% capture recording %}<a href="{{ item.recording }}">Recording</a> | {% endcapture %}{% endif %}
+    {% if item.project %}{% capture project %}<a href="{{ item.project }}" target="_blank" rel="noopener noreferrer">Project</a> | {% endcapture %}{% endif %}
+    {% if item.paper %}{% capture paper %}<a href="{{ item.paper }}" target="_blank" rel="noopener noreferrer">Paper</a> | {% endcapture %}{% endif %}
+    {% if item.slides %}{% capture slides %}<a href="{{ item.slides }}" target="_blank" rel="noopener noreferrer">Slides</a> | {% endcapture %}{% endif %}
+    {% if item.recording %}{% capture recording %}<a href="{{ item.recording }}" target="_blank" rel="noopener noreferrer">Recording</a> | {% endcapture %}{% endif %}
     {% capture links %}{{ project }}{{ paper }}{{ slides }}{{ recording }}{% endcapture %}
     
 <section class="entry">
@@ -43,7 +43,7 @@
     {%- if noexpand == false and mobcollapse %}<div class="fade-out"></div>{% endif -%}
   </div>
   {% if mobcollapse %}<label for="expand{{ expand_id }}" class="toggle-expand{% if noexpand %} noexpand{% endif %}"></label>{% endif %}
-  {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ item.link }}"></a>{% endif %}
+  {% if item.link %}<a for="expand{{ expand_id }}" class="toggle-expand link" href="{{ item.link }}" target="_blank" rel="noopener noreferrer"></a>{% endif %}
 </section>
 {%- if mobcollapse -%}
 <style type="text/css">
