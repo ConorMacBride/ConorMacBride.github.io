@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<body>
+
+
   <meta charset="utf-8">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/navbar.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:700|Roboto:300,400,700&amp;display=swap" rel="stylesheet">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>MCALF: Multi-Component Atmospheric Line Fitting | Conor MacBride</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="MCALF: Multi-Component Atmospheric Line Fitting" />
-<meta name="author" content="Conor MacBride" />
-<meta property="og:locale" content="en_GB" />
-<meta name="description" content="Determining accurate velocity measurements from observations of the Sun is of vital importance to solar physicists who are studying the wave dynamics in the solar atmosphere. Weak chromospheric absorption lines, due to dynamic events in the solar atmosphere, often consist of multiple spectral components. Isolating these components allows for the velocity field of the dynamic and quiescent regimes to be studied independently. However, isolating such components is particularly challenging due to the wide variety of spectral shapes present in the same dataset. MCALF provides a novel method and infrastructure to determine Doppler velocities in a large dataset. Each spectrum is fitted with a model adapted to its specific spectral shape." />
-<meta property="og:description" content="Determining accurate velocity measurements from observations of the Sun is of vital importance to solar physicists who are studying the wave dynamics in the solar atmosphere. Weak chromospheric absorption lines, due to dynamic events in the solar atmosphere, often consist of multiple spectral components. Isolating these components allows for the velocity field of the dynamic and quiescent regimes to be studied independently. However, isolating such components is particularly challenging due to the wide variety of spectral shapes present in the same dataset. MCALF provides a novel method and infrastructure to determine Doppler velocities in a large dataset. Each spectrum is fitted with a model adapted to its specific spectral shape." />
-<link rel="canonical" href="https://macbride.me/mcalf/" />
-<meta property="og:url" content="https://macbride.me/mcalf/" />
-<meta property="og:site_name" content="Conor MacBride" />
-<meta property="og:image" content="https://macbride.me/assets/images/default-card.png" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-05-17T00:00:00+01:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://macbride.me/assets/images/default-card.png" />
-<meta property="twitter:title" content="MCALF: Multi-Component Atmospheric Line Fitting" />
-<meta name="twitter:site" content="@" />
-<meta name="twitter:creator" content="@Conor MacBride" />
+<meta name="generator" content="Jekyll v4.2.2">
+<meta property="og:title" content="MCALF: Multi-Component Atmospheric Line Fitting">
+<meta name="author" content="Conor MacBride">
+<meta property="og:locale" content="en_GB">
+<meta name="description" content="Determining accurate velocity measurements from observations of the Sun is of vital importance to solar physicists who are studying the wave dynamics in the solar atmosphere. Weak chromospheric absorption lines, due to dynamic events in the solar atmosphere, often consist of multiple spectral components. Isolating these components allows for the velocity field of the dynamic and quiescent regimes to be studied independently. However, isolating such components is particularly challenging due to the wide variety of spectral shapes present in the same dataset. MCALF provides a novel method and infrastructure to determine Doppler velocities in a large dataset. Each spectrum is fitted with a model adapted to its specific spectral shape.">
+<meta property="og:description" content="Determining accurate velocity measurements from observations of the Sun is of vital importance to solar physicists who are studying the wave dynamics in the solar atmosphere. Weak chromospheric absorption lines, due to dynamic events in the solar atmosphere, often consist of multiple spectral components. Isolating these components allows for the velocity field of the dynamic and quiescent regimes to be studied independently. However, isolating such components is particularly challenging due to the wide variety of spectral shapes present in the same dataset. MCALF provides a novel method and infrastructure to determine Doppler velocities in a large dataset. Each spectrum is fitted with a model adapted to its specific spectral shape.">
+<link rel="canonical" href="https://macbride.me/mcalf/">
+<meta property="og:url" content="https://macbride.me/mcalf/">
+<meta property="og:site_name" content="Conor MacBride">
+<meta property="og:image" content="https://macbride.me/assets/images/default-card.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2021-05-17T00:00:00+01:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://macbride.me/assets/images/default-card.png">
+<meta property="twitter:title" content="MCALF: Multi-Component Atmospheric Line Fitting">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@Conor MacBride">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Conor MacBride"},"dateModified":"2021-05-17T00:00:00+01:00","datePublished":"2021-05-17T00:00:00+01:00","description":"Determining accurate velocity measurements from observations of the Sun is of vital importance to solar physicists who are studying the wave dynamics in the solar atmosphere. Weak chromospheric absorption lines, due to dynamic events in the solar atmosphere, often consist of multiple spectral components. Isolating these components allows for the velocity field of the dynamic and quiescent regimes to be studied independently. However, isolating such components is particularly challenging due to the wide variety of spectral shapes present in the same dataset. MCALF provides a novel method and infrastructure to determine Doppler velocities in a large dataset. Each spectrum is fitted with a model adapted to its specific spectral shape.","headline":"MCALF: Multi-Component Atmospheric Line Fitting","image":"https://macbride.me/assets/images/default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://macbride.me/mcalf/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://macbride.me/assets/images/conor.jpeg"},"name":"Conor MacBride"},"url":"https://macbride.me/mcalf/"}</script>
 <!-- End Jekyll SEO tag -->
-<meta
-    name="theme-color"
-    content="#EEEEEE"
-    media="(prefers-color-scheme: light)" />
-  <meta
-    name="theme-color"
-    content="#222222"
-    media="(prefers-color-scheme: dark)" />
-</head>
-<body>
+<meta name="theme-color" content="#EEEEEE" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#222222" media="(prefers-color-scheme: dark)">
+
+
   <header>
     <div class="header-container">
-    <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride" /></div>
+    <div class="picture"><img src="/assets/images/conor.jpeg" alt="Conor MacBride"></div>
     <div class="profile">
       <div class="name">
-        <img src="/assets/images/conor.jpeg" alt="Conor MacBride" />
+        <img src="/assets/images/conor.jpeg" alt="Conor MacBride">
         <span class="title">Dr</span>
         <span class="firstname">Conor</span>
         <span class="lastname">MacBride</span>
@@ -56,8 +50,8 @@
           <li><a href="/" aria-label="About" title="About">About</a></li>
           <li><a href="/cv/" aria-label="CV" title="CV">CV</a></li>
           <li><a href="mailto:conor@macbride.me" aria-label="Email" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/ConorMacBride" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -66,25 +60,25 @@
   <div class="main-container-outer">
   <div class="main-container">
     <div id="main" class="pagecontainer">
-  <p><strong>17 May 2021 &mdash; 4 minutes</strong></p>
+  <p><strong>17 May 2021 — 4 minutes</strong></p>
   <h1>MCALF: Multi-Component Atmospheric Line Fitting</h1>
   <p>
 <strong>
-<span itemscope="" itemtype="https://schema.org/Person">Conor D. MacBride<sup>1</sup><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="orcid.widget" rel="me noopener noreferrer"><img src="/assets/images/orcid.svg" width="18" height="18" style="width:1em;margin-left:.5em;vertical-align:baseline;" alt="ORCID iD icon" /></a></span>
+<span itemscope="" itemtype="https://schema.org/Person">Conor D. MacBride<sup>1</sup><a itemprop="sameAs" content="https://orcid.org/0000-0002-9901-8723" href="https://orcid.org/0000-0002-9901-8723" target="_blank" rel="me noopener noreferrer"><img src="/assets/images/orcid.svg" width="18" height="18" style="width:1em;margin-left:.5em;vertical-align:baseline;" alt="ORCID iD icon"></a></span>
 and
-<span itemscope="" itemtype="https://schema.org/Person">David B. Jess<sup>1,2</sup><a itemprop="sameAs" content="https://orcid.org/0000-0002-9155-8039" href="https://orcid.org/0000-0002-9155-8039" target="orcid.widget" rel="me noopener noreferrer"><img src="/assets/images/orcid.svg" width="18" height="18" style="width:1em;margin-left:.5em;vertical-align:baseline;" alt="ORCID iD icon" /></a></span>
-</strong><br />
+<span itemscope="" itemtype="https://schema.org/Person">David B. Jess<sup>1,2</sup><a itemprop="sameAs" content="https://orcid.org/0000-0002-9155-8039" href="https://orcid.org/0000-0002-9155-8039" target="_blank" rel="me noopener noreferrer"><img src="/assets/images/orcid.svg" width="18" height="18" style="width:1em;margin-left:.5em;vertical-align:baseline;" alt="ORCID iD icon"></a></span>
+</strong><br>
 <sup>1</sup> Astrophysics Research Centre, School of Mathematics and Physics, Queen's University Belfast, Belfast, BT7 1NN, UK; <sup>2</sup> Department of Physics and Astronomy, California State University Northridge, Northridge, CA 91330, U.S.A.
 </p>
 
-<p><a href="https://doi.org/10.21105/joss.03265"><img src="https://joss.theoj.org/papers/10.21105/joss.03265/status.svg" alt="DOI" style="vertical-align: sub" /></a> |
-<a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210509303M/abstract"><strong>ADS</strong></a> |
-<a href="https://arxiv.org/abs/2105.09303"><strong>arXiv</strong></a></p>
+<p><a href="https://doi.org/10.21105/joss.03265" target="_blank" rel="noopener noreferrer"><img src="https://joss.theoj.org/papers/10.21105/joss.03265/status.svg" alt="DOI" style="vertical-align: sub"></a> |
+<a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210509303M/abstract" target="_blank" rel="noopener noreferrer"><strong>ADS</strong></a> |
+<a href="https://arxiv.org/abs/2105.09303" target="_blank" rel="noopener noreferrer"><strong>arXiv</strong></a></p>
 
-<p><a href="https://github.com/ConorMacBride/mcalf"><strong>Software repository</strong></a> |
-<a href="https://www.theoj.org/joss-papers/joss.03265/10.21105.joss.03265.pdf"><strong>Download paper</strong></a> |
-<a href="https://github.com/openjournals/joss-reviews/issues/3265"><strong>Paper review</strong></a> |
-<a href="https://doi.org/10.5281/zenodo.4767888"><strong>Software archive</strong></a></p>
+<p><a href="https://github.com/ConorMacBride/mcalf" target="_blank" rel="noopener noreferrer"><strong>Software repository</strong></a> |
+<a href="https://www.theoj.org/joss-papers/joss.03265/10.21105.joss.03265.pdf" target="_blank" rel="noopener noreferrer"><strong>Download paper</strong></a> |
+<a href="https://github.com/openjournals/joss-reviews/issues/3265" target="_blank" rel="noopener noreferrer"><strong>Paper review</strong></a> |
+<a href="https://doi.org/10.5281/zenodo.4767888" target="_blank" rel="noopener noreferrer"><strong>Software archive</strong></a></p>
 
 <h2 id="summary">Summary</h2>
 
@@ -100,49 +94,53 @@ and
 
 <p>Using this sample model, as well as the separate base (template) model it is built upon, a custom model can easily be built for a specific dataset. The custom model can be designed to take into account the spectral shape of each particular spectrum in the dataset. By training a neural network classifier using a sample of spectra from the dataset labelled with their spectral shapes, the spectral shape of any spectrum in the dataset can be found. The fitting algorithm can then be adjusted for each spectrum based on the particular spectral shape the neural network assigned it. The ‘toolkit’ nature of this package also allows the possibility of utilising existing machine learning classifiers, such as the “supervised hierarchical <span style="font-family:serif"><em>k</em></span>-means” classifier introduced in Panos et al. (2018), which clusters solar flare spectra based on their profile shape.</p>
 
-<p>This package is designed to run in parallel over large data cubes, as well as in serial. As each spectrum is processed in isolation, this package scales very well across many processor cores. Numerous functions are provided to plot the results clearly, some of which are showcased in Figure 1. The <code class="language-plaintext highlighter-rouge">MCALF</code> API also contains many useful functions which have the potential of being integrated into other Python packages. Full documentation as well as examples on how to use <code class="language-plaintext highlighter-rouge">MCALF</code> are provided at <a href="https://mcalf.macbride.me">mcalf.macbride.me</a>.</p>
+<p>This package is designed to run in parallel over large data cubes, as well as in serial. As each spectrum is processed in isolation, this package scales very well across many processor cores. Numerous functions are provided to plot the results clearly, some of which are showcased in Figure 1. The <code class="language-plaintext highlighter-rouge">MCALF</code> API also contains many useful functions which have the potential of being integrated into other Python packages. Full documentation as well as examples on how to use <code class="language-plaintext highlighter-rouge">MCALF</code> are provided at <a href="https://mcalf.macbride.me" target="_blank" rel="noopener noreferrer">mcalf.macbride.me</a>.</p>
 
 <figure>
-<img src="/img/2021-05-17-mcalf-figure.svg" alt="collection of example plots generated by MCALF" style="background-color: #FFF" />
+<img src="/img/2021-05-17-mcalf-figure.svg" alt="collection of example plots generated by MCALF" style="background-color: #FFF">
 <figcaption><strong>Figure 1:</strong> An overview of some of the plotting functions that are included in <code class="language-plaintext highlighter-rouge">MCALF</code>.</figcaption>
 </figure>
 
 <h2 id="acknowledgements">Acknowledgements</h2>
 
-<p>CDM would like to thank the Northern Ireland Department for the Economy for the award of a PhD studentship. DBJ wishes to thank Invest NI and Randox Laboratories Ltd. for the award of a Research and Development Grant (059RDEN-1) that allowed the computational techniques employed to be developed. DBJ would also like to thank the UK Science and Technology Facilities Council (STFC) for the consolidated grant ST/T00021X/1. The authors wish to acknowledge scientific discussions with the Waves in the Lower Solar Atmosphere (WaLSA; <a href="https://www.WaLSA.team">www.WaLSA.team</a>) team, which is supported by the Research Council of Norway (project no. 262622) and the Royal Society (award no. Hooke18b/SCTM).</p>
+<p>CDM would like to thank the Northern Ireland Department for the Economy for the award of a PhD studentship. DBJ wishes to thank Invest NI and Randox Laboratories Ltd. for the award of a Research and Development Grant (059RDEN-1) that allowed the computational techniques employed to be developed. DBJ would also like to thank the UK Science and Technology Facilities Council (STFC) for the consolidated grant ST/T00021X/1. The authors wish to acknowledge scientific discussions with the Waves in the Lower Solar Atmosphere (WaLSA; <a href="https://www.WaLSA.team" target="_blank" rel="noopener noreferrer">www.WaLSA.team</a>) team, which is supported by the Research Council of Norway (project no. 262622) and the Royal Society (award no. Hooke18b/SCTM).</p>
 
 <h2 id="references">References</h2>
 
 <ul>
-  <li>Felipe, T., Socas-Navarro, H., &amp; Khomenko, E. (2014). Synthetic observations of wave propagation in a sunspot umbra. <em>The Astrophysical Journal</em>, <em>795</em>(1), 9. <a href="https://doi.org/10.1088/0004-637x/795/1/9">https://doi.org/10.1088/0004-637x/795/1/9</a></li>
-  <li>MacBride, C. D., Jess, D. B., Grant, S. D. T., Khomenko, E., Keys, P. H., &amp; Stangalini, M. (2020). Accurately constraining velocity information from spectral imaging observations using machine learning techniques. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, <em>379</em>(2190), 20200171. <a href="https://doi. org/10.1098/rsta.2020.0171">https://doi. org/10.1098/rsta.2020.0171</a></li>
-  <li>Panos, B., Kleint, L., Huwyler, C., Krucker, S., Melchior, M., Ullmann, D., &amp; Voloshynovskiy, S. (2018). Identifying typical Mg ii flare spectra using machine learning. <em>The Astrophysical Journal</em>, <em>861</em>(1), 62. <a href="https://doi.org/10.3847/1538-4357/aac779">https://doi.org/10.3847/1538-4357/aac779</a></li>
-  <li>Stangalini, M., Baker, D., Valori, G., Jess, D. B., Jafarzadeh, S., Murabito, M., To, A. S. H., Brooks, D. H., Ermolli, I., Giorgi, F., &amp; MacBride, C. D. (2020). Spectropolarimetric fluctuations in a sunspot chromosphere. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, <em>379</em>(2190), 20200216. <a href="https://doi. org/10.1098/rsta.2020.0216">https://doi. org/10.1098/rsta.2020.0216</a></li>
+  <li>Felipe, T., Socas-Navarro, H., &amp; Khomenko, E. (2014). Synthetic observations of wave propagation in a sunspot umbra. <em>The Astrophysical Journal</em>, <em>795</em>(1), 9. <a href="https://doi.org/10.1088/0004-637x/795/1/9" target="_blank" rel="noopener noreferrer">https://doi.org/10.1088/0004-637x/795/1/9</a>
+</li>
+  <li>MacBride, C. D., Jess, D. B., Grant, S. D. T., Khomenko, E., Keys, P. H., &amp; Stangalini, M. (2020). Accurately constraining velocity information from spectral imaging observations using machine learning techniques. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, <em>379</em>(2190), 20200171. <a href="https://doi.%20org/10.1098/rsta.2020.0171">https://doi. org/10.1098/rsta.2020.0171</a>
+</li>
+  <li>Panos, B., Kleint, L., Huwyler, C., Krucker, S., Melchior, M., Ullmann, D., &amp; Voloshynovskiy, S. (2018). Identifying typical Mg ii flare spectra using machine learning. <em>The Astrophysical Journal</em>, <em>861</em>(1), 62. <a href="https://doi.org/10.3847/1538-4357/aac779" target="_blank" rel="noopener noreferrer">https://doi.org/10.3847/1538-4357/aac779</a>
+</li>
+  <li>Stangalini, M., Baker, D., Valori, G., Jess, D. B., Jafarzadeh, S., Murabito, M., To, A. S. H., Brooks, D. H., Ermolli, I., Giorgi, F., &amp; MacBride, C. D. (2020). Spectropolarimetric fluctuations in a sunspot chromosphere. <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em>, <em>379</em>(2190), 20200216. <a href="https://doi.%20org/10.1098/rsta.2020.0216">https://doi. org/10.1098/rsta.2020.0216</a>
+</li>
 </ul>
 
 <h2 id="citation">Citation</h2>
 
-<p>MacBride, C. D., &amp; Jess, D. B. (2021). MCALF: Multi-Component Atmospheric Line Fitting. <em>Journal of Open Source Software</em>, <em>6</em>(61), 3265. <a href="https://doi.org/10.21105/joss.03265">https://doi.org/10.21105/joss.03265</a></p>
+<p>MacBride, C. D., &amp; Jess, D. B. (2021). MCALF: Multi-Component Atmospheric Line Fitting. <em>Journal of Open Source Software</em>, <em>6</em>(61), 3265. <a href="https://doi.org/10.21105/joss.03265" target="_blank" rel="noopener noreferrer">https://doi.org/10.21105/joss.03265</a></p>
 
 <h2 id="license">License</h2>
 
-<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution 4.0 International License</a>.</p>
 
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
+<p><a rel="license noopener noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a></p>
 
 
   <div id="postnav">
-    <div id="previous">&nbsp;
+    <div id="previous"> 
       
-        <a href="/specfit/">&larr; Previous</a>
+        <a href="/specfit/">← Previous</a>
       
     </div>
     <div id="index">
         <a href="/blog/">Index</a>
     </div>
-    <div id="next">&nbsp;
+    <div id="next"> 
       
-        <a href="/2021/12/14/mancha.html">Next &rarr;</a>
+        <a href="/2021/12/14/mancha.html">Next →</a>
       
     </div>
   </div>
@@ -155,11 +153,11 @@ and
     <nav>
       <ul class="links">
         <li><a href="mailto:conor@macbride.me" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-        <li><a href="https://github.com/ConorMacBride" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/conormacbride" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/ConorMacBride" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
-    <div class="credit">Conor <strong>MacBride</strong> &copy; 2018&ndash;2025</div>
+    <div class="credit">Conor <strong>MacBride</strong> © 2018–2025</div>
     </div>
   </footer>
   <script>
@@ -170,5 +168,6 @@ and
       }
     });
   </script>
+
+
 </body>
-</html>
