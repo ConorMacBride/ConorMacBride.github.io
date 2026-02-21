@@ -8,9 +8,10 @@
 
 require 'jekyll'
 require 'time'
-require 'ostruct'
 
 module Jekyll
+  DocWrapper = Struct.new(:data, :content, :basename_without_ext)
+
   class GroupedExperienceGenerator < Generator
     safe true
     priority :low
@@ -45,10 +46,10 @@ module Jekyll
         if d.respond_to?(:data)
           d
         elsif d.is_a?(Hash)
-          OpenStruct.new(
-            data: d,
-            content: (d['content'] || ''),
-            basename_without_ext: (d['slug'] || d['id'] || d['path'] || '')
+          DocWrapper.new(
+            d,
+            (d['content'] || ''),
+            (d['slug'] || d['id'] || d['path'] || '')
           )
         else
           d
